@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Web Page with YouTube Videos</title>
+    <title>MoshunTV</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: black;
@@ -16,8 +17,29 @@
         }
 
         header {
-            padding: 20px;
-            text-align: center;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        header video {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        h1 {
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(255, 1, 1);
+            font-size: 15em;
+            font-family: 'Tiny5', sans-serif;
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+            z-index: 1;
+            white-space: nowrap; /* Prevents text from wrapping */
         }
 
         main {
@@ -31,13 +53,12 @@
         .video-container {
             position: relative;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .video-container p {
             position: absolute;
-            bottom: 10;
-            left: 0;
+            left: 0; 
             right: 0;
             margin: 0;
         }
@@ -61,7 +82,7 @@
 
         h2 {
             font-family: 'Rouge Script', cursive;
-            font-size: 3em;
+            font-size: 2em;
             text-align: center;
             margin-bottom: 20px;
         }
@@ -70,10 +91,6 @@
             .video-row {
                 flex-direction: column;
                 align-items: center;
-            }
-
-            header {
-                padding: 10px;
             }
 
             main {
@@ -87,12 +104,26 @@
             .video-container {
                 margin-bottom: 10px;
             }
+
+            h1 {
+                font-size: 4em;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            header video {
+                max-height: 200px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <video id="banner-video" autoplay muted loop>
+            <source src="static.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>MoshunTV</h1>
     </header>
     <main>
         <section>
@@ -114,8 +145,19 @@
                     <iframe src="https://www.youtube.com/embed/x-XuU4OTJU8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p><a href="https://youtu.be/x-XuU4OTJU8?si=Jr3ouKF2rWyTvLCU" target="_blank">JasonMartin & DJ Quik - SINCE I WAS LIL</a></p>
                 </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Wftfymo8XM0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p><a href="https://youtu.be/Wftfymo8XM0?si=0f_9t8kuKLOCUZ5e" target="_blank">Larry June - Imported Couches</a></p>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/fobCQ_kTm_c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p><a href="https://youtu.be/fobCQ_kTm_c?si=0r921ARKeRUkN6E8" target="_blank">Wiz Khalifa - Keys</a></p>
+                </div>                
             </div>
         </section>
     </main>
+    <script>
+        document.getElementById('banner-video').playbackRate = 0.5;
+    </script>
 </body>
 </html>
