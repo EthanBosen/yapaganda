@@ -1,0 +1,110 @@
+body {
+    background-color: black;
+    color: rgb(78, 201, 129);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+h1 {
+    position: absolute;
+    text-align: center;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 1, 1);
+    font-size: 10em;
+    font-family: 'Tiny5', sans-serif;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+main {
+    padding: 20px;
+}
+
+a {
+    color: rgb(78, 201, 129);
+}
+
+.video-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.video-container p {
+    position: absolute;
+    left: 0; 
+    right: 0;
+    margin: 0;
+}
+
+.video-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between videos */
+    justify-content: center;
+}
+
+.video-container {
+    flex: 1 1 300px;
+    max-width: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 200px;
+}
+
+h2 {
+    font-family: 'Rouge Script', cursive;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* iPhone screen adjustments */
+@media (max-width: 480px) {
+    .video-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    iframe {
+        height: 180px;
+    }
+
+    .video-container {
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 4em;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    header video {
+        max-height: 300px; /* Reduce the height by 25% for iPhone screens */
+    }
+}
