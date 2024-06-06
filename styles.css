@@ -15,7 +15,7 @@ header {
 header video {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    max-height: 200px;
     object-fit: cover;
     display: block;
 }
@@ -23,15 +23,16 @@ header video {
 h1 {
     position: absolute;
     text-align: center;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(255, 1, 1);
-    font-size: 10em;
-    font-family: 'Tiny5', sans-serif;
+    font-size: 5em;
+    font-family: 'Galindo', sans-serif;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
     z-index: 1;
     white-space: nowrap; /* Prevents text from wrapping */
+    -webkit-text-stroke: 1px rgb(70, 0, 0);
 }
 
 main {
