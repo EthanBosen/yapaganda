@@ -91,7 +91,7 @@ h2 {
     }
 
     iframe {
-        height: 180px;
+        height: 100px;
     }
 
     .video-container {
@@ -101,6 +101,7 @@ h2 {
     h1 {
         font-size: 4em;
         top: 50%;
+        bottom: 50%;
         transform: translate(-50%, -50%);
     }
 
