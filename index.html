@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Page with YouTube Videos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        a {
+            color: lightblue;
+        }
+
+        .video-container {
+            margin-bottom: 20px;
+        }
+
+        .video-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Adds space between videos */
+            justify-content: center;
+        }
+
+        .video-container {
+            flex: 1 1 300px;
+            max-width: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 200px;
+        }
+
+        @media (max-width: 480px) {
+            .video-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header {
+                padding: 10px;
+            }
+
+            main {
+                padding: 10px;
+            }
+
+            iframe {
+                height: 180px;
+            }
+
+            .video-container {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Main Content</h2>
+            <div class="video-row">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/D4n1X3O9x88" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p><a href="https://www.youtube.com/watch?v=D4n1X3O9x88" target="_blank">Larry June - Dreams</a></p>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/7Or2T9UzwvQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p><a href="https://youtu.be/7Or2T9UzwvQ?si=mAzmsLM2QDPspNjQ" target="_blank">G Perico - The Interview</a></p>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/qgdxULJfS0Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p><a href="https://youtu.be/qgdxULJfS0Q?si=rFTgGEjfECc9Zcet" target="_blank">Wiz Khalifa - Not a Drill Freestyle</a></p>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/x-XuU4OTJU8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p><a href="https://youtu.be/x-XuU4OTJU8?si=Jr3ouKF2rWyTvLCU" target="_blank">JasonMartin & DJ Quik - SINCE I WAS LIL</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
