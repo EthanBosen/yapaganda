@@ -104,15 +104,10 @@ h2 {
         top: 50%;
         transform: translate(-50%, -50%);
     }
-
-    header video {
-        max-height: 300px; /* Reduce the height by 25% for iPhone screens */
-    }
 }
-
 /* iOS-specific adjustments */
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     header video {
-        max-height: 100px; /* Shorten height by 100px for iOS devices */
+        max-height: 200px; /* Shorten height by 100px for iOS devices */
     }
 }
