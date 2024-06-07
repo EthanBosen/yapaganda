@@ -107,6 +107,14 @@ h2 {
 }
 /* iOS-specific adjustments */
 @media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    .video-row {
+        gap: 5px; /* Reduced space between videos for iOS devices */
+    }
+
+    .video-container {
+        margin-bottom: 5px; /* Reduced space below each video container for iOS devices */
+    }
+
     header video {
         max-height: 200px; /* Shorten height by 100px for iOS devices */
     }
