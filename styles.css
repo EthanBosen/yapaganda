@@ -101,7 +101,7 @@ h2 {
 
     h1 {
         font-size: 4em;
-        top: 50%;
+        top: 25%;
         transform: translate(-50%, -50%);
     }
 }
