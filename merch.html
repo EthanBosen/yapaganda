@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connected - Merch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Galindo&family=Caprasimo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <video id="banner-video" autoplay muted loop playsinline>
+            <source src="static.mp4" type="video/mp4">
+            <img src="fallback.jpg" alt="Connected">
+            Your browser does not support the video tag.
+        </video>        
+        <h1>Connected</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Artist Latest Merchandise</h2>
+            <div class="button-container">
+                <button onclick="location.href='index.html'">Home</button>
+                <button onclick="location.href='merch.html'">Merch</button>
+                <button onclick="location.href='directory.html'">Directory</button>
+            </div>
+            <div class="merch-row">
+                <div class="merch-item">
+                    <img src="shirt.jpg" alt="Shirt">
+                    <p>Artist Shirt</p>
+                </div>
+                <div class="merch-item">
+                    <img src="cap.jpg" alt="Cap">
+                    <p>Artist Cap</p>
+                </div>
+                <div class="merch-item">
+                    <img src="hoodie.jpg" alt="Hoodie">
+                    <p>Artist Hoodie</p>
+                </div>
+                <div class="merch-item">
+                    <img src="mug.jpg" alt="Mug">
+                    <p>Artist Coffee Mug</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.getElementById('banner-video').playbackRate = 0.5;
+    </script>
+</body>
+</html>

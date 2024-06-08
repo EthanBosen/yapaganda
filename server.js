@@ -4,12 +4,27 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files from the current directory
 app.use(express.static(path.join(__dirname)));
 
-// Serve the index.html file
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.get('/:page', (req, res) => {
+    const page = req.params.page;
+    const validPages = ['index', 'merch', 'directory']; 
+    if (validPages.includes(page)) {
+        res.sendFile(path.join(__dirname, `${page}.html`));
+    } else {
+        res.status(404).send('Page not found');
+    }
+});
+
+app.get('/search/:query', (req, res) => {
+    const query = req.params.query.toUpperCase();
+    // Perform search logic here based on the query
+    // For simplicity, let's just return the query string
+    res.send(`You searched for: ${query}`);
 });
 
 app.listen(PORT, () => {

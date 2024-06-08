@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connected - Directory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Galindo&family=Caprasimo&display=swap" rel="stylesheet">
+    <style>
+        .search-container {
+            text-align: center; 
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+<header>
+    <video id="banner-video" autoplay muted loop playsinline>
+        <source src="static.mp4" type="video/mp4">
+        <img src="fallback.jpg" alt="Connected">
+        Your browser does not support the video tag.
+    </video>        
+    <h1>Connected</h1>
+</header>
+<body>
+    <main>
+        <section>
+            <h2>Contact Information</h2>
+            <div class="button-container">
+                <button onclick="location.href='index.html'">Home</button>
+                <button onclick="location.href='merch.html'">Merch</button>
+                <button onclick="location.href='directory.html'">Directory</button>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search" onkeyup="search()">
+            </div>
+        </section> 
+    </main>
+    <div class="directory-list">        
+        <div class="directory-list">
+            <ul id="artistList">
+                <p><a href="https://x.com/bgperico?lang=en">G Perico</a></p>
+                <p><a href="https://x.com/wizkhalifa">Wiz Khalifa</a></p>
+                <p><a href="https://x.com/LarryJuneTFM">Larry June</a></p>
+                <p><a href="https://x.com/CurrenSy_Spitta">Curren$y</a></p>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.getElementById('banner-video').playbackRate = 0.5;
+
+        function search() {
+            var input, filter, ul, p, a, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById('artistList');
+            p = ul.getElementsByTagName('p');
+
+            for (i = 0; i < p.length; i++) {
+                a = p[i].getElementsByTagName('a')[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    p[i].style.display = '';
+                } else {
+                    p[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

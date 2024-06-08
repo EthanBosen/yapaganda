@@ -1,9 +1,9 @@
 body {
     background-color: black;
-    color: rgb(78, 201, 129);
+    color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Caprasimo', sans-serif;
 }
 
 header {
@@ -26,44 +26,120 @@ h1 {
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(255, 1, 1);
+    color: rgb(0, 0, 0);
     font-size: 5em;
-    font-family: 'Galindo', sans-serif;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    font-family: 'Caprasimo', sans-serif;
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
     z-index: 1;
-    white-space: nowrap; /* Prevents text from wrapping */
-    -webkit-text-stroke: 1px rgb(70, 0, 0);
+    white-space: nowrap; 
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 
 main {
     padding: 20px;
 }
 
-a {
-    color: rgb(78, 201, 129);
+.directory-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.video-container {
+.directory-list ul p {
+    margin-bottom: 10px; 
+    font-family: 'Caprasimo', sans-serif;
+}
+
+.directory-list ul p a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+.directory-list ul p a:hover {
+    color: #445355;
+}
+
+
+.active {
+    opacity: 0.5;
+    pointer-events: none; 
+}
+
+a {
+    color: rgb(78, 201, 129);
+    font-family: 'Caprasimo', sans-serif;
+}
+
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    font-family: 'Caprasimo', sans-serif;
+    font-size: 1.2em;
+    background-color: rgb(78, 201, 129);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 20px;
+    margin-right: 10px; 
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 250px;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: rgb(47, 116, 75);
+}
+
+#searchInput {
+    width: 100px; 
+    height: 10px;
+    max-width: 200px; 
+    margin-top: 30px; 
+    padding: 8px; 
+    font-size: 14px;
+    border: 4px solid rgb(0, 0, 0); 
+    border-radius: 250px; 
+    outline: none; 
+    transition: border-color 0.3s ease; 
+}
+
+#searchInput:focus {
+    border-color: rgb(47, 116, 75); 
+}
+
+#searchInput::placeholder {
+    color: rgba(156, 154, 154, 0.8); 
+}
+
+.video-container, .merch-item, .directory-list ul {
     position: relative;
     text-align: center;
     margin-bottom: 10px;
 }
 
-.video-container p {
+.video-container p, .merch-item p, .directory-list ul li {
     position: absolute;
     left: 0; 
     right: 0;
     margin: 0;
+    font-family: 'Caprasimo', sans-serif;
 }
 
-.video-row {
+.video-row, .merch-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Adds space between videos */
+    gap: 20px; 
     justify-content: center;
 }
 
-.video-container {
+.video-container, .merch-item {
     flex: 1 1 300px;
     max-width: 100%;
 }
@@ -74,49 +150,16 @@ iframe {
 }
 
 h2 {
-    font-family: 'Rouge Script', cursive;
+    font-family: 'Caprasimo', cursive;
     font-size: 2em;
     text-align: center;
     margin-bottom: 20px;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
 
 /* iPhone screen adjustments */
 @media (max-width: 480px) {
-    .video-row {
+    .video-row, .merch-row {
         flex-direction: column;
-        align-items: center;
-    }
-
-    main {
-        padding: 10px;
-    }
-
-    iframe {
-        height: 180px;
-    }
-
-    .video-container {
-        margin-bottom: 10px;
-    }
-
-    h1 {
-        font-size: 4em;
-        top: 25%;
-        transform: translate(-50%, -50%);
-    }
-}
-
-/* iOS-specific adjustments */
-@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-    .video-row {
-        gap: 1px; /* Reduced space between videos for iOS devices */
-    }
-
-    .video-container {
-        margin-bottom: 1px; /* Reduced space below each video container for iOS devices */
-    }
-
-    header video {
-        max-height: 200px; /* Space control iOS devices */
-    }
-}
+        align-items: center
+    }}
