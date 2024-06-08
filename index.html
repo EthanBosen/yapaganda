@@ -20,36 +20,36 @@
         <section>
             <h2>Welcome, and Enjoy</h2>
             <div class="video-row">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/D4n1X3O9x88" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video-container" data-index="0">
+                    <iframe src="https://www.youtube.com/embed/D4n1X3O9x88?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p><a href="https://www.youtube.com/watch?v=D4n1X3O9x88" target="_blank">Larry June - Dreams</a></p>
                 </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/7Or2T9UzwvQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video-container" data-index="1">
+                    <iframe src="https://www.youtube.com/embed/7Or2T9UzwvQ?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p><a href="https://youtu.be/7Or2T9UzwvQ?si=mAzmsLM2QDPspNjQ" target="_blank">G Perico - The Interview</a></p>
                 </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/qgdxULJfS0Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video-container" data-index="2">
+                    <iframe src="https://www.youtube.com/embed/qgdxULJfS0Q?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p><a href="https://youtu.be/qgdxULJfS0Q?si=rFTgGEjfECc9Zcet" target="_blank">Wiz Khalifa - Not a Drill Freestyle</a></p>
                 </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/x-XuU4OTJU8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video-container" data-index="3">
+                    <iframe src="https://www.youtube.com/embed/x-XuU4OTJU8?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p><a href="https://youtu.be/x-XuU4OTJU8?si=Jr3ouKF2rWyTvLCU" target="_blank">JasonMartin & DJ Quik - SINCE I WAS LIL</a></p>
                 </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/Wftfymo8XM0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video-container" data-index="4">
+                    <iframe src="https://www.youtube.com/embed/Wftfymo8XM0?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p><a href="https://youtu.be/Wftfymo8XM0?si=0f_9t8kuKLOCUZ5e" target="_blank">Larry June - Imported Couches</a></p>
                 </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/fobCQ_kTm_c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video-container" data-index="5">
+                    <iframe src="https://www.youtube.com/embed/fobCQ_kTm_c?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p><a href="https://youtu.be/fobCQ_kTm_c?si=0r921ARKeRUkN6E8" target="_blank">Wiz Khalifa - Keys</a></p>
                 </div>          
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/ZeVIQe68R44" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video-container" data-index="6">
+                    <iframe src="https://www.youtube.com/embed/ZeVIQe68R44?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p><a href="https://youtu.be/ZeVIQe68R44?si=ywE1LzktP8ouiiRm" target="_blank">Larry June, The Alchemist & Big Sean - Palisades, CA</a></p>
                 </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/67smQxgHdyA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video-container" data-index="7">
+                    <iframe src="https://www.youtube.com/embed/67smQxgHdyA?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p><a href="https://youtu.be/67smQxgHdyA?si=IzUVleWwB1K80t46" target="_blank">Nef the Pharaoh - Furley Goat</a></p>
                 </div>
             </div>
@@ -57,6 +57,39 @@
     </main>
     <script>
         document.getElementById('banner-video').playbackRate = 0.5;
+
+        let tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        let firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        let players = [];
+        const videoContainers = document.querySelectorAll('.video-container');
+        let currentVideoIndex = 0;
+
+        function onYouTubeIframeAPIReady() {
+            videoContainers.forEach((container, index) => {
+                const iframe = container.querySelector('iframe');
+                players[index] = new YT.Player(iframe, {
+                    events: {
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+            });
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data === YT.PlayerState.ENDED) {
+                playNextVideo();
+            }
+        }
+
+        function playNextVideo() {
+            const nextVideoIndex = (currentVideoIndex + 1) % players.length;
+            players[currentVideoIndex].pauseVideo();
+            players[nextVideoIndex].playVideo();
+            currentVideoIndex = nextVideoIndex;
+        }
     </script>
 </body>
 </html>
