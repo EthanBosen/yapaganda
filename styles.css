@@ -35,14 +35,6 @@ h1 {
     -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 
-/* Media query for smaller screens, like iPhones */
-@media only screen and (max-width: 480px) {
-    h1 {
-        font-size: 3em; /* Adjusted font size for smaller screens */
-    }
-}
-
-
 main {
     padding: 20px;
 }
@@ -173,6 +165,9 @@ h2 {
     }}
 @media only screen and (max-width: 480px) {
     h1 {
-        font-size: 3em; /* Adjusted font size for smaller screens */
-    }
-    }
+        font-size: 3em; 
+    }}
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 3em; 
+    }}

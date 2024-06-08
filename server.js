@@ -22,8 +22,6 @@ app.get('/:page', (req, res) => {
 
 app.get('/search/:query', (req, res) => {
     const query = req.params.query.toUpperCase();
-    // Perform search logic here based on the query
-    // For simplicity, let's just return the query string
     res.send(`You searched for: ${query}`);
 });
 
