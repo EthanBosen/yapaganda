@@ -25,9 +25,10 @@
         <section>
             <h2>Welcome, and Enjoy</h2>
             <div class="button-container">
-                <button id="home-btn" onclick="location.href='index.html'">Music</button>
+                <button id="home-btn" onclick="location.href='index.html'">Home</button>
                 <button id="merch-btn" onclick="location.href='merch.html'">Merch</button>
-                <button id="directory-btn" onclick="location.href='directory.html'">Social</button>
+                <button id="directory-btn" onclick="location.href='directory.html'">Directory</button>
+    
             </div>
             <div class="video-row">
                 <div class="video-container" data-index="0">
@@ -62,21 +63,9 @@
                     <iframe src="https://www.youtube.com/embed/67smQxgHdyA?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p><a href="https://youtu.be/67smQxgHdyA?si=IzUVleWwB1K80t46" target="_blank">Nef the Pharaoh - Furley Goat</a></p>
                 </div>
-                <div class="video-container" data-index="8">
+                <div class="video-container" data-index="7">
                     <iframe src="https://www.youtube.com/embed/r-cv2BiZ2_k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p><a href="https://youtu.be/r-cv2BiZ2_k?si=ANk2FO5FXdi7JleF" target="_blank">Curren$y & The Alchemist - Half Moon Mornings</a></p>
-                </div>
-                <div class="video-container" data-index="9">
-                    <iframe src="https://www.youtube.com/embed/6IHXObbiMag" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <p><a href="https://youtu.be/6IHXObbiMag?si=jdlkOeE5_PKlTbBa" target="_blank">Big Hit, Hit-Boy & The Alchemist - Gank Move</a></p>
-                </div>
-                <div class="video-container" data-index="10">
-                    <iframe src="https://www.youtube.com/embed/Kt_Q9DxNP9Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <p><a href="https://youtu.be/Kt_Q9DxNP9Q?si=EZIjX9iAuBUQe1iW" target="_blank">Larry June, The Alchemist & Action Bronson - Solid Plan</a></p>
-                </div>
-                <div class="video-container" data-index="11">
-                    <iframe src="https://www.youtube.com/embed/LHNT8dO9IX0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <p><a href="https://youtu.be/LHNT8dO9IX0?si=MTy9prYvOXo39ouR" target="_blank">Young Deji - I'm Yo Pusha</a></p>
                 </div>
             </div>
         </section>
@@ -112,12 +101,10 @@
 
         function playNextVideo() {
             const nextVideoIndex = (currentVideoIndex + 1) % players.length;
-            players[currentVideoIndex].mute(); // 
             players[currentVideoIndex].pauseVideo();
             players[nextVideoIndex].playVideo();
             currentVideoIndex = nextVideoIndex;
         }
     </script>
-    <script src="client.js"></script>
 </body>
 </html>
