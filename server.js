@@ -4,6 +4,8 @@ const path = require('path');
 
 const PORT = process.env.PORT || 3000;
 
+document.getElementById('banner-video').playbackRate = 0.5;
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
