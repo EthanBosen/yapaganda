@@ -1,35 +1,15 @@
-document.getElementById('banner-video').playbackRate = 0.5;
+const express = require('express');
+const app = express();
+const path = require('path');
 
-let tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-let firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+const PORT = process.env.PORT || 3000;
 
-let players = [];
-const videoContainers = document.querySelectorAll('.video-container');
-let currentVideoIndex = 0;
+app.use(express.static(path.join(__dirname, 'public')));
 
-function onYouTubeIframeAPIReady() {
-    videoContainers.forEach((container, index) => {
-        const iframe = container.querySelector('iframe');
-        players[index] = new YT.Player(iframe, {
-            events: {
-                'onStateChange': onPlayerStateChange
-            }
-        });
-    });
-}
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
-function onPlayerStateChange(event) {
-    if (event.data === YT.PlayerState.ENDED) {
-        playNextVideo();
-    }
-}
-
-function playNextVideo() {
-    const nextVideoIndex = (currentVideoIndex + 1) % players.length;
-    players[currentVideoIndex].mute(); 
-    players[currentVideoIndex].pauseVideo();
-    players[nextVideoIndex].playVideo();
-    currentVideoIndex = nextVideoIndex;
-}
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
