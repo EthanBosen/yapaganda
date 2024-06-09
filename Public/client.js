@@ -28,7 +28,7 @@ function onPlayerStateChange(event) {
 
 function playNextVideo() {
     const nextVideoIndex = (currentVideoIndex + 1) % players.length;
-    players[currentVideoIndex].mute();
+    players[currentVideoIndex].mute(); 
     players[currentVideoIndex].pauseVideo();
     players[nextVideoIndex].playVideo();
     currentVideoIndex = nextVideoIndex;
