@@ -1,30 +1,35 @@
-const express = require('express');
-const path = require('path');
+document.getElementById('banner-video').playbackRate = 0.5;
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+let tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+let firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-app.use(express.static(path.join(__dirname)));
+let players = [];
+const videoContainers = document.querySelectorAll('.video-container');
+let currentVideoIndex = 0;
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
+function onYouTubeIframeAPIReady() {
+    videoContainers.forEach((container, index) => {
+        const iframe = container.querySelector('iframe');
+        players[index] = new YT.Player(iframe, {
+            events: {
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    });
+}
 
-app.get('/:page', (req, res) => {
-    const page = req.params.page;
-    const validPages = ['index', 'merch', 'directory']; 
-    if (validPages.includes(page)) {
-        res.sendFile(path.join(__dirname, `${page}.html`));
-    } else {
-        res.status(404).send('Page not found');
+function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.ENDED) {
+        playNextVideo();
     }
-});
+}
 
-app.get('/search/:query', (req, res) => {
-    const query = req.params.query.toUpperCase();
-    res.send(`You searched for: ${query}`);
-});
-
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+function playNextVideo() {
+    const nextVideoIndex = (currentVideoIndex + 1) % players.length;
+    players[currentVideoIndex].mute(); 
+    players[currentVideoIndex].pauseVideo();
+    players[nextVideoIndex].playVideo();
+    currentVideoIndex = nextVideoIndex;
+}
