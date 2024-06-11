@@ -25,6 +25,17 @@ app.get('/search/:query', (req, res) => {
     res.send(`You searched for: ${query}`);
 });
 
+// Adding a route to serve the carousel data (if necessary)
+app.get('/carousel-data', (req, res) => {
+    const carouselItems = [
+        { id: 1, image: 'path_to_image1.jpg', title: 'Item 1' },
+        { id: 2, image: 'path_to_image2.jpg', title: 'Item 2' },
+        { id: 3, image: 'path_to_image3.jpg', title: 'Item 3' }
+        // Add more items as needed
+    ];
+    res.json(carouselItems);
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

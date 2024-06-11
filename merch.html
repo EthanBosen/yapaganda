@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +11,6 @@
     <header>
         <video id="banner-video" autoplay muted loop playsinline>
             <source src="static.mp4" type="video/mp4">
-            <img src="fallback.jpg" alt="Connected">
             Your browser does not support the video tag.
         </video>        
         <h1>Connected</h1>
@@ -25,28 +23,68 @@
                 <button onclick="location.href='merch.html'">Merch</button>
                 <button onclick="location.href='directory.html'">Directory</button>
             </div>
-            <div class="merch-row">
-                <div class="merch-item">
-                    <img src="shirt.jpg" alt="Shirt">
-                    <p>Artist Shirt</p>
+            <div class="carousel">
+                <button class="carousel-button carousel-button-left">&lt;</button>
+                <div class="carousel-track">
+                    <div class="merch-item">
+                        <a href="https://bluetshirt.com/collections/all" target="_blank">
+                            <img src="bluetshirtpreview.jpg" alt="Blue T-Shirt Collection">
+                        </a>
+                        <p>Blue T-Shirt Collection</p>
+                    </div>
+                    <div class="merch-item">
+                        <a href="https://store.taylorgang.com/" target="_blank">
+                            <img src="taylorgangpreview.jpg" alt="Taylor Gang Merchandise">
+                        </a>
+                        <p>Taylor Gang Merchandise</p>
+                    </div>
+                    <div class="merch-item">
+                        <a href="https://jetlifeapparel.com/" target="_blank">
+                            <img src="jetlifeapparelpreview.jpg" alt="Jet Life Apparel">
+                        </a>
+                        <p>Jet Life Apparel</p>
+                    </div>
+                    <div class="merch-item">
+                        <a href="https://midnightorganic.com/" target="_blank">
+                            <img src="midnightorganicpreview.jpg" alt="Midnight Organic">
+                        </a>
+                        <p>Midnight Organic</p>
+                    </div>
                 </div>
-                <div class="merch-item">
-                    <img src="cap.jpg" alt="Cap">
-                    <p>Artist Cap</p>
-                </div>
-                <div class="merch-item">
-                    <img src="hoodie.jpg" alt="Hoodie">
-                    <p>Artist Hoodie</p>
-                </div>
-                <div class="merch-item">
-                    <img src="mug.jpg" alt="Mug">
-                    <p>Artist Coffee Mug</p>
-                </div>
+                
+                <button class="carousel-button carousel-button-right">&gt;</button>
             </div>
         </section>
     </main>
     <script>
         document.getElementById('banner-video').playbackRate = 0.5;
+
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector('.carousel-button-right');
+        const prevButton = document.querySelector('.carousel-button-left');
+
+        slides.forEach((slide, index) => {
+            slide.style.left = slideWidth * index + 'px';
+        });
+
+        const moveToSlide = (track, currentSlide, targetSlide) => {
+            track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+            currentSlide.classList.remove('current-slide');
+            targetSlide.classList.add('current-slide');
+        };
+
+        nextButton.addEventListener('click', e => {
+            const currentSlide = track.querySelector('.current-slide') || slides[0];
+            const nextSlide = currentSlide.nextElementSibling || slides[0];
+            moveToSlide(track, currentSlide, nextSlide);
+        });
+
+        prevButton.addEventListener('click', e => {
+            const currentSlide = track.querySelector('.current-slide') || slides[0];
+            const prevSlide = currentSlide.previousElementSibling || slides[slides.length - 1];
+            moveToSlide(track, currentSlide, prevSlide);
+        });
     </script>
 </body>
 </html>
