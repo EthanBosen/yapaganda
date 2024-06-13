@@ -1,12 +1,28 @@
+/* Reset or Normalize CSS */
+/* Normalize.css or CSS Reset */
+
+/* Base Styles */
 body {
     background-color: black;
     color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
-    font-family: 'Caprasimo', sans-serif;
+    font-family: 'Galindo', sans-serif;
+    box-sizing: border-box;
 }
 
+a {
+    color: rgb(78, 201, 129);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #445355;
+}
+
+/* Layout Styles */
 header {
+    text-align: center;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -31,7 +47,7 @@ h1 {
     font-family: 'Caprasimo', sans-serif;
     text-shadow: 5px 5px 10px rgb(0, 0, 0);
     z-index: 1;
-    white-space: nowrap; 
+    white-space: nowrap;
     -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 
@@ -39,37 +55,7 @@ main {
     padding: 20px;
 }
 
-.directory-list ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.directory-list ul p {
-    margin-bottom: 10px; 
-    font-family: 'Caprasimo', sans-serif;
-}
-
-.directory-list ul p a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-}
-
-.directory-list ul p a:hover {
-    color: #445355;
-}
-
-.active {
-    opacity: 0.5;
-    pointer-events: none; 
-}
-
-a {
-    color: rgb(78, 201, 129);
-    font-family: 'Caprasimo', sans-serif;
-}
-
+/* Component Styles */
 .button-container {
     text-align: center;
     margin-bottom: 20px;
@@ -85,7 +71,7 @@ a {
     border: none;
     padding: 10px 20px;
     margin-left: 20px;
-    margin-right: 10px; 
+    margin-right: 10px;
     margin-top: 10px;
     cursor: pointer;
     border-radius: 250px;
@@ -97,106 +83,37 @@ a {
 }
 
 #searchInput {
-    width: 100px; 
+    width: 100px;
     height: 10px;
-    max-width: 200px; 
-    margin-top: 30px; 
-    padding: 8px; 
+    max-width: 200px;
+    margin-top: 30px;
+    padding: 8px;
     font-size: 14px;
-    border: 4px solid rgb(0, 0, 0); 
-    border-radius: 250px; 
-    outline: none; 
-    transition: border-color 0.3s ease; 
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 250px;
+    outline: none;
+    transition: border-color 0.3s ease;
 }
 
 #searchInput:focus {
-    border-color: rgb(47, 116, 75); 
+    border-color: rgb(47, 116, 75);
 }
 
 #searchInput::placeholder {
-    color: rgba(156, 154, 154, 0.8); 
+    color: rgba(156, 154, 154, 0.8);
 }
 
-.video-container, .merch-item, .directory-list ul {
-    position: relative;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.video-container p, .merch-item p, .directory-list ul li {
-    position: absolute;
-    left: 0; 
-    right: 0;
-    margin: 0;
-    font-family: 'Caprasimo', sans-serif;
-}
-
-.video-row, .merch-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; 
-    justify-content: center;
-}
-
-.video-container, .merch-item {
-    flex: 1 1 300px;
-    max-width: 100%;
-}
-
-body {
-    font-family: 'Galindo', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-header {
-    text-align: center;
-    position: relative;
-}
-
-#banner-video {
-    width: 100%;
-    height: auto;
-}
-
-button {
-    font-family: 'Caprasimo', sans-serif;
-    margin: 5px;
-}
-
-/* Ensure the .merch-item maintains the aspect ratio */
-.merch-item {
-    min-width: 200px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.merch-item p {
-    margin-top: 550px;
-}
-
-.carousel-track .merch-item {
-    margin-right: 5px;
-}
-
-.merch-item img {
-    width: 100%;
-    border-radius: 20px;
-    max-width: 250px; 
-    height: 500px;
-    aspect-ratio: 2 / 1; 
-    object-fit: cover; 
-}
-
+/* Carousel Styles */
 .carousel {
     position: relative;
     overflow: hidden;
     width: 100%;
     margin: 80px 0;
+}
+
+.carousel-outer {
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .carousel-track-container {
@@ -211,6 +128,15 @@ button {
     height: 600px;
     width: 70%;
     margin-left: 50px;
+}
+
+.carousel .merch-item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.carousel .merch-item:last-child {
+    margin-right: 0;
 }
 
 .carousel-button {
@@ -230,14 +156,53 @@ button {
 
 .carousel-button-right {
     right: 10px;
-
 }
 
-iframe {
+.merch-item {
+    min-width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.merch-item p {
+    margin-top: 550px;
+}
+
+.merch-item img {
     width: 100%;
-    height: 200px;
+    border-radius: 20px;
+    max-width: 250px;
+    height: 500px;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
 }
 
+/* Directory List Styles */
+.directory-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.directory-list ul p {
+    margin-bottom: 10px;
+    font-family: 'Caprasimo', sans-serif;
+}
+
+.directory-list ul p a {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+.active {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Page-Specific Styles */
 h2 {
     font-family: 'Caprasimo', cursive;
     font-size: 2em;
@@ -246,16 +211,14 @@ h2 {
     -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
 
-/* iPhone screen adjustments */
+/* Responsive Design */
 @media (max-width: 480px) {
     .video-row, .merch-row {
         flex-direction: column;
         align-items: center;
     }
-}
 
-@media only screen and (max-width: 480px) {
     h1 {
-        font-size: 3em; 
+        font-size: 3em;
     }
 }

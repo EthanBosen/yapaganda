@@ -7,19 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Galindo&family=Caprasimo&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="http://appradar.ru/wp-content/themes/appradar/js/jquery.horizontal.scroll.js"></script>
-    <style>
-        .carousel {
-            display: flex;
-            overflow: hidden;
-        }
-        .carousel .merch-item {
-            margin-right: 10px;
-        }
-        .carousel .merch-item:last-child {
-            margin-right: 0;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -83,13 +70,9 @@
         document.getElementById('banner-video').playbackRate = 0.5;
 
         $(document).ready(function(){
-            var w = 0, h = 0;
-            $('.carousel .merch-item').each(function(i, index){
-                w += $(this).outerWidth(true); 
-                h = $(this).outerHeight() > h ? $(this).outerHeight() : h;
+            $('.carousel-outer').scroll(function(e){
+                e.preventDefault();
             });
-            $('.carousel').width(w).height(h);
-            $('.carousel-outer').height(h + 8).horizontalScroll();
         });
     </script>
 </body>
