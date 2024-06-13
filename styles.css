@@ -209,6 +209,8 @@ button {
     display: flex;
     transition: transform 0.5s ease;
     height: 600px;
+    width: 70%;
+    margin-left: 50px;
 }
 
 .carousel-button {
@@ -223,11 +225,12 @@ button {
 }
 
 .carousel-button-left {
-    left: 10px;
+    left: 0px;
 }
 
 .carousel-button-right {
     right: 10px;
+
 }
 
 iframe {
