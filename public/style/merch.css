@@ -109,10 +109,17 @@ main {
     overflow: hidden;
     width: 100%;
     margin: 80px 0;
+    scroll-snap-type: x mandatory; 
+    scroll-padding: 0 24px; /* controls when it will snap */ 
+}
+
+.carousel .merch-item {
+    scroll-snap-align: start;
 }
 
 .carousel-outer {
     overflow-x: auto;
+    margin: 20px;
     white-space: nowrap;
 }
 
@@ -178,23 +185,6 @@ main {
     height: 500px;
     aspect-ratio: 2 / 1;
     object-fit: cover;
-}
-
-/* Directory List Styles */
-.directory-list ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.directory-list ul p {
-    margin-bottom: 10px;
-    font-family: 'Caprasimo', sans-serif;
-}
-
-.directory-list ul p a {
-    color: rgb(255, 255, 255);
-    font-size: 18px;
 }
 
 .active {

@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connected - Merch</title>
-    <link rel="stylesheet" href="/public/style/merch.css"> <!-- Corrected path -->
+    <link rel="stylesheet" href="/public/style/merch.css"> <!-- Corrected path to your CSS file -->
     <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Galindo&family=Caprasimo&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <video id="banner-video" autoplay muted loop playsinline>
-            <source src="/public/media/static.mp4" type="video/mp4"> <!-- Corrected path -->
+            <source src="/public/media/static.mp4" type="video/mp4"> <!-- Corrected path to your video -->
             Your browser does not support the video tag.
         </video>        
         <h1>Connected</h1>
@@ -26,37 +26,37 @@
                 <div class="carousel">
                     <div class="merch-item">
                         <a href="https://bluetshirt.com/collections/all" target="_blank">
-                            <img src="media/bluetshirtpreview.jpg" alt="Blue T-Shirt Collection"> <!-- Corrected path -->
+                            <img src="media/bluetshirtpreview.jpg" alt="Blue T-Shirt Collection"> <!-- Corrected path to your images -->
                         </a>
                         <p>Blue T-Shirt Collection</p>
                     </div>
                     <div class="merch-item">
                         <a href="https://store.taylorgang.com/" target="_blank">
-                            <img src="media/taylorgangpreview.jpg" alt="Taylor Gang Merchandise"> <!-- Corrected path -->
+                            <img src="media/taylorgangpreview.jpg" alt="Taylor Gang Merchandise"> <!-- Corrected path to your images -->
                         </a>
                         <p>Taylor Gang Merchandise</p>
                     </div>
                     <div class="merch-item">
                         <a href="https://jetlifeapparel.com/" target="_blank">
-                            <img src="media/jetlifeapparelpreview.jpg" alt="Jet Life Apparel"> <!-- Corrected path -->
+                            <img src="media/jetlifeapparelpreview.jpg" alt="Jet Life Apparel"> <!-- Corrected path to your images -->
                         </a>
                         <p>Jet Life Apparel</p>
                     </div>
                     <div class="merch-item">
                         <a href="https://midnightorganic.com/" target="_blank">
-                            <img src="media/midnightorganicpreview.jpg" alt="Midnight Organic"> <!-- Corrected path -->
+                            <img src="media/midnightorganicpreview.jpg" alt="Midnight Organic"> <!-- Corrected path to your images -->
                         </a>
                         <p>Midnight Organic</p>
                     </div>
                     <div class="merch-item">
                         <a href="https://shopjasonmartin.com/" target="_blank">
-                            <img src="media/problemvjasonpreview.jpg" alt="Problem vs Jason"> <!-- Corrected path -->
+                            <img src="media/problemvjasonpreview.jpg" alt="Problem vs Jason"> <!-- Corrected path to your images -->
                         </a>
                         <p>Problem vs Jason</p>
                     </div>
                     <div class="merch-item">
                         <a href="https://theetsofficial.com/collections/ets" target="_blank">
-                            <img src="media/ETSpreview.jpg" alt="ETS"> <!-- Corrected path -->
+                            <img src="media/ETSpreview.jpg" alt="ETS"> <!-- Corrected path to your images -->
                         </a>
                         <p>ETS</p>
                     </div>
@@ -64,14 +64,30 @@
             </div>
         </section>
     </main>
+    
+    <!-- JavaScript Section -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- jQuery CDN -->
     <script>
+        // Adjust video playback rate
         document.getElementById('banner-video').playbackRate = 0.5;
 
+        // Optionally prevent scrolling in carousel-outer
         $(document).ready(function(){
-            $('.carousel-outer').scroll(function(e){
+            $('.carousel-outer').on('scroll', function(e){
                 e.preventDefault();
             });
         });
+
+        // Function to scroll to an item smoothly (example: scrolls to the second item)
+        function scrollToItem() {
+            const el = document.querySelector('.carousel .merch-item:nth-child(2)');
+            if (el) {
+                el.scrollIntoView({
+                    behavior: 'smooth',
+                    inline: 'start'
+                });
+            }
+        }
     </script>
 </body>
 </html>
