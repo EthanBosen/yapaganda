@@ -1,0 +1,224 @@
+/* Reset or Normalize CSS */
+/* Normalize.css or CSS Reset */
+
+/* Base Styles */
+body {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    font-family: 'Galindo', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    color: rgb(78, 201, 129);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #445355;
+}
+
+/* Layout Styles */
+header {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+h1 {
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 5em;
+    font-family: 'Caprasimo', sans-serif;
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+    z-index: 1;
+    white-space: nowrap;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+
+main {
+    padding: 20px;
+}
+
+/* Component Styles */
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    font-family: 'Caprasimo', sans-serif;
+    font-size: 1.2em;
+    background-color: rgb(6, 161, 71);
+    color: black;
+    border: none;
+    padding: 5px 25px;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 250px;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: rgb(0, 255, 21);
+}
+
+#searchInput {
+    width: 100px;
+    height: 10px;
+    max-width: 200px;
+    margin-top: 30px;
+    padding: 8px;
+    font-size: 14px;
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 250px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: rgb(47, 116, 75);
+}
+
+#searchInput::placeholder {
+    color: rgba(156, 154, 154, 0.8);
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 80px 0;
+}
+
+.carousel-outer {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.carousel-track-container {
+    display: flex;
+    overflow: hidden;
+    height: 600px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 600px;
+    width: 70%;
+    margin-left: 50px;
+}
+
+.carousel .merch-item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.carousel .merch-item:last-child {
+    margin-right: 0;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.carousel-button-left {
+    left: 0px;
+}
+
+.carousel-button-right {
+    right: 10px;
+}
+
+.merch-item {
+    min-width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.merch-item p {
+    margin-top: 550px;
+}
+
+.merch-item img {
+    width: 100%;
+    border-radius: 20px;
+    max-width: 250px;
+    height: 500px;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+}
+
+/* Directory List Styles */
+.directory-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.directory-list ul p {
+    margin-bottom: 10px;
+    font-family: 'Caprasimo', sans-serif;
+}
+
+.directory-list ul p a {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+.active {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Page-Specific Styles */
+h2 {
+    font-family: 'Caprasimo', cursive;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .video-row, .merch-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+}
