@@ -6,6 +6,20 @@
     <title>Connected - Merch</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Galindo&family=Caprasimo&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://appradar.ru/wp-content/themes/appradar/js/jquery.horizontal.scroll.js"></script>
+    <style>
+        .carousel {
+            display: flex;
+            overflow: hidden;
+        }
+        .carousel .merch-item {
+            margin-right: 10px;
+        }
+        .carousel .merch-item:last-child {
+            margin-right: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,9 +37,8 @@
                 <button onclick="location.href='merch.html'">Merch</button>
                 <button onclick="location.href='directory.html'">Directory</button>
             </div>
-            <div class="carousel">
-                <button class="carousel-button carousel-button-left">&lt;</button>
-                <div class="carousel-track">
+            <div class="carousel-outer">
+                <div class="carousel">
                     <div class="merch-item">
                         <a href="https://bluetshirt.com/collections/all" target="_blank">
                             <img src="bluetshirtpreview.jpg" alt="Blue T-Shirt Collection">
@@ -63,39 +76,20 @@
                         <p>ETS</p>
                     </div>
                 </div>
-                
-                <button class="carousel-button carousel-button-right">&gt;</button>
             </div>
         </section>
     </main>
     <script>
         document.getElementById('banner-video').playbackRate = 0.5;
 
-        const track = document.querySelector('.carousel-track');
-        const slides = Array.from(track.children);
-        const nextButton = document.querySelector('.carousel-button-right');
-        const prevButton = document.querySelector('.carousel-button-left');
-
-        slides.forEach((slide, index) => {
-            slide.style.left = slideWidth * index + 'px';
-        });
-
-        const moveToSlide = (track, currentSlide, targetSlide) => {
-            track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-            currentSlide.classList.remove('current-slide');
-            targetSlide.classList.add('current-slide');
-        };
-
-        nextButton.addEventListener('click', e => {
-            const currentSlide = track.querySelector('.current-slide') || slides[0];
-            const nextSlide = currentSlide.nextElementSibling || slides[0];
-            moveToSlide(track, currentSlide, nextSlide);
-        });
-
-        prevButton.addEventListener('click', e => {
-            const currentSlide = track.querySelector('.current-slide') || slides[0];
-            const prevSlide = currentSlide.previousElementSibling || slides[slides.length - 1];
-            moveToSlide(track, currentSlide, prevSlide);
+        $(document).ready(function(){
+            var w = 0, h = 0;
+            $('.carousel .merch-item').each(function(i, index){
+                w += $(this).outerWidth(true); 
+                h = $(this).outerHeight() > h ? $(this).outerHeight() : h;
+            });
+            $('.carousel').width(w).height(h);
+            $('.carousel-outer').height(h + 8).horizontalScroll();
         });
     </script>
 </body>
