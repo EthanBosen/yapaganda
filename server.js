@@ -4,38 +4,36 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.get('/:page', (req, res) => {
-    const page = req.params.page;
-    const validPages = ['public/index', 'public/merch', 'public/directory']; 
-    if (validPages.includes(page)) {
-        res.sendFile(path.join(__dirname, `${page}.html`));
-    } else {
-        res.status(404).send('Page not found');
-    }
+app.get('/merch', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'merch.html'));
 });
 
-app.get('/search/:query', (req, res) => {
-    const query = req.params.query.toUpperCase();
-    res.send(`You searched for: ${query}`);
+app.get('/directory', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'directory.html'));
 });
 
-// Adding a route to serve the carousel data (if necessary)
-app.get('/carousel-data', (req, res) => {
-    const carouselItems = [
-        { id: 1, image: 'path_to_image1.jpg', title: 'Item 1' },
-        { id: 2, image: 'path_to_image2.jpg', title: 'Item 2' },
-        { id: 3, image: 'path_to_image3.jpg', title: 'Item 3' }
-        // Add more items as needed
-    ];
-    res.json(carouselItems);
+app.use((req, res) => {
+    res.status(404).send('Page not found');
 });
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
+});
+
+app.get('/carousel-data', (req, res) => {
+    const carouselItems = [
+        { id: 1, image: '/public/media/bluetshirtpreview.jpg', title: 'Blue T-Shirt Collection', link: 'https://bluetshirt.com/collections/all' },
+        { id: 2, image: '/public/media/taylorgangpreview.jpg', title: 'Taylor Gang Merchandise', link: 'https://store.taylorgang.com/' },
+        { id: 3, image: '/public/media/jetlifeapparelpreview.jpg', title: 'Jet Life Apparel', link: 'https://jetlifeapparel.com/' },
+        { id: 4, image: '/public/media/midnightorganicpreview.jpg', title: 'Midnight Organic', link: 'https://midnightorganic.com/' },
+        { id: 5, image: '/public/media/problemvjasonpreview.jpg', title: 'Problem vs Jason', link: 'https://shopjasonmartin.com/' },
+        { id: 6, image: '/public/media/ETSpreview.jpg', title: 'ETS', link: 'https://theetsofficial.com/collections/ets' },
+    ];
+    res.json(carouselItems);
 });
