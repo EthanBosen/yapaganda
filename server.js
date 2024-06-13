@@ -7,12 +7,12 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname)));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 app.get('/:page', (req, res) => {
     const page = req.params.page;
-    const validPages = ['index', 'merch', 'directory']; 
+    const validPages = ['public/index', 'public/merch', 'public/directory']; 
     if (validPages.includes(page)) {
         res.sendFile(path.join(__dirname, `${page}.html`));
     } else {

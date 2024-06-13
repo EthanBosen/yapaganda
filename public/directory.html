@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connected - Directory</title>
-    <link rel="stylesheet" href="style/directory.css">
+    <link rel="stylesheet" href="style/directory.css"> <!-- Corrected path -->
     <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Galindo&family=Caprasimo&display=swap" rel="stylesheet">
     <style>
         .search-container {
@@ -15,8 +15,8 @@
 </head>
 <header>
     <video id="banner-video" autoplay muted loop playsinline>
-        <source src="media/static.mp4" type="video/mp4">
-        <img src="fallback.jpg" alt="Connected">
+        <source src="media/static.mp4" type="video/mp4"> <!-- Corrected path -->
+        <img src="media/fallback.jpg" alt="Connected"> <!-- Corrected path -->
         Your browser does not support the video tag.
     </video>        
     <h1>Connected</h1>
@@ -26,9 +26,9 @@
         <section>
             <h2>Directory</h2>
             <div class="button-container">
-                <button onclick="location.href='index.html'">Home</button>
-                <button onclick="location.href='merch.html'">Merch</button>
-                <button onclick="location.href='directory.html'">Social</button>
+                <button id="home-btn" onclick="location.href='index.html'">Music</button>
+                <button id="merch-btn" onclick="location.href='merch.html'">Merch</button>
+                <button id="directory-btn" onclick="location.href='directory.html'">Social</button>
             </div>
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Search" onkeyup="search()">
