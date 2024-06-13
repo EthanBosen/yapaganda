@@ -47,14 +47,6 @@ h1 {
     -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 
-h2 {
-    font-family: 'Caprasimo', cursive;
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 20px;
-    -webkit-text-stroke: 1px rgb(0, 0, 0);
-}
-
 main {
     padding: 20px;
 }
