@@ -62,7 +62,6 @@ h1 {
     -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 
-
 main {
     padding: 20px;
 }
@@ -110,25 +109,39 @@ main {
     flex-direction: column;
     align-items: center;
     margin: 10px;
+    width: 100%;
 }
 
 .video-container {
+    position: relative;
+    width: 50%;
+    padding-bottom: 28.125%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin-bottom: 5px;
+    height: 100%;
+    border: 0;
 }
 
 p {
     margin-top: 5px;
     text-align: center;
+    width: 50%;
 }
 
-@media (max-width: 1024px) {
-    .video-row {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 768px) {
+    .video-container {
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
     }
 
-    h1 {
-        font-size: 3em;
+    p {
+        width: 100%;
     }
 }
