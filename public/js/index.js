@@ -1,25 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Existing code for navigation buttons
+    
     const homeBtn = document.getElementById('home-btn');
     const merchBtn = document.getElementById('merch-btn');
     const directoryBtn = document.getElementById('directory-btn');
 
     homeBtn.addEventListener('click', function() {
-        window.location.href = '/'; // Navigate to homepage
+        window.location.href = '/'; 
     });
 
     merchBtn.addEventListener('click', function() {
-        window.location.href = '/merch'; // Navigate to merch page
+        window.location.href = '/merch'; 
     });
 
     directoryBtn.addEventListener('click', function() {
-        window.location.href = '/directory'; // Navigate to directory page
+        window.location.href = '/directory'; 
     });
 
     // Function to initialize YouTube players
     function onYouTubeIframeAPIReady() {
         videoContainers.forEach(function(container, index) {
-            let videoId = container.querySelector('iframe').getAttribute('src').split('/')[4]; // Extract video ID from iframe src
+            let videoId = container.querySelector('iframe').getAttribute('src').split('/')[4]; 
             players[index] = new YT.Player(container, {
                 videoId: videoId,
                 events: {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Move to the next video
             currentVideoIndex++;
             if (currentVideoIndex >= players.length) {
-                currentVideoIndex = 0; // Loop back to the first video
+                currentVideoIndex = 0; 
             }
             players[currentVideoIndex].playVideo();
         }
@@ -48,11 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    // Initial playback rate adjustment for banner video
+
     document.getElementById('banner-video').playbackRate = 0.5;
 });
 
-// Handle when YouTube API script loads
+
 function onYouTubeIframeAPIReady() {
-    // Call the function inside DOMContentLoaded to initialize players
 }

@@ -22,14 +22,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const directoryBtn = document.getElementById('directory-btn');
 
     homeBtn.addEventListener('click', function() {
-        window.location.href = '/'; // Navigate to homepage
+        window.location.href = '/'; 
     });
 
     merchBtn.addEventListener('click', function() {
-        window.location.href = '/merch'; // Navigate to merch page
+        window.location.href = '/merch'; 
     });
 
     directoryBtn.addEventListener('click', function() {
-        window.location.href = '/directory'; // Navigate to directory page
+        window.location.href = '/directory'; 
     });
 });
