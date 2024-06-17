@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('Error fetching carousel data:', error);
             const errorMessage = document.createElement('p');
-            errorMessage.textContent = 'Failed to load carousel items.';
+            errorMessage.textContent = '...';
             carousel.appendChild(errorMessage);
         });
 
