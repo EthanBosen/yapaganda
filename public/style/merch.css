@@ -114,13 +114,24 @@ main {
 /* Responsive Design */
 @media (max-width: 480px) {
     .carousel {
-        flex-wrap: nowrap;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 0 24px;
     }
 
     .carousel li {
         flex: 0 0 auto;
         width: 80%;
         margin-right: 10px;
+    }
+
+    .carousel li img {
+        width: 200px;  
+        height: 500px; 
+        object-fit: cover; 
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     h1 {

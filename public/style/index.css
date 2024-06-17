@@ -85,25 +85,20 @@ main {
     pointer-events: none;
 }
 
-.video-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .video-group {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
+    margin-top: 50px;
     width: 100%;
 }
 
 .video-container {
     position: relative;
-    width: 50%;
+    width: 80%;
     padding-bottom: 28.125%; /* 16:9 aspect ratio */
     height: 0;
+    margin-bottom: 20px;
     overflow: hidden;
 }
 
@@ -116,11 +111,6 @@ main {
     border: 0;
 }
 
-p {
-    margin-top: 5px;
-    text-align: center;
-    width: 50%;
-}
 
 @media (max-width: 768px) {
     .video-container {

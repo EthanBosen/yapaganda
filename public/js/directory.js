@@ -16,6 +16,11 @@ function search() {
     }
 }
 
+const bannerVideo = document.getElementById('banner-video');
+if (bannerVideo) {
+    bannerVideo.playbackRate = 1.0;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const homeBtn = document.getElementById('home-btn');
     const merchBtn = document.getElementById('merch-btn');

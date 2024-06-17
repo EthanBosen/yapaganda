@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let bannerVideo = document.getElementById('banner-video');
     if (bannerVideo) {
-        bannerVideo.playbackRate = 0.5;
+        bannerVideo.playbackRate = 1.0;
     }
 
 

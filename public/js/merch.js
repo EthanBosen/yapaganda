@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const bannerVideo = document.getElementById('banner-video');
     if (bannerVideo) {
-        bannerVideo.playbackRate = 0.5;
+        bannerVideo.playbackRate = 1.0;
     }
 
     const homeBtn = document.getElementById('home-btn');
