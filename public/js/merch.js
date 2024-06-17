@@ -16,25 +16,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 carousel.appendChild(li);
             });
         })
-        .catch(error => console.error('Error fetching carousel data:', error));
+        .catch(error => {
+            console.error('Error fetching carousel data:', error);
+            const errorMessage = document.createElement('p');
+            errorMessage.textContent = 'Failed to load carousel items.';
+            carousel.appendChild(errorMessage);
+        });
 
-    document.getElementById('banner-video').playbackRate = 0.5;
+    const bannerVideo = document.getElementById('banner-video');
+    if (bannerVideo) {
+        bannerVideo.playbackRate = 0.5;
+    }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const homeBtn = document.getElementById('home-btn');
-        const merchBtn = document.getElementById('merch-btn');
-        const directoryBtn = document.getElementById('directory-btn');
-    
-        homeBtn.addEventListener('click', function() {
-            window.location.href = '/'; 
-        });
-    
-        merchBtn.addEventListener('click', function() {
-            window.location.href = '/merch'; 
-        });
-    
-        directoryBtn.addEventListener('click', function() {
-            window.location.href = '/directory'; 
-        });
+    const homeBtn = document.getElementById('home-btn');
+    const merchBtn = document.getElementById('merch-btn');
+    const directoryBtn = document.getElementById('directory-btn');
+
+    homeBtn.addEventListener('click', function() {
+        window.location.href = '/'; 
+    });
+
+    merchBtn.addEventListener('click', function() {
+        window.location.href = '/merch'; 
+    });
+
+    directoryBtn.addEventListener('click', function() {
+        window.location.href = '/directory'; 
     });
 });
