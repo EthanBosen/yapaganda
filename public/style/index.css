@@ -1,15 +1,17 @@
+
 body {
     background-color: black;
     color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
-    font-family: 'Caprasimo', sans-serif;
+    font-family: 'Galindo', sans-serif;
     box-sizing: border-box;
 }
 
 a {
-    color: rgb(6, 161, 71);
+    color: rgb(78, 201, 129);
     text-decoration: none;
+    font-family: 'Caprasimo', sans-serif;
     -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
 
@@ -35,21 +37,6 @@ header video {
 h1 {
     position: absolute;
     text-align: center;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
-    font-size: 5em;
-    font-family: 'Caprasimo', sans-serif;
-    text-shadow: 5px 5px 10px rgb(0, 0, 0);
-    z-index: 1;
-    white-space: nowrap;
-    -webkit-text-stroke: 1px rgb(255, 255, 255);
-}
-
-.main-heading {
-    text-align: center;
-    position: absolute;
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
