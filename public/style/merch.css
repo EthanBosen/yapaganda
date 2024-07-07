@@ -108,11 +108,11 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 10px;
-    padding: 10px;
+    margin: 5px;
+    padding: 5px;
     border: 1px solid #fff;
-    border-radius: 8px;
-    background-color: #333;
+    border-radius: 10px;
+    background-color: #0f0f0f;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -132,7 +132,7 @@ main {
     width: 200px;
     height: 500px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
