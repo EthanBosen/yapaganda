@@ -138,7 +138,7 @@ main {
 
 @media (max-width: 768px) {
     .video-container {
-        width: 100%;
+        width: 90%;
         padding-bottom: 56.25%; /* 16:9 aspect ratio */
     }
     .video-container iframe {
