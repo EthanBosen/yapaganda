@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(carouselItems => {
             carouselItems.forEach(item => {
                 const li = document.createElement('li');
-                li.classList.add('merch-item');
+                li.classList.add('merch-card');
                 li.innerHTML = `
                     <a href="${item.link}" target="_blank">
                         <img src="${item.image}" alt="${item.title}">
