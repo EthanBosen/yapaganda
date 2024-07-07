@@ -147,7 +147,7 @@ main {
 
     .merch-card {
         flex: 0 0 auto;
-        width: 100px;
+        width: 200px;
         height: 400px;
         margin-right: 5px;
     }
