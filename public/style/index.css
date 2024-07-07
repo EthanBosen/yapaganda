@@ -150,14 +150,14 @@ main {
         font-size: 10px;
     }
 
-    a {
+    .video-container a {
         color:  rgba(9, 255, 111, 0.466);
         text-decoration: none;
         font-family: 'Caprasimo', sans-serif;
         -webkit-text-stroke: .3px rgb(0, 0, 0);
-        text-align: center;
-        margin-right: 10px;
-        margin-left: 10px;
+        margin-right: 15px;
+        margin-left: 15px;
+        overflow: hidden;
     }
 
     h1 {
