@@ -150,9 +150,14 @@ main {
         font-size: 10px;
     }
 
-    p {
-        width: 100%;
+    a {
+        color:  rgba(9, 255, 111, 0.466);
+        text-decoration: none;
+        font-family: 'Caprasimo', sans-serif;
+        -webkit-text-stroke: .3px rgb(0, 0, 0);
+        text-align: center;
     }
+
     h1 {
         font-size: 3em;
     }
