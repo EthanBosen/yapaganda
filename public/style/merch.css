@@ -110,13 +110,14 @@ main {
     text-align: center;
 }
 
-.carousel li a {
+.carousel a {
     scroll-snap-align: start;
     list-style-type: none;
     margin-right: 1px;
     text-align: center;
     color: rgba(9, 255, 111, 0.466);
     text-decoration: none;
+    position: relative;
 }
 
 .carousel li a:hover {
