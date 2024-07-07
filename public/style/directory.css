@@ -125,7 +125,11 @@ main {
         align-items: center;
     }
 
-    h1 {
+    .header h1 {
+        margin-top: 10px;
+        text-align: center;
         font-size: 3em;
     }
+
 }
+

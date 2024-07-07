@@ -150,6 +150,12 @@ main {
         font-size: 10px;
     }
 
+    .header h1 {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 3em;
+    }
+
     .video-container a {
         color:  rgba(9, 255, 111, 0.466);
         text-decoration: none;
@@ -160,8 +166,5 @@ main {
         overflow: hidden;
     }
 
-    h1 {
-        font-size: 3em;
-    }
 }
 
