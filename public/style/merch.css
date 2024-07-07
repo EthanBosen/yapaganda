@@ -103,14 +103,14 @@ main {
     scroll-padding: 0 24px;
 }
 
-.carousel li {
+.merch-card li {
     scroll-snap-align: start;
     list-style-type: none;
     margin-right: 20px;
     text-align: center;
 }
 
-.carousel a {
+.merch-card a {
     scroll-snap-align: start;
     list-style-type: none;
     margin-right: 1px;
@@ -120,11 +120,11 @@ main {
     padding-top: 10px;
 }
 
-.carousel  a:hover {
+.merch-card  a:hover {
     color:rgb(0, 255, 21);
 }
 
-.carousel li img {
+.merch-card img {
     width: 200px;  
     height: 500px; 
     object-fit: cover; 
@@ -132,16 +132,6 @@ main {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.carousel li p {
-    margin-top: 20px;
-    font-family: 'Caprasimo', sans-serif;
-    -webkit-text-stroke: 1px rgb(0, 0, 0);
-}
-
-.active {
-    opacity: 0.5;
-    pointer-events: none;
-}
 
 /* Responsive Design */
 @media (max-width: 480px) {
@@ -152,13 +142,13 @@ main {
         scroll-padding: 0 24px;
     }
 
-    .carousel li {
+    .merch-card li {
         flex: 0 0 auto;
         width: 80%;
         margin-right: 10px;
     }
 
-    .carousel li img {
+    .merch-card li img {
         width: 200px;  
         height: 500px; 
         object-fit: cover; 
