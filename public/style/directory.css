@@ -94,7 +94,7 @@ main {
 }
 
 #searchInput::placeholder {
-    color: rgba(156, 154, 154, 0.8);
+    color: rgba(211, 211, 211, 0.541);
 }
 
 .directory-list ul {

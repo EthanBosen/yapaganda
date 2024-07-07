@@ -92,8 +92,7 @@ main {
 }
 
 #searchInput::placeholder {
-    color: rgba(0, 0, 0, 0.8);
-    -webkit-text-stroke: .3px rgba(9, 255, 111, 0.466);
+    color: rgba(211, 211, 211, 0.541);
 }
 
 .carousel {
@@ -110,7 +109,7 @@ main {
     justify-content: center;
     margin: 5px;
     padding: 5px;
-    border: 1px solid #fff;
+    border: 1px solid #ffffff00;
     border-radius: 10px;
     background-color: #0f0f0f;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

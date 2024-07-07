@@ -9,10 +9,10 @@ body {
 }
 
 a {
-    color: rgb(78, 201, 129);
+    color:  rgba(9, 255, 111, 0.466);
     text-decoration: none;
     font-family: 'Caprasimo', sans-serif;
-    -webkit-text-stroke: .1px rgba(9, 255, 111, 0.466);
+    -webkit-text-stroke: .3px rgb(0, 0, 0);
 }
 
 a:hover {
@@ -102,19 +102,14 @@ main {
 }
 
 #searchInput::placeholder {
-    color: rgba(156, 154, 154, 0.8);
-}
-
-.active {
-    opacity: 0.5;
-    pointer-events: none;
+    color: rgba(211, 211, 211, 0.541);
 }
 
 .video-group {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 20px;
     width: 100%;
 }
 
@@ -127,13 +122,17 @@ main {
     overflow: hidden;
 }
 
+.video-container a {
+    text-align: center;
+
+}
+
 .video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: 0;
 }
 
 
@@ -141,6 +140,14 @@ main {
     .video-container {
         width: 100%;
         padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    }
+    .video-container iframe {
+        position: absolute;
+        margin-right: 10px;
+        margin-left: 10px;
+        width: 100%;
+        height: 100%;
+        font-size: 10px;
     }
 
     p {
