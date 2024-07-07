@@ -9,15 +9,6 @@ body {
     box-sizing: border-box;
 }
 
-a {
-    color: rgba(9, 255, 111, 0.466);
-    text-decoration: none;
-}
-
-a:hover {
-    color: #445355;
-}
-
 header {
     text-align: center;
     position: relative;
@@ -117,6 +108,19 @@ main {
     list-style-type: none;
     margin-right: 20px;
     text-align: center;
+}
+
+.carousel li a {
+    scroll-snap-align: start;
+    list-style-type: none;
+    margin-right: 1px;
+    text-align: center;
+    color: rgba(9, 255, 111, 0.466);
+    text-decoration: none;
+}
+
+.carousel li a:hover {
+    color:  rgb(0, 255, 21);
 }
 
 .carousel li img {
