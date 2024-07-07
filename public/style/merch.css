@@ -13,20 +13,28 @@ header {
     text-align: center;
     position: relative;
     width: 100%;
+    display: flex;
+    justify-content: center;
     overflow: hidden;
 }
 
-header video {
+header .video-container {
     margin-top: 30px;
     width: 100%;
-    height: auto;
-    max-height: 150px;
-    display: block;
+    position: relative;
+    margin-bottom: -30px;
+}
+
+header .video-container video {
+    width: 40%;
+    max-height: auto;
+    border-radius: 50px;
 }
 
 h1 {
     position: absolute;
     text-align: center;
+    margin-top: 70px;
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -40,7 +48,7 @@ h1 {
 }
 
 main {
-    padding: 20px;
+    margin-top: 10px;
 }
 
 .button-container {
