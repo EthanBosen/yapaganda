@@ -18,7 +18,7 @@ function search() {
 
 const bannerVideo = document.getElementById('banner-video');
 if (bannerVideo) {
-    bannerVideo.playbackRate = 1.0;
+    bannerVideo.playbackRate = 0.5;
 }
 
 document.addEventListener('DOMContentLoaded', function() {

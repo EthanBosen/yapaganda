@@ -17,10 +17,10 @@ header {
 }
 
 header video {
+    margin-top: 30px;
     width: 100%;
     height: auto;
-    max-height: 200px;
-    object-fit: cover;
+    max-height: 150px;
     display: block;
 }
 
