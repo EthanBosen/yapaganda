@@ -117,11 +117,11 @@ main {
     text-align: center;
     color: rgba(9, 255, 111, 0.466);
     text-decoration: none;
-    position: relative;
+    padding-top: 10px;
 }
 
-.carousel li a:hover {
-    color:  rgb(0, 255, 21);
+.carousel  a:hover {
+    color:rgb(0, 255, 21);
 }
 
 .carousel li img {
