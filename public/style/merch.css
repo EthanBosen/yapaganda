@@ -151,6 +151,10 @@ main {
         margin-right: 5px;
     }
 
+    .header {
+        margin-top: 10px;
+    }
+    
     .merch-card img {
         width: 180px;
         height: 400px;
