@@ -150,11 +150,8 @@ main {
         font-size: 10px;
     }
 
-    .header h1 {
-            margin-top: 30px;
-    }
-
     h1 {
+        margin-top: 30px;
         font-size: 50px;
         }
 
