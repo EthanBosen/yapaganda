@@ -10,7 +10,7 @@ body {
 }
 
 a {
-    color: rgb(78, 201, 129);
+    color: rgba(9, 255, 111, 0.466);
     text-decoration: none;
 }
 
@@ -45,7 +45,7 @@ h1 {
     text-shadow: 5px 5px 10px rgb(0, 0, 0);
     z-index: 1;
     white-space: nowrap;
-    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    -webkit-text-stroke: .1px rgba(9, 255, 111, 0.466);
 }
 
 main {
@@ -62,7 +62,7 @@ main {
 .button-container button {
     font-family: 'Caprasimo', sans-serif;
     font-size: 1.2em;
-    background-color: rgb(6, 161, 71);
+    background-color: rgba(9, 255, 111, 0.466);
     color: black;
     border: none;
     padding: 5px 25px;
@@ -101,7 +101,8 @@ main {
 }
 
 #searchInput::placeholder {
-    color: rgba(156, 154, 154, 0.8);
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-text-stroke: .3px rgba(9, 255, 111, 0.466);
 }
 
 .carousel {

@@ -12,7 +12,7 @@ a {
     color: rgb(78, 201, 129);
     text-decoration: none;
     font-family: 'Caprasimo', sans-serif;
-    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    -webkit-text-stroke: .1px rgba(9, 255, 111, 0.466);
 }
 
 a:hover {
@@ -46,7 +46,7 @@ h1 {
     text-shadow: 5px 5px 10px rgb(0, 0, 0);
     z-index: 1;
     white-space: nowrap;
-    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    -webkit-text-stroke: .1px rgba(9, 255, 111, 0.466);
 }
 
 main {
@@ -63,7 +63,7 @@ main {
 .button-container button {
     font-family: 'Caprasimo', sans-serif;
     font-size: 1.2em;
-    background-color: rgb(6, 161, 71);
+    background-color: rgba(9, 255, 111, 0.466);
     color: black;
     border: none;
     padding: 5px 25px;
