@@ -126,12 +126,12 @@ main {
     }
 
     .header h1 {
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
     h1 {
-        font-size: 30px;
-        }
+        font-size: 50px;
+    }
 
 }
 
