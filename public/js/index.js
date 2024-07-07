@@ -60,19 +60,20 @@ function playNextVideo() {
 }
 
 function search() {
-    var input, filter, ul, li, a, i, txtValue;
+    var input, filter, div, iframes, i, txtValue;
     input = document.getElementById('searchInput');
     filter = input.value.toUpperCase();
-    ul = document.getElementById('artistList');
-    li = ul.getElementsByTagName('li');
+    div = document.getElementById('artistList');
+    iframes = div.getElementsByTagName('iframe');
 
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName('a')[0];
-        txtValue = a.textContent || a.innerText;
+    for (i = 0; i < iframes.length; i++) {
+        txtValue = iframes[i].getAttribute('data-searchable-text');
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = '';
+            iframes[i].parentNode.style.display = '';
         } else {
-            li[i].style.display = 'none';
+            iframes[i].parentNode.style.display = 'none';
         }
     }
 }
+
+
