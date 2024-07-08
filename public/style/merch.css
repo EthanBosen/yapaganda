@@ -159,6 +159,28 @@ main {
         font-size: 3em;
         margin-top: 33px;
     }
+    
+    .carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 0 24px;
+    }
+    
+    .merch-card {
+        flex: 0 0 auto;
+        width: 200px;
+        height: 400px;
+        margin-right: 5px;
+    }
+        
+    .merch-card img {
+        width: 180px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
 }
     
 @media (max-width: 480px) {
