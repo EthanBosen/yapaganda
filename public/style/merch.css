@@ -118,6 +118,8 @@ main {
 
 .merch-card p {
     margin-bottom: 10px;
+    font-family: 'Caprasimo', sans-serif;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);  
 }
 
 .merch-card a {
