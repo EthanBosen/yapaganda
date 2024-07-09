@@ -21,12 +21,20 @@ document.addEventListener('DOMContentLoaded', function() {
         bannerVideo.playbackRate = 0.5;
     }
 
-
-    // YouTube IFrame API
+    // youtube api 
     let tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     let firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // This function creates an <iframe> (and YouTube player)
+    // after the API code downloads.
+    let apiKey = "AIzaSyAwl2b2wSx6iSkZ6sHTXUu_okcAzSbqR1c"; // Replace with your actual API key
+
+    // Ensuring the API key is properly appended to the script URL
+    tag.onload = function() {
+        tag.src += "&key=" + apiKey;
+    };
 });
 
 let players = [];
@@ -35,13 +43,21 @@ let currentVideoIndex = 0;
 function onYouTubeIframeAPIReady() {
     const videoContainers = document.querySelectorAll('.video-container');
     videoContainers.forEach((container, index) => {
-        const iframe = container.querySelector('iframe');
-        players[index] = new YT.Player(iframe, {
+        const videoId = container.querySelector('a').href.split('v=')[1];
+        players[index] = new YT.Player(container.querySelector('iframe'), {
+            height: '360',
+            width: '640',
+            videoId: videoId,
             events: {
+                'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
             }
         });
     });
+}
+
+function onPlayerReady(event) {
+    event.target.playVideo();
 }
 
 function onPlayerStateChange(event) {
@@ -51,12 +67,10 @@ function onPlayerStateChange(event) {
 }
 
 function playNextVideo() {
-    if (players.length > 0) {
-        const nextVideoIndex = (currentVideoIndex + 1) % players.length;
-        players[currentVideoIndex].pauseVideo();
-        players[nextVideoIndex].playVideo();
-        currentVideoIndex = nextVideoIndex;
-    }
+    const nextVideoIndex = (currentVideoIndex + 1) % players.length;
+    players[currentVideoIndex].stopVideo();
+    players[nextVideoIndex].playVideo();
+    currentVideoIndex = nextVideoIndex;
 }
 
 function search() {
@@ -75,5 +89,3 @@ function search() {
         }
     }
 }
-
-
