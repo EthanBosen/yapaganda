@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
     const homeBtn = document.getElementById('home-btn');
     const merchBtn = document.getElementById('merch-btn');
     const directoryBtn = document.getElementById('directory-btn');
@@ -21,17 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
         bannerVideo.playbackRate = 0.5;
     }
 
-    // youtube api 
+    // Load YouTube API script
     let tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     let firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    // This function creates an <iframe> (and YouTube player)
-    // after the API code downloads.
-    let apiKey = "AIzaSyAwl2b2wSx6iSkZ6sHTXUu_okcAzSbqR1c"; // Replace with your actual API key
+    let apiKey = "AIzaSyAwl2b2wSx6iSkZ6sHTXUu_okcAzSbqR1c"; 
 
-    // Ensuring the API key is properly appended to the script URL
     tag.onload = function() {
         tag.src += "&key=" + apiKey;
     };

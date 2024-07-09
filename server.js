@@ -1,3 +1,4 @@
+const fetch = require('node-fetch').default;
 const express = require('express');
 const path = require('path');
 
@@ -18,25 +19,27 @@ app.get('/directory', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'directory.html'));
 });
 
+app.get('/carousel-data', async (req, res) => {
+    try {
+        // Example: Fetching carousel data from an external API (replace with your actual endpoint)
+        const response = await fetch('https://googleads.g.doubleclick.net/pagead/viewthroughconversion/962985656/?backend=innertube&cname=56&cver=20240707&foc_id=8Gk3U3dqXoMiwPN7sefbXg&label=followon_view&ptype=no_rmkt&random=254075896&cv_attributed=0');
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch carousel data');
+        }
+
+        const data = await response.json();
+        res.json(data);
+    } catch (error) {
+        console.error('Error fetching carousel data:', error);
+        res.status(500).json({ error: 'Failed to fetch carousel data' });
+    }
+});
+
 app.use((req, res) => {
     res.status(404).send('Page not found');
 });
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
-});
-
-app.get('/carousel-data', (req, res) => {
-    const carouselItems = [
-        { id: 1, image: '/public/media/bluetshirtpreview.jpg', title: 'Blue T-Shirt Collection', link: 'https://bluetshirt.com/collections/all' },
-        { id: 2, image: '/public/media/midnightorganicpreview.jpg', title: 'Midnight Organic', link: 'https://midnightorganic.com/' },
-        { id: 3, image: '/public/media/ETSpreview.jpg', title: 'ETS', link: 'https://theetsofficial.com/collections/ets' },
-        { id: 4, image: '/public/media/taylorgangpreview.jpg', title: 'Taylor Gang Merchandise', link: 'https://store.taylorgang.com/' },
-        { id: 5, image: '/public/media/jetlifeapparelpreview.jpg', title: 'Jet Life Apparel', link: 'https://jetlifeapparel.com/' },
-        { id: 6, image: '/public/media/media/domkennedypreview.jpg.jpg', title: 'OPM', link: 'https://opmopm.us/' },
-        { id: 7, image: '/public/media/djquikpreview.jpg', title: 'DJ Quik', link: 'https://www.djquikstore.com/' },
-        { id: 8, image: '/public/media/problemvjasonpreview.jpg', title: 'Problem vs Jason', link: 'https://shopjasonmartin.com/' },
-        { id: 9, image: '/public/media/jay305preview.jpg', title: 'Jay 305', link: 'https://jay305.komi.io' },
-    ];
-    res.json(carouselItems);
 });
