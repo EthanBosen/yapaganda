@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    color: rgb(255, 255, 255);
+    color: white;
     margin: 0;
     padding: 0;
     font-family: 'Galindo', sans-serif;
@@ -11,7 +11,7 @@ a {
     color: rgba(9, 255, 111, 0.466);
     text-decoration: none;
     font-family: 'Caprasimo', sans-serif;
-    -webkit-text-stroke: .3px rgb(0, 0, 0);
+    -webkit-text-stroke: 0.3px black;
 }
 
 a:hover {
@@ -31,7 +31,6 @@ header {
 
 header .video-container video {
     width: 400px;
-    max-height: auto;
     border-radius: 50px;
     margin-bottom: 10px;
 }
@@ -41,13 +40,13 @@ h1 {
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
+    color: black;
     font-size: 5em;
     font-family: 'Caprasimo', sans-serif;
-    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+    text-shadow: 5px 5px 10px black;
     z-index: 1;
     white-space: nowrap;
-    -webkit-text-stroke: .5px rgba(9, 255, 111, 0.466);  
+    -webkit-text-stroke: 0.5px rgba(9, 255, 111, 0.466);
 }
 
 main {
@@ -68,8 +67,7 @@ main {
     color: black;
     border: none;
     padding: 5px 25px;
-    margin-left: 20px;
-    margin-right: 10px;
+    margin: 0 10px;
     cursor: pointer;
     border-radius: 250px;
     transition: background-color 0.3s ease;
@@ -77,7 +75,6 @@ main {
 
 .button-container button:hover {
     background-color: rgb(0, 255, 21);
-    padding: 5px 25px;
 }
 
 .search-container {
@@ -91,7 +88,7 @@ main {
     padding: 8px;
     font-size: 14px;
     text-align: center;
-    border: 4px solid rgb(0, 0, 0);
+    border: 4px solid black;
     border-radius: 250px;
     outline: none;
     transition: border-color 0.3s ease;
@@ -116,7 +113,7 @@ main {
 main .video-container {
     position: relative;
     width: 80%;
-    padding-bottom: 28.125%; 
+    padding-bottom: 28.125%;
     height: 0;
     margin-bottom: 20px;
     overflow: hidden;
@@ -136,19 +133,11 @@ main .video-container {
 
 @media (max-width: 768px) {
     header {
-        width: 100%;
         height: 50%;
     }
 
     header .video-container video {
         width: 50%;
-        border-radius: 50px;
-    }
-
-    header .video-container iframe {
-        position: absolute;
-        width: 100%;
-        height: 100%;
     }
 
     h1 {
@@ -164,9 +153,7 @@ main .video-container {
 
     header .video-container video {
         width: 50%;
-        border-radius: 50px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin: 0 10px;
     }
 
     h1 {

@@ -2,7 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.carousel');
 
     fetch('/carousel-data')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch carousel data');
+            }
+            return response.json();
+        })
         .then(carouselItems => {
             carouselItems.forEach(item => {
                 const li = document.createElement('li');
@@ -19,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('Error fetching carousel data:', error);
             const errorMessage = document.createElement('p');
-            errorMessage.textContent = '...';
+            errorMessage.textContent = '|||';
             carousel.appendChild(errorMessage);
         });
 
@@ -33,35 +38,37 @@ document.addEventListener('DOMContentLoaded', function() {
     const directoryBtn = document.getElementById('directory-btn');
 
     homeBtn.addEventListener('click', function() {
-        window.location.href = '/'; 
+        window.location.href = '/';
     });
 
     merchBtn.addEventListener('click', function() {
-        window.location.href = '/merch'; 
+        window.location.href = '/merch';
     });
 
     directoryBtn.addEventListener('click', function() {
-        window.location.href = '/directory'; 
-    });  
-});
+        window.location.href = '/directory';
+    });
 
-function search() {
-    var input, filter, ul, li, a, i, txtValue, dataNameValue;
-    input = document.getElementById('searchInput');
-    filter = input.value.toUpperCase();
-    ul = document.getElementById('artistList');
-    li = ul.getElementsByClassName('merch-card');
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('keyup', search);
 
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName('a')[0];
-        txtValue = a.textContent || a.innerText;
-        dataNameValue = a.getAttribute('data-name').toUpperCase();
+    function search() {
+        var input, filter, ul, li, a, i, txtValue, dataNameValue;
+        input = document.getElementById('searchInput');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById('artistList');
+        li = ul.getElementsByClassName('merch-card');
 
-        if (txtValue.toUpperCase().indexOf(filter) > -1 || dataNameValue.indexOf(filter) > -1) {
-            li[i].style.display = ''; 
-        } else {
-            li[i].style.display = 'none'; 
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName('a')[0];
+            txtValue = a.textContent || a.innerText;
+            dataNameValue = a.getAttribute('data-name').toUpperCase();
+
+            if (txtValue.toUpperCase().indexOf(filter) > -1 || dataNameValue.indexOf(filter) > -1) {
+                li[i].style.display = '';
+            } else {
+                li[i].style.display = 'none';
+            }
         }
     }
-}
-
+});

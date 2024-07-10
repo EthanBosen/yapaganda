@@ -4,84 +4,68 @@ document.addEventListener('DOMContentLoaded', function() {
     const directoryBtn = document.getElementById('directory-btn');
 
     homeBtn.addEventListener('click', function() {
-        window.location.href = '/'; 
+        window.location.href = '/';
     });
 
     merchBtn.addEventListener('click', function() {
-        window.location.href = '/merch'; 
+        window.location.href = '/merch';
     });
 
     directoryBtn.addEventListener('click', function() {
-        window.location.href = '/directory'; 
+        window.location.href = '/directory';
     });
 
-    let bannerVideo = document.getElementById('banner-video');
+    const bannerVideo = document.getElementById('banner-video');
     if (bannerVideo) {
         bannerVideo.playbackRate = 0.5;
     }
 
-    // Load YouTube API script
-    let tag = document.createElement('script');
+    const tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
-    let firstScriptTag = document.getElementsByTagName('script')[0];
+    const firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    let apiKey = "AIzaSyAwl2b2wSx6iSkZ6sHTXUu_okcAzSbqR1c"; 
+    let players = [];
 
-    tag.onload = function() {
-        tag.src += "&key=" + apiKey;
+    window.onYouTubeIframeAPIReady = function() {
+        const videoContainers = document.querySelectorAll('iframe');
+        videoContainers.forEach((iframe, index) => {
+            const videoId = getYouTubeVideoId(iframe.getAttribute('src'));
+            const player = new YT.Player(iframe, {
+                videoId: videoId,
+                playerVars: {
+                    autoplay: 0,
+                    controls: 1
+                },
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+            players.push(player);
+        });
     };
-});
 
-let players = [];
-let currentVideoIndex = 0;
+    function getYouTubeVideoId(url) {
+        const videoId = url.split('/').pop().split('?')[0];
+        return videoId;
+    }
+    
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('keyup', search);
 
-function onYouTubeIframeAPIReady() {
-    const videoContainers = document.querySelectorAll('.video-container');
-    videoContainers.forEach((container, index) => {
-        const videoId = container.querySelector('a').href.split('v=')[1];
-        players[index] = new YT.Player(container.querySelector('iframe'), {
-            height: '360',
-            width: '640',
-            videoId: videoId,
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
+    function search() {
+        const filter = searchInput.value.toLowerCase();
+        const videoContainers = document.querySelectorAll('.video-container');
+
+        videoContainers.forEach(container => {
+            const aTag = container.querySelector('a');
+            const text = aTag ? aTag.textContent.toLowerCase() : '';
+
+            if (text.includes(filter)) {
+                container.style.display = '';
+            } else {
+                container.style.display = 'none';
             }
         });
-    });
-}
-
-function onPlayerReady(event) {
-    event.target.playVideo();
-}
-
-function onPlayerStateChange(event) {
-    if (event.data === YT.PlayerState.ENDED) {
-        playNextVideo();
     }
-}
-
-function playNextVideo() {
-    const nextVideoIndex = (currentVideoIndex + 1) % players.length;
-    players[currentVideoIndex].stopVideo();
-    players[nextVideoIndex].playVideo();
-    currentVideoIndex = nextVideoIndex;
-}
-
-function search() {
-    var input, filter, div, iframes, i, txtValue;
-    input = document.getElementById('searchInput');
-    filter = input.value.toUpperCase();
-    div = document.getElementById('artistList');
-    iframes = div.getElementsByTagName('iframe');
-
-    for (i = 0; i < iframes.length; i++) {
-        txtValue = iframes[i].getAttribute('data-searchable-text');
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            iframes[i].parentNode.style.display = '';
-        } else {
-            iframes[i].parentNode.style.display = 'none';
-        }
-    }
-}
+});
