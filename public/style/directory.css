@@ -8,8 +8,9 @@ body {
 }
 
 a {
-    color: rgb(78, 201, 129);
+    color: rgba(9, 255, 111, 0.466);
     text-decoration: none;
+    -webkit-text-stroke: .4px rgb(0, 0, 0);
 }
 
 header {
