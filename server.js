@@ -19,23 +19,6 @@ app.get('/directory', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'directory.html'));
 });
 
-app.get('/carousel-data', async (req, res) => {
-    try {
-    
-        const response = await fetch('https://googleads.g.doubleclick.net/pagead/viewthroughconversion/962985656/?backend=innertube&cname=56&cver=20240707&foc_id=8Gk3U3dqXoMiwPN7sefbXg&label=followon_view&ptype=no_rmkt&random=254075896&cv_attributed=0');
-
-        if (!response.ok) {
-            throw new Error('Failed to fetch carousel data');
-        }
-
-        const data = await response.json();
-        res.json(data);
-    } catch (error) {
-        console.error('Error fetching carousel data:', error);
-        res.status(500).json({ error: 'Failed to fetch carousel data' });
-    }
-});
-
 app.use((req, res) => {
     res.status(404).send('Page not found');
 });

@@ -127,6 +127,10 @@ main {
     -webkit-text-stroke: 1px rgb(0, 0, 0);  
 }
 
+.merch-card p:hover {
+    color: rgb(0, 255, 21);
+}
+
 .merch-card a {
     display: flex; /* Ensures the entire card area is clickable */
     flex-direction: column;
@@ -136,10 +140,6 @@ main {
     text-decoration: none;
     text-align: center;
     width: 100%;
-}
-
-.merch-card a:hover {
-    color: rgb(0, 255, 21);
 }
 
 .merch-card img {
