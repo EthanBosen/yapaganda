@@ -1,74 +1,86 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.querySelector('.carousel');
+    const homeBtn = document.getElementById('home-btn');
+    const merchBtn = document.getElementById('merch-btn');
+    const directoryBtn = document.getElementById('directory-btn');
+    
+    gtag('event', 'page_view', {
+        'traffic_type': document.body.getAttribute('data-traffic-type')
+    });
 
-    fetch('/carousel-data')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to fetch carousel data');
-            }
-            return response.json();
-        })
-        .then(carouselItems => {
-            carouselItems.forEach(item => {
-                const li = document.createElement('li');
-                li.classList.add('merch-card');
-                li.innerHTML = `
-                    <a href="${item.link}" target="_blank">
-                        <img src="${item.image}" alt="${item.title}">
-                    </a>
-                    <p>${item.title}</p>
-                `;
-                carousel.appendChild(li);
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching carousel data:', error);
-            const errorMessage = document.createElement('p');
-            errorMessage.textContent = '|||';
-            carousel.appendChild(errorMessage);
+    homeBtn.addEventListener('click', function() {
+        gtag('event', 'button_click', {
+            'event_category': 'Navigation',
+            'event_label': 'Home Button',
+            'traffic_type': document.body.getAttribute('data-traffic-type')
         });
+        window.location.href = '/';
+    });
+
+    merchBtn.addEventListener('click', function() {
+        gtag('event', 'button_click', {
+            'event_category': 'Navigation',
+            'event_label': 'Merch Button',
+            'traffic_type': document.body.getAttribute('data-traffic-type')
+        });
+        window.location.href = '/merch';
+    });
+
+    directoryBtn.addEventListener('click', function() {
+        gtag('event', 'button_click', {
+            'event_category': 'Navigation',
+            'event_label': 'Directory Button',
+            'traffic_type': document.body.getAttribute('data-traffic-type')
+        });
+        window.location.href = '/directory';
+    });
 
     const bannerVideo = document.getElementById('banner-video');
     if (bannerVideo) {
         bannerVideo.playbackRate = 0.5;
     }
 
-    const homeBtn = document.getElementById('home-btn');
-    const merchBtn = document.getElementById('merch-btn');
-    const directoryBtn = document.getElementById('directory-btn');
+    let players = [];
 
-    homeBtn.addEventListener('click', function() {
-        window.location.href = '/';
-    });
+    window.onYouTubeIframeAPIReady = function() {
+        const videoContainers = document.querySelectorAll('iframe');
+        videoContainers.forEach((iframe, index) => {
+            const videoId = getYouTubeVideoId(iframe.getAttribute('src'));
+            const player = new YT.Player(iframe, {
+                videoId: videoId,
+                playerVars: {
+                    autoplay: 0,
+                    controls: 1
+                },
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+            players.push(player);
+        });
+    };
 
-    merchBtn.addEventListener('click', function() {
-        window.location.href = '/merch';
-    });
-
-    directoryBtn.addEventListener('click', function() {
-        window.location.href = '/directory';
-    });
+    function getYouTubeVideoId(url) {
+        const videoId = url.split('/').pop().split('?')[0];
+        return videoId;
+    }
 
     const searchInput = document.getElementById('searchInput');
     searchInput.addEventListener('keyup', search);
 
     function search() {
-        var input, filter, ul, li, a, i, txtValue, dataNameValue;
-        input = document.getElementById('searchInput');
-        filter = input.value.toUpperCase();
-        ul = document.getElementById('artistList');
-        li = ul.getElementsByClassName('merch-card');
+        const filter = searchInput.value.toLowerCase();
+        const merchCards = document.querySelectorAll('.merch-card');
 
-        for (i = 0; i < li.length; i++) {
-            a = li[i].getElementsByTagName('a')[0];
-            txtValue = a.textContent || a.innerText;
-            dataNameValue = a.getAttribute('data-name').toUpperCase();
+        merchCards.forEach(card => {
+            const aTag = card.querySelector('a');
+            const text = aTag ? aTag.textContent.toLowerCase() : '';
+            const dataName = aTag ? aTag.getAttribute('data-name').toLowerCase() : '';
 
-            if (txtValue.toUpperCase().indexOf(filter) > -1 || dataNameValue.indexOf(filter) > -1) {
-                li[i].style.display = '';
+            if (text.includes(filter) || dataName.includes(filter)) {
+                card.style.display = '';
             } else {
-                li[i].style.display = 'none';
+                card.style.display = 'none';
             }
-        }
+        });
     }
 });

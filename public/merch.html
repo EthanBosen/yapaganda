@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>yapaganda - Merch</title>
-    <link rel="stylesheet" href="style/merch.css"> 
-    <script src = "js/merch.js"></script>
+    <link rel="stylesheet" href="style/merch.css">
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="js/merch.js" defer></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0XR96421QL"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -14,19 +14,26 @@
         gtag('js', new Date());
 
         gtag('config', 'G-0XR96421QL');
-    </script>  
-    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Galindo&family=Caprasimo&display=swap" rel="stylesheet"> 
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6162024378894654" crossorigin="anonymous"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-6162024378894654",
+            enable_page_level_ads: true
+        });
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Galindo&family=Caprasimo&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body data-traffic-type="internal">
 <header>
     <div class="video-container">
-        <video autoplay muted loop playsinline>
+        <video autoplay muted loop playsinline id="banner-video">
             <source src="media/static.mp4" type="video/mp4">
             <img src="/public/media/fallback.jpg" alt="yapaganda">
             Your browser does not support the video tag.
-        </video>  
-    </div>         
+        </video>
+    </div>
     <h1>yapaganda</h1>
 </header>
 
@@ -39,7 +46,7 @@
     </div>
 
     <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search" onkeyup="search()">
+        <input type="text" id="searchInput" placeholder="Search">
     </div>
 </section>
 
