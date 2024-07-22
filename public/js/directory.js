@@ -56,3 +56,12 @@ function search() {
         }
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const artistList = document.getElementById('artistList');
+    const items = Array.from(artistList.getElementsByTagName('li'));
+
+    items.sort((a, b) => a.textContent.localeCompare(b.textContent));
+
+    items.forEach(item => artistList.appendChild(item));
+});
