@@ -51,63 +51,53 @@ document.addEventListener('DOMContentLoaded', function() {
                 try {
                     const videoId = getYouTubeVideoId(iframe.getAttribute('src'));
                     const player = new YT.Player(iframe, {
-                        videoId: videoId,
-                        playerVars: {
-                            autoplay: 0,
-                            controls: 1
-                        },
                         events: {
                             'onStateChange': onPlayerStateChange
                         }
                     });
                     players.push(player);
-                } catch (error) {
-                    console.error(`Failed to initialize player for iframe ${index}:`, error);
+                } catch (err) {
+                    console.error(`Error initializing player for iframe ${index}:`, err);
                 }
             });
-        } catch (error) {
-            console.error('Failed to initialize YouTube API:', error);
+        } catch (err) {
+            console.error('Error initializing YouTube API:', err);
         }
     };
 
     function getYouTubeVideoId(url) {
-        try {
-            const urlParams = new URLSearchParams(new URL(url).search);
-            return urlParams.get('v') || '';
-        } catch (error) {
-            console.error('Failed to extract YouTube video ID:', error);
-            return '';
-        }
-    }
-
-    // Add error handling to search functionality
-    if (searchInput) {
-        searchInput.addEventListener('keyup', search);
-    } else {
-        console.error('Search input not found.');
-    }
-
-    function search() {
-        try {
-            const filter = searchInput.value.toLowerCase();
-            const videoContainers = document.querySelectorAll('.video-container');
-
-            videoContainers.forEach(container => {
-                const aTag = container.querySelector('a');
-                const text = aTag ? aTag.textContent.toLowerCase() : '';
-
-                if (text.includes(filter)) {
-                    container.style.display = '';
-                } else {
-                    container.style.display = 'none';
-                }
-            });
-        } catch (error) {
-            console.error('Error occurred during search:', error);
-        }
+        const regex = /(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+        const matches = url.match(regex);
+        return matches ? matches[1] : null;
     }
 
     function onPlayerStateChange(event) {
-        // Implement player state change handling if needed
+        if (event.data === YT.PlayerState.ENDED) {
+            let nextPlayer;
+            for (let i = 0; i < players.length; i++) {
+                if (players[i] === event.target) {
+                    nextPlayer = players[i + 1];
+                    break;
+                }
+            }
+            if (nextPlayer) {
+                nextPlayer.playVideo();
+                nextPlayer.getIframe().scrollIntoView({ behavior: 'smooth' });
+            }
+        }
     }
+
+    // Search functionality
+    searchInput.addEventListener('input', function() {
+        const filter = searchInput.value.toUpperCase();
+        const videoContainers = document.querySelectorAll('.video-container');
+
+        videoContainers.forEach(container => {
+            const anchor = container.querySelector('a');
+            if (anchor) {
+                const textValue = anchor.textContent || anchor.innerText;
+                container.style.display = textValue.toUpperCase().includes(filter) ? '' : 'none';
+            }
+        });
+    });
 });
