@@ -149,6 +149,39 @@ main {
     border-radius: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* scroll-bar styling for chrome, edge, safari */
+.carousel::-webkit-scrollbar {
+    width: 12px; 
+    height: 12px;
+}
+
+.carousel::-webkit-scrollbar-track {
+    background: #1a1a1a; 
+    border-radius: 10px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background-color: rgba(9, 255, 111, 0.466); 
+    border-radius: 10px;
+    border: 3px solid #1a1a1a; 
+}
+
+.carousel::-webkit-scrollbar-thumb:hover {
+    background-color: #00ff15; 
+}
+
+/* For Firefox */
+.carousel {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(9, 255, 111, 0.466) #1a1a1a; 
+}
+
+/* For Internet Explorer and Edge Legacy */
+.carousel {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
     
 @media (max-width: 768px) {
     header {
