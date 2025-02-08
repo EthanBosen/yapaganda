@@ -94,14 +94,17 @@ main {
 }
 
 .team-list {
+    /* Center the list */
     display: flex;
-    flex-direction: row; /* Ensures columns are next to each other */
-    justify-content: space-between;
+    justify-content: center;
+    /* Remove flex-direction since we're not splitting into columns */
 }
 
 .team-list ul {
-    flex: 0 0 48%; /* Each column takes up roughly half the width */
-    margin: 0 1%; /* Small margin for spacing */
+    /* Full width for single column */
+    width: 100%;
+    max-width: 600px; /* Optional: to limit the width of the list for better readability */
+    margin: 0 auto; /* Center the list */
     padding: 0;
     list-style-type: none;
 }
@@ -123,8 +126,12 @@ main {
     font-size: 18px;
 }
 
-/* Remove any previous nth-child selectors */
-
+.record {
+    font-size: 14px;
+    text-align: center;
+    color: #ccc; /* or any color that fits your design */
+    margin-left: 5px;
+}
 
 @media (max-width: 768px) {
         header {
