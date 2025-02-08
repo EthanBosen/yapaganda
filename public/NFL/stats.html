@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yapaganda sports - NFL</title>
+    <link rel="stylesheet" href="/public/NFL/style/nfl.css">
+    <script src="/public/NFL/js/nfl.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Galindo&family=Caprasimo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <div class="video-container">
+        <video autoplay muted loop playsinline>
+            <source src="/public/media/static.mp4" type="video/mp4">
+            <img src="/public/media/fallback.jpg" alt="yapaganda">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <h1>yapaganda</h1>
+</header>
+
+<main>
+<section>
+    <!-- Navigation Bar -->
+    <div class="button-container">
+     <button id="index-btn">Home</button>
+     <button id="nfl-btn">NFL</button>
+     <button id="stats-btn">Stats</button>
+     <button id="merch-btn">Merch</button>
+    </div>
+    <div class="search-container">
+     <input type="text" id="searchInput" placeholder="Search" onkeyup="search()">
+    </div>
+</section>
+
+    <!-- Team List -->
+    <div class="team-list">
+    <ul id="teamList">
+
+    </ul>
+    </div>
+    
+</main>
+
+</body>
+</html>

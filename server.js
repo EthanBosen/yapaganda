@@ -5,6 +5,8 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+require('dotenv').config();
+
 // Serve static files from the root directory
 app.use(express.static(__dirname));
 
