@@ -16,7 +16,7 @@ app.get('/merch', (req, res) => {
 });
 
 app.get('/directory', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'NFL', 'home.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.get('/directory', (req, res) => {
