@@ -8,15 +8,19 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'NFL', 'nfl.html'));
 });
 
 app.get('/merch', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'merch.html'));
+    res.sendFile(path.join(__dirname, 'public', 'NFL', 'merch.html'));
 });
 
 app.get('/directory', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'directory.html'));
+    res.sendFile(path.join(__dirname, 'public', 'NFL', 'home.html'));
+});
+
+app.get('/directory', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'NFL', 'stats.html'));
 });
 
 app.use((req, res) => {
