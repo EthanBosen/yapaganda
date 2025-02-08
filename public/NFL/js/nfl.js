@@ -1,53 +1,27 @@
-// Navbuttons
 document.addEventListener('DOMContentLoaded', function() {
-    const homeBtn = document.getElementById('home-btn');
+    const homeBtn = document.getElementById('index-btn');
     const merchBtn = document.getElementById('merch-btn');
     const statsBtn = document.getElementById('stats-btn');
     const nflBtn = document.getElementById('nfl-btn');
     const teamList = document.getElementById('teamList');
-    const teams = Array.from(teamList.children);
     const bannerVideo = document.querySelector('video');
-    
-    // Button event listeners
+
     homeBtn.addEventListener('click', function() {
-        gtag('event', 'button_click', {
-            'event_category': 'Navigation',
-            'event_label': 'Home Button',
-            'traffic_type': document.body.getAttribute('data-traffic-type')
-        });
-        window.location.href = '/';
+        window.location.href = '/index';
     });
 
     nflBtn.addEventListener('click', function() {
-        gtag('event', 'button_click', {
-            'event_category': 'Navigation',
-            'event_label': 'NFL Button',
-            'traffic_type': document.body.getAttribute('data-traffic-type')
-        });
-        window.location.href = '/nfl';
+        window.location.href = '/public/NFL/nfl.html';
     });
 
-    statsBtnBtn.addEventListener('click', function() {
-        gtag('event', 'button_click', {
-            'event_category': 'Navigation',
-            'event_label': 'stats Button',
-            'traffic_type': document.body.getAttribute('data-traffic-type')
-        });
-        window.location.href = '/stats';
+    statsBtn.addEventListener('click', function() {
+        window.location.href = '/public/NFL/stats.html';
     });
-
 
     merchBtn.addEventListener('click', function() {
-        gtag('event', 'button_click', {
-            'event_category': 'Navigation',
-            'event_label': 'Merch Button',
-            'traffic_type': document.body.getAttribute('data-traffic-type')
-        });
-        window.location.href = '/merch';
+        window.location.href = '/public/NFL/merch.html';
     });
-
-
-
+    
     // Video playback rate
     if (bannerVideo) {
         bannerVideo.playbackRate = 0.5;
@@ -64,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const secondColumn = teamList.cloneNode(true);
     teamList.parentNode.appendChild(secondColumn);
 
+    const teams = Array.from(teamList.children);
     for (let i = 16; i < teams.length; i++) {
         secondColumn.appendChild(teams[i]);
     }
@@ -73,51 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Assuming you have a function to fetch team data from the API
-    // This function would return an array of team objects with records
-    
-    const teamList = document.getElementById('teamList');
-    if (teamList) {
-        // This would be replaced by API data in the future
-        const teams = [
-            // Example data structure for teams
-            // { name: 'Bears', record: '5-2', wins: 5, losses: 2 },
-            // { name: 'Bengals', record: '3-4', wins: 3, losses: 4 },
-            // ... add other teams here
-        ];
-
-        // Sort teams by wins (descending) to get winning and losing order
-        teams.sort((a, b) => b.wins - a.wins);
-
-        // Create two columns
-        const winningColumn = teamList;
-        const losingColumn = teamList.cloneNode(true);
-        teamList.parentNode.appendChild(losingColumn);
-
-        // Populate columns based on record
-        teams.forEach((team, index) => {
-            const listItem = document.createElement('li');
-            const link = document.createElement('a');
-            link.href = `/public/NFL/teams/${team.name.toLowerCase()}.html`;
-            link.textContent = team.name;
-            listItem.appendChild(link);
-
-            // Place teams with more wins in the winning column, others in losing
-            if (index < teams.length / 2) {
-                winningColumn.appendChild(listItem);
-            } else {
-                losingColumn.appendChild(listItem);
-            }
-        });
-    }
-});
-
 function search() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById('searchInput');
     filter = input.value.toUpperCase();
-    ul = document.getElementById('teamList'); // Assuming teamList is the correct id
+    ul = document.getElementById('teamList');
     li = ul.getElementsByTagName('li');
 
     for (i = 0; i < li.length; i++) {
