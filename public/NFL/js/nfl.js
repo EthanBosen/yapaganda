@@ -28,12 +28,12 @@ document.addEventListener('DOMContentLoaded', async function() {
         bannerVideo.playbackRate = 0.5;
     }
 
-    // Sorting team list
-    if (teamList) {
-        const items = Array.from(teamList.getElementsByTagName('li'));
-        items.sort((a, b) => a.textContent.localeCompare(b.textContent));
-        items.forEach(item => teamList.appendChild(item));
-    }
+    // // Sorting team list
+    // if (teamList) {
+    //     const items = Array.from(teamList.getElementsByTagName('li'));
+    //     items.sort((a, b) => a.textContent.localeCompare(b.textContent));
+    //     items.forEach(item => teamList.appendChild(item));
+    // }
 
     // Fetching the Chiefs' record from your server
     try {

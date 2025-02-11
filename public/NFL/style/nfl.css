@@ -93,18 +93,60 @@ main {
     color: rgba(211, 211, 211, 0.541);
 }
 
+.draft-title {
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    font-size: 30px;
+    color: #fcb723;
+    margin-top: 25px;
+    -webkit-text-stroke: 1.60px rgb(0, 0, 0);  
+}
+
+.draft-title a {
+    font-family: inherit; /* Inherits the font from .draft-title */
+    margin-left: 14px;
+}
+
+.draft-timer {
+    margin-left: 10px;
+}
+
 .team-list {
-    /* Center the list */
     display: flex;
     justify-content: center;
-    /* Remove flex-direction since we're not splitting into columns */
+    margin-top: 20px;
+}
+
+.team-name, .team-record {
+    display: inline-block;
+    vertical-align: middle; 
+}
+  
+.team-record {
+    margin-left: 10px; 
+}
+
+p {
+    font-size: 12px;
+    color: #777777c4;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 
+    2px 2px 0 #000000,   
+    -2px -2px 0 #000000,  
+    2px -2px 0 #000000,    
+    -2px 2px 0 #000000,   
+    0 2px 0 #000000,       
+    2px 0 0 #000000,       
+    0 -2px 0 #000000,     
+    -2px 0 0 #000000;      
+    
 }
 
 .team-list ul {
-    /* Full width for single column */
     width: 100%;
-    max-width: 600px; /* Optional: to limit the width of the list for better readability */
-    margin: 0 auto; /* Center the list */
+    max-width: 600px; 
+    margin: 0 auto; 
     padding: 0;
     list-style-type: none;
 }
@@ -116,20 +158,29 @@ main {
 }
 
 .team-list ul li a {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 18px;
-    display: block; /* Ensures each link behaves like a block for consistent spacing */
+    text-decoration: none;
+    text-shadow: 
+    2px 2px 0 #fff,    
+    -2px -2px 0 #fff,   
+    2px -2px 0 #fff,    
+    -2px 2px 0 #fff,    
+    0 2px 0 #fff,       
+    2px 0 0 #fff,     
+    0 -2px 0 #fff,    
+    -2px 0 0 #fff;   
 }
 
 .team-list ul li a:hover {
-    color: #09883e;
+    color: #2188e9;
     font-size: 18px;
 }
 
 .record {
     font-size: 14px;
     text-align: center;
-    color: #ccc; /* or any color that fits your design */
+    color: #ccc; 
     margin-left: 5px;
 }
 
