@@ -57,6 +57,20 @@ h1 {
     background-color: #45a049; /* Darker green on hover for effect */
 }
 
+a {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 5em;
+    font-family: 'Caprasimo', sans-serif;
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+    z-index: 1;
+    white-space: nowrap;
+    -webkit-text-stroke: .5px rgba(0, 73, 207, 0.822);  
+}
+
 main {
     padding-top: 10px;
 }
