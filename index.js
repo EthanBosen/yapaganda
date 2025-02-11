@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'event_label': 'Merch Button',
                 'traffic_type': document.body.getAttribute('data-traffic-type')
             });
-            window.location.href = '/merch';
+            window.location.href = '/public/NFL/merch.html';
         });
 
         nflBtn.addEventListener('click', function() {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'event_label': 'NFL Button',
                 'traffic_type': document.body.getAttribute('data-traffic-type')
             });
-            window.location.href = '/nfl';
+            window.location.href = '/public/NFL/nfl.html';
         });
     } 
 });
