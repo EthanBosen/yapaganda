@@ -40,53 +40,41 @@ h1 {
 }
 
 .nav-button {
-    background-color: #4CAF50; /* Green */
+    background-color: #e03d3d; 
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
+    font-family: 'Caprasimo', sans-serif;
+    -webkit-text-stroke: .8px #e03d3d; 
     margin: 4px 2px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    transition: background-color 0.3s; 
+    border-radius: 250px; /* This will round the corners */
 }
 
 .nav-button:hover {
-    background-color: #45a049; /* Darker green on hover for effect */
+    background-color: #45a049; 
 }
 
-.nba-button {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
-    font-size: 5em;
-    font-family: 'Caprasimo', sans-serif;
-    text-shadow: 5px 5px 10px rgb(0, 0, 0);
-    z-index: 1;
-    border-radius: 250px; /* This will round the corners */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px; /* Adjust as needed for spacing from header */
 }
 
-.nfl-button {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
-    font-size: 5em;
-    font-family: 'Caprasimo', sans-serif;
-    text-shadow: 5px 5px 10px rgb(0, 0, 0);
-    z-index: 1; 
-    border-radius: 250px; /* This will round the corners */
+.nba-button, .nfl-button {
+    margin: 10px 0; /* Adjust spacing between buttons */
 }
 
 main {
     padding-top: 10px;
 }
-
 @media (max-width: 768px) {
     header {
         width: 100%;
