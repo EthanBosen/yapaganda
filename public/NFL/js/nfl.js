@@ -27,37 +27,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     if (bannerVideo) {
         bannerVideo.playbackRate = 0.5;
     }
-
-    // // Sorting team list
-    // if (teamList) {
-    //     const items = Array.from(teamList.getElementsByTagName('li'));
-    //     items.sort((a, b) => a.textContent.localeCompare(b.textContent));
-    //     items.forEach(item => teamList.appendChild(item));
-    // }
-
-    // Fetching the Chiefs' record from your server
-    try {
-        const response = await fetch('/api/chiefs-record');
-        const data = await response.json();
-        
-        if (response.ok) {
-            const { wins, losses } = data;
-            updateChiefsRecord(wins, losses);
-        } else {
-            console.error('Error fetching Chiefs record:', data.error);
-        }
-    } catch (error) {
-        console.error('Error fetching Chiefs record:', error);
-    }
 });
-
-function updateChiefsRecord(wins, losses) {
-    const chiefsListItem = document.querySelector('#teamList li a[href="/public/NFL/teams/chiefs.html"]');
-    if (chiefsListItem) {
-        // Insert the record next to the team name
-        chiefsListItem.nextElementSibling.textContent = ` (${wins}-${losses})`;
-    }
-}
 
 function search() {
     var input, filter, ul, li, a, i, txtValue;
