@@ -39,6 +39,15 @@ h1 {
     -webkit-text-stroke: .5px rgba(0, 73, 207, 0.822);  
 }
 
+h3 {
+    color: rgba(0, 73, 207, 0.822); 
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-family: 'Caprasimo', sans-serif;
+    -webkit-text-stroke: .7px rgb(0, 0, 0);  
+}
+
 main {
     padding-top: 10px;
 }
@@ -93,38 +102,27 @@ main {
     color: rgba(211, 211, 211, 0.541);
 }
 
-.team-list {
+.passing-container, .receiving-container, .rushing-container, .tackle-container {
     display: flex;
-    flex-direction: row; /* Ensures columns are next to each other */
+    justify-content: center;
+    gap: 150px;
+    margin-bottom: 20px;
+}
+
+.passing-yards, .passing-touchdowns, .receiving-yards, .receiving-touchdowns, .rushing-yards, .rushing-touchdowns, .tackles, .sacks, .interceptions, .yards-allowed {
+    text-align: left; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.player-stat {
+    display: flex;
     justify-content: space-between;
+    align-items: baseline;
 }
 
-.team-list ul {
-    flex: 0 0 48%; /* Each column takes up roughly half the width */
-    margin: 0 1%; /* Small margin for spacing */
-    padding: 0;
-    list-style-type: none;
+.player-stat p, .player-stat h4 {
+    margin: 5px; 
 }
-
-.team-list ul li {
-    margin-bottom: 10px;
-    text-align: center;
-    font-family: 'Caprasimo', sans-serif;
-}
-
-.team-list ul li a {
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-    display: block; /* Ensures each link behaves like a block for consistent spacing */
-}
-
-.team-list ul li a:hover {
-    color: #09883e;
-    font-size: 18px;
-}
-
-/* Remove any previous nth-child selectors */
-
 
 @media (max-width: 768px) {
         header {

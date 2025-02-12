@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yapaganda sports - NFL</title>
+    <link rel="stylesheet" href="/public/NFL/style/stats.css">
+    <script src="/public/NFL/js/nfl.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Galindo&family=Caprasimo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <div class="video-container">
+        <video autoplay muted loop playsinline>
+            <source src="/public/media/static.mp4" type="video/mp4">
+            <img src="/public/media/fallback.jpg" alt="yapaganda">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <h1>yapaganda</h1>
+</header>
+
+<section>
+    <!-- Navigation Bar -->
+    <div class="button-container">
+     <button id="index-btn">Home</button>
+     <button id="nfl-btn">NFL</button>
+     <button id="stats-btn">Stats</button>
+     <button id="merch-btn">Merch</button>
+    </div>
+    <div class="search-container">
+     <input type="text" id="searchInput" placeholder="Search" onkeyup="search()">
+    </div>
+</section>
+
+<main>
+<!-- Passing -->
+<div class="passing-container"> 
+    <!-- Passing Yards -->
+    <div class="passing-yards">
+        <h3>Passing Yards</h3>
+        <div class="player-stat">
+            <p>1)  Joe Burrow</p>
+            <h4>4,918</h4>
+        </div>
+        <div class="player-stat">
+            <p>2) Jared Goff</p>
+            <h4>4,629</h4>
+        </div>
+        <div class="player-stat">
+            <p>3) Baker Mayfield</p>
+            <h4>4,500</h4>
+        </div>
+        <div class="player-stat">
+            <p>4) Geno Smith</p>
+            <h4>4,320</h4>
+        </div>
+        <div class="player-stat">
+            <p>5) Sam Darnold</p>
+            <h4>4,319</h4>
+        </div>
+    </div>
+    <!-- Passing Touchdown -->
+    <div class="passing-touchdowns">
+        <h3>Passing Touchdowns</h3>
+        <div class="player-stat">
+            <p>1) Joe Burrow</p>
+            <h4>43</h4>
+        </div>
+        <div class="player-stat">
+            <p>2) Baker Mayfield</p>
+            <h4>41</h4>
+        </div>
+        <div class="player-stat">
+            <p>2) Lamar Jackson</p>
+            <h4>41</h4>
+        </div>
+        <div class="player-stat">
+            <p>4) Jared Goff</p>
+            <h4>37</h4>
+        </div>
+        <div class="player-stat">
+            <p>5) Sam Darnold</p>
+            <h4>35</h4>
+        </div>
+    </div>
+</div>
+
+<!-- Receiving -->
+<div class="receiving-container"> 
+    <!-- Receiving Yards -->
+    <div class="receiving-yards">
+        <h3>Receiving Yards</h3>
+        <div class="player-stat">
+            <p>1) Ja'Marr Chase</p>
+            <h4>1,708</h4>
+        </div>
+        <div class="player-stat">
+            <p>2) Justin Jefferson</p>
+            <h4>1,533</h4>
+        </div>
+        <div class="player-stat">
+            <p>3) Brian Thomas Jr.</p>
+            <h4>1,282</h4>
+        </div>
+        <div class="player-stat">
+            <p>4) Drake London</p>
+            <h4>1,271</h4>
+        </div>
+        <div class="player-stat">
+            <p>5) Amon-Ra St. Brown</p>
+            <h4>1,263</h4>
+        </div>
+    </div>
+    <!-- Receiving Touchdowns -->
+    <div class="receiving-touchdowns">
+        <h3>Receiving Touchdowns</h3>
+        <div class="player-stat">
+            <p>1) Ja'Marr Chase</p>
+            <h4>17</h4>
+        </div>
+        <div class="player-stat">
+            <p>2) Terry McLaurin</p>
+            <h4>13</h4>
+        </div>
+        <div class="player-stat">
+            <p>3) Amon-Ra St. Brown</p>
+            <h4>12</h4>
+        </div>
+        <div class="player-stat">
+            <p>4) Mike Evans</p>
+            <h4>11</h4>
+        </div>
+        <div class="player-stat">
+            <p>4) Mark Andrews</p>
+            <h4>11</h4>
+        </div>
+    </div>
+</div>
+
+<!-- Rushing-->
+<div class="rushing-container">
+    <!-- Rushing Yards -->
+    <div class="rushing-yards">
+        <h3>Rushing Yards</h3>
+        <div class="player-stat">
+            <p>1) Saquon Barkley</p>
+            <h4>2,005</h4>
+        </div>
+        <div class="player-stat">
+            <p>2) Derrick Henry</p>
+            <h4>1,921</h4>
+        </div>
+        <div class="player-stat">
+            <p>3) Bijan Robinson</p>
+            <h4>1,456</h4>
+        </div>
+        <div class="player-stat">
+            <p>4) Jonathan Taylor</p>
+            <h4>1,431</h4>
+        </div>
+        <div class="player-stat">
+            <p>5) Jahmyr Gibbs</p>
+            <h4>1,412</h4>
+        </div>
+    </div>
+    <!-- Rushing Touchdowns -->
+    <div class="rushing-touchdowns">
+        <h3>Rushing Touchdowns</h3>
+        <div class="player-stat">
+            <p>1) Derrick Henry</p>
+            <h4>16</h4>
+        </div>
+        <div class="player-stat">
+            <p>1) James Cook</p>
+            <h4>16</h4>
+        </div>
+        <div class="player-stat">
+            <p>1) Jahmyr Gibbs</p>
+            <h4>16</h4>
+        </div>
+        <div class="player-stat">
+            <p>4) Josh Jacobs</p>
+            <h4>15</h4>
+        </div>
+        <div class="player-stat">
+            <p>5) Jalen Hurts</p>
+            <h4>14</h4>
+        </div>
+    </div>
+</div> 
+
+<!-- Tackles/Sacks-->
+<div class="tackle-container">
+    <!-- Tackles -->
+    <div class="tackles">
+        <h3>Tackles</h3>
+        <div class="player-stat">
+            <p>1) Zaire Franklin</p>
+            <h4>173</h4>
+        </div>
+        <div class="player-stat">
+            <p>2) Budda Baker</p>
+            <h4>164</h4>
+        </div>
+        <div class="player-stat">
+            <p>3) Robert Spillane</p>
+            <h4>158</h4>
+        </div>
+        <div class="player-stat">
+            <p>3) Jamien Sherwood</p>
+            <h4>158</h4>
+        </div>
+        <div class="player-stat">
+            <p>5) Roquan Smith</p>
+            <h4>154</h4>
+        </div>
+    </div>
+    <!-- Sacks -->
+    <div class="sacks">
+        <h3>Sacks</h3>
+        <div class="player-stat">
+            <p>1) Trey Hendrickson</p>
+            <h4>17.5</h4>
+        </div>
+        <div class="player-stat">
+            <p>2) Myles Garrett</p>
+            <h4>14</h4>
+        </div>
+        <div class="player-stat">
+            <p>3) Nik Bonitto</p>
+            <h4>13.5</h4>
+        </div>
+        <div class="player-stat">
+            <p>4) Kyle Van Noy</p>
+            <h4>12.5</h4>
+        </div>
+        <div class="player-stat">
+            <p>5) Danielle Hunter</p>
+            <h4>12</h4>
+        </div>
+    </div>
+</div>
+
+<!-- Interceptions/Yards Allowed-->
+<div class="tackle-container">
+    <!-- Interceptions -->
+    <div class="interceptions">
+        <h3>Interceptions</h3>
+        <div class="player-stat">
+            <p>1) Kerby Joseph</p>
+            <h4>9</h4>
+        </div>
+        <div class="player-stat">
+            <p>2) Xavier McKinney</p>
+            <h4>8</h4>
+        </div>
+        <div class="player-stat">
+            <p>3) C.J. Gardner-Johnson</p>
+            <h4>6</h4>
+        </div>
+        <div class="player-stat">
+            <p>3) Byron Murphy Jr.</p>
+            <h4>6</h4>
+        </div>
+        <div class="player-stat">
+            <p>3) Donte Jackson</p>
+            <h4>6</h4>
+        </div>
+    </div>
+    <!-- Yards Allowed -->
+    <div class="yards-allowed">
+        <h3>Yards Allowed</h3>
+        <div class="player-stat">
+            <p>1) Panthers</p>
+            <h4>6,877</h4>
+        </div>
+        <div class="player-stat">
+            <p>2) Jaguars</p>
+            <h4>6,629</h4>
+        </div>
+        <div class="player-stat">
+            <p>3) Saints</p>
+            <h4>6,459</h4>
+        </div>
+        <div class="player-stat">
+            <p>4) Colts</p>
+            <h4>6,140</h4>
+        </div>
+        <div class="player-stat">
+            <p>5) Cowboys</p>
+            <h4>6,039</h4>
+        </div>
+    </div>
+</div>
+</main>
+
+</body>
+</html>
