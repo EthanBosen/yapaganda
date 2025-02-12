@@ -3,20 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>yapaganda sports - NBA </title>
-    <link rel="stylesheet" href="/public/NBA/style/nba.css">
-    <script src="/public/NBA/js/nba.js" defer></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-0XR96421QL');
-    </script>
+    <title>yapaganda sports - NFL</title>
+    <link rel="stylesheet" href="/public/NFL/style/nfl.css">
+    <script src="/public/NFL/js/nfl.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Galindo&family=Caprasimo&display=swap" rel="stylesheet">
 </head>
 
-<body data-traffic-type="internal">
+<body>
 <header>
     <div class="video-container">
         <video autoplay muted loop playsinline>
@@ -29,52 +22,59 @@
 </header>
 
 <main>
-    <section>
-        <div class="button-container">
-            <button id="nba-btn">NBA</button>
-            <button id="home-btn">Home</button>
-            <button id="merch-btn">Merch</button>
-        </div>
+<section>
+    <!-- Navigation Bar -->
+    <div class="button-container">
+     <button id="index-btn">Home</button>
+     <button id="nba-btn">NBA</button>
+     <button id="stats-btn">Stats</button>
+     <button id="merch-btn">Merch</button>
+    </div>
+    <div class="search-container">
+     <input type="text" id="searchInput" placeholder="Search" onkeyup="search()">
+    </div>
+</section>
 
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search" onkeyup="search()">
-        </div>
-    </section>
+    <!-- Draft Countdown Timer
+    <div class = "draft-title">Draft Timer:
+        <a id="draft-timer"></a>
+        <script src="/public/NFL/js/drafttimer.js"></script>
+    </div> -->
 
+    <!-- Team List -->
     <div class="team-list">
-        <ul id="teamList">
-            <li><a href="/public/NFL/teams/bears.html">Bears</a></li>
-            <li><a href="/public/NFL/teams/bengals.html">Bengals</a></li>
-            <li><a href="/public/NFL/teams/bills.html">Bills</a></li>
-            <li><a href="/public/NFL/teams/browns.html">Browns</a></li>
-            <li><a href="/public/NFL/teams/buccaneers.html">Buccaneers</a></li>
-            <li><a href="/public/NFL/teams/cardinals.html">Cardinals</a></li>
-            <li><a href="/public/NFL/teams/chargers.html">Chargers</a></li>
-            <li><a href="/public/NFL/teams/chiefs.html">Chiefs</a></li>
-            <li><a href="/public/NFL/teams/colts.html">Colts</a></li>
-            <li><a href="/public/NFL/teams/commanders.html">Commanders</a></li>
-            <li><a href="/public/NFL/teams/cowboys.html">Cowboys</a></li>
-            <li><a href="/public/NFL/teams/dolphins.html">Dolphins</a></li>
-            <li><a href="/public/NFL/teams/eagles.html">Eagles</a></li>
-            <li><a href="/public/NFL/teams/falcons.html">Falcons</a></li>
-            <li><a href="/public/NFL/teams/giants.html">Giants</a></li>
-            <li><a href="/public/NFL/teams/jaguars.html">Jaguars</a></li>
-            <li><a href="/public/NFL/teams/jets.html">Jets</a></li>
-            <li><a href="/public/NFL/teams/lions.html">Lions</a></li>
-            <li><a href="/public/NFL/teams/packers.html">Packers</a></li>
-            <li><a href="/public/NFL/teams/panthers.html">Panthers</a></li>
-            <li><a href="/public/NFL/teams/patriots.html">Patriots</a></li>
-            <li><a href="/public/NFL/teams/raiders.html">Raiders</a></li>
-            <li><a href="/public/NFL/teams/rams.html">Rams</a></li>
-            <li><a href="/public/NFL/teams/ravens.html">Ravens</a></li>
-            <li><a href="/public/NFL/teams/saints.html">Saints</a></li>
-            <li><a href="/public/NFL/teams/seahawks.html">Seahawks</a></li>
-            <li><a href="/public/NFL/teams/steelers.html">Steelers</a></li>
-            <li><a href="/public/NFL/teams/texans.html">Texans</a></li>
-            <li><a href="/public/NFL/teams/titans.html">Titans</a></li>
-            <li><a href="/public/NFL/teams/vikings.html">Vikings</a></li>
-            <li><a href="/public/NFL/teams/49ers.html">49ers</a></li>
-        </ul>
+    <ul id="teamList">
+        <li><a href="" class="team-name">Bucks</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Bulls</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Cavaliers</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Celtics</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Clippers</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Grizzlies</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Hawks</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Heat</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Hornets</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Jazz</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Kings</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Knicks</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Lakers</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Magic</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Mavericks</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Nets</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Nuggets</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Pacers</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Pelicans</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Pistons</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Raptors</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Rockets</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Spurs</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Suns</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Thunder</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Timberwolves</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Trail Blazers</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Warriors</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">Wizards</a><p class="team-record"></p></li>
+        <li><a href="" class="team-name">76ers</a><p class="team-record"></p></li> 
+    </ul>
     </div>
 </main>
 

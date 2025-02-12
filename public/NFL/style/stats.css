@@ -93,37 +93,45 @@ main {
     color: rgba(211, 211, 211, 0.541);
 }
 
-.team-list {
-    display: flex;
-    flex-direction: row; /* Ensures columns are next to each other */
-    justify-content: space-between;
+.passing-yards {
+
 }
 
-.team-list ul {
-    flex: 0 0 48%; /* Each column takes up roughly half the width */
-    margin: 0 1%; /* Small margin for spacing */
-    padding: 0;
-    list-style-type: none;
+.passing-touchdowns {
+
 }
 
-.team-list ul li {
-    margin-bottom: 10px;
-    text-align: center;
-    font-family: 'Caprasimo', sans-serif;
+.receiving-yards {
+
 }
 
-.team-list ul li a {
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-    display: block; /* Ensures each link behaves like a block for consistent spacing */
+.receiving-touchdowns {
+
 }
 
-.team-list ul li a:hover {
-    color: #09883e;
-    font-size: 18px;
+.rushing-yards {
+
 }
 
-/* Remove any previous nth-child selectors */
+.rushing-touchdowns {
+
+}
+
+.tackles {
+
+}
+
+.sacks {
+
+}
+
+.interceptions {
+
+}
+
+.yards-allowed {
+
+}
 
 
 @media (max-width: 768px) {

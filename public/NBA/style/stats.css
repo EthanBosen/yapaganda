@@ -93,10 +93,17 @@ main {
     color: rgba(211, 211, 211, 0.541);
 }
 
+.team-list {
+    display: flex;
+    flex-direction: row; /* Ensures columns are next to each other */
+    justify-content: space-between;
+}
+
 .team-list ul {
-    list-style-type: none;
+    flex: 0 0 48%; /* Each column takes up roughly half the width */
+    margin: 0 1%; /* Small margin for spacing */
     padding: 0;
-    margin-top: 20px;
+    list-style-type: none;
 }
 
 .team-list ul li {
@@ -108,12 +115,16 @@ main {
 .team-list ul li a {
     color: rgb(255, 255, 255);
     font-size: 18px;
+    display: block; /* Ensures each link behaves like a block for consistent spacing */
 }
 
 .team-list ul li a:hover {
     color: #09883e;
     font-size: 18px;
 }
+
+/* Remove any previous nth-child selectors */
+
 
 @media (max-width: 768px) {
         header {
@@ -160,4 +171,3 @@ main {
         align-items: center;
     }
 }
-
