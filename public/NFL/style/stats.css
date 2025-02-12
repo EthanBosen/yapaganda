@@ -39,6 +39,15 @@ h1 {
     -webkit-text-stroke: .5px rgba(0, 73, 207, 0.822);  
 }
 
+h3 {
+    color: rgba(0, 73, 207, 0.822); 
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-family: 'Caprasimo', sans-serif;
+    -webkit-text-stroke: .7px rgb(0, 0, 0);  
+}
+
 main {
     padding-top: 10px;
 }
@@ -93,64 +102,26 @@ main {
     color: rgba(211, 211, 211, 0.541);
 }
 
-.passing-container {
+.passing-container, .receiving-container, .rushing-container, .tackle-container {
     display: flex;
     justify-content: center;
     gap: 150px;
     margin-bottom: 20px;
 }
 
-.passing-yards, .passing-touchdowns {
-    text-align: center; 
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+.passing-yards, .passing-touchdowns, .receiving-yards, .receiving-touchdowns, .rushing-yards, .rushing-touchdowns, .tackles, .sacks, .interceptions, .yards-allowed {
+    text-align: left; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.receiving-container {
+.player-stat {
     display: flex;
-    justify-content: center;
-    gap: 150px;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
-.receiving-yards, .receiving-touchdowns {
-    text-align: center; 
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
-
-.rushing-container {
-    display: flex;
-    justify-content: center;
-    gap: 150px;
-    margin-bottom: 20px;
-}
-
-.rushing-yards, .rushing-touchdowns {
-    text-align: center; 
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
-
-.tackle-container {
-    display: flex;
-    justify-content: center;
-    gap: 150px;
-    margin-bottom: 20px;
-}
-
-.tackles, .sacks {
-    text-align: center;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
-
-.tackle-container {
-    display: flex;
-    justify-content: center;
-    gap: 150px;
-    margin-bottom: 20px;
-}
-
-.interceptions, .yards-allowed {
-    text-align: center; 
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+.player-stat p, .player-stat h4 {
+    margin: 5px; 
 }
 
 @media (max-width: 768px) {
