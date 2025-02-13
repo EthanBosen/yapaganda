@@ -102,14 +102,14 @@ main {
     color: rgba(211, 211, 211, 0.541);
 }
 
-.passing-container, .receiving-container, .rushing-container, .tackle-container {
+.offense, .defense {
     display: flex;
     justify-content: center;
     gap: 150px;
     margin-bottom: 20px;
 }
 
-.passing-yards, .passing-touchdowns, .receiving-yards, .receiving-touchdowns, .rushing-yards, .rushing-touchdowns, .tackles, .sacks, .interceptions, .yards-allowed {
+.points, .assists, .three-points, .rebounds, .blocks, .steals {
     text-align: left; 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -118,6 +118,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    gap: 10px;
 }
 
 .player-stat p, .player-stat h4 {
