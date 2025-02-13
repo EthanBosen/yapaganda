@@ -149,22 +149,22 @@ main {
         }
     }
     
-@media (max-width: 480px) {
-    header {
-        height: 150px;
-    }
+    @media (max-width: 480px) {
+        header {
+            height: auto;
+        }
     
-    header .video-container video {
-        width: 50%;
-        border-radius: 50px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
+        header .video-container video {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 20px;
+            margin: 10px 0;
+        }
     
-    h1 {
-        font-size: 2em;
-        margin-top: 33px;
-    }
+        h1 {
+            margin-top: 31px;
+            font-size: 3.5em;
+        }
 
     .video-row, .merch-row {
         flex-direction: column;
