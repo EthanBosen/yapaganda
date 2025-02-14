@@ -86,31 +86,12 @@ main {
 }
 
 #searchInput:focus {
-    border-color: rgb(47, 116, 75);
+    border-color: rgb(255, 0, 55);
 }
 
 #searchInput::placeholder {
     color: rgba(211, 211, 211, 0.541);
 }
-
-/* .draft-title {
-    display: flex;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    justify-content: center;
-    font-size: 30px;
-    color: #fcb723;
-    margin-top: 25px;
-    -webkit-text-stroke: 1.60px rgb(0, 0, 0);  
-} */
-
-/* .draft-title a {
-    font-family: inherit; 
-    margin-left: 14px;
-} */ 
-
-/* .draft-timer {
-    margin-left: 10px;
-} */
 
 .team-list {
     display: flex;
@@ -123,7 +104,7 @@ main {
     display: inline-block;
     vertical-align: middle; 
 }
-  
+
 .team-record {
     margin-left: 10px; 
 }
@@ -141,7 +122,6 @@ p {
     2px 0 0 #000000,       
     0 -2px 0 #000000,     
     -2px 0 0 #000000;      
-    
 }
 
 .team-list ul {
@@ -188,18 +168,18 @@ p {
 @media (max-width: 768px) {
     header {
         width: 100%;
-        height: auto; /* Let the height adjust based on content */
+        height: auto; 
     }
 
     header .video-container video {
-        max-width: 100%; /* Ensure video scales to screen width */
+        max-width: 100%; 
         height: auto;
-        border-radius: 25px; /* Adjust border-radius if needed */
+        border-radius: 25px; 
     }
 
     h1 {
-        font-size: 2em; /* Smaller font size for smaller screens */
-        margin-top: 10px; /* Adjust as needed */
+        font-size: 2em; 
+        margin-top: 10px; 
     }
 }
 
@@ -210,30 +190,30 @@ p {
     }
 
     .button-container button {
-        font-size: 1em; /* Smaller font size */
-        margin: 5px 0; /* Space between buttons */
-        padding: 5px 15px; /* Smaller padding */
+        font-size: 1em; 
+        margin: 5px 0; 
+        padding: 5px 15px; 
     }
 }
 
 @media (max-width: 768px) {
     #searchInput {
-        width: 50%; /* Wider on mobile */
-        max-width: 400px; /* But not too wide */
+        width: 50%; 
+        max-width: 400px; 
     }
 }
 
 @media (max-width: 768px) {
     .team-list ul {
-        width: 90%; /* Wider on mobile */
+        width: 90%; 
     }
 
     .team-list ul li a {
-        font-size: 16px; /* Smaller font size */
+        font-size: 16px; 
     }
 
     .team-record {
-        font-size: 10px; /* Smaller font size for records */
+        font-size: 10px; 
     }
 }
 
@@ -259,4 +239,3 @@ p {
         align-items: center;
     }
 }
-

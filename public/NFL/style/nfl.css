@@ -86,7 +86,7 @@ main {
 }
 
 #searchInput:focus {
-    border-color: rgb(47, 116, 75);
+    border-color: rgb(255, 0, 55);
 }
 
 #searchInput::placeholder {
@@ -104,7 +104,7 @@ main {
 }
 
 .draft-title a {
-    font-family: inherit; /* Inherits the font from .draft-title */
+    font-family: inherit; 
     margin-left: 14px;
 }
 
@@ -156,6 +156,7 @@ p {
     margin-bottom: 10px;
     text-align: center;
     font-family: 'Caprasimo', sans-serif;
+    position: relative; 
 }
 
 .team-list ul li a {
@@ -185,28 +186,32 @@ p {
     margin-left: 5px;
 }
 
-img {
+.crown {
     width: 3%;
     height: auto;
-    margin-right: 8px;
-    margin-left: -15px;
+    position: absolute;
+    bottom: 100%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    margin-left: 8px;
+    margin-bottom: -3px; 
 }
 
 @media (max-width: 768px) {
     header {
         width: 100%;
-        height: auto; /* Let the height adjust based on content */
+        height: auto;
     }
 
     header .video-container video {
-        max-width: 100%; /* Ensure video scales to screen width */
+        max-width: 100%;
         height: auto;
-        border-radius: 25px; /* Adjust border-radius if needed */
+        border-radius: 25px; 
     }
 
     h1 {
-        font-size: 2em; /* Smaller font size for smaller screens */
-        margin-top: 10px; /* Adjust as needed */
+        font-size: 2em;
+        margin-top: 10px; 
     }
 }
 
@@ -217,30 +222,30 @@ img {
     }
 
     .button-container button {
-        font-size: 1em; /* Smaller font size */
-        margin: 5px 0; /* Space between buttons */
-        padding: 5px 15px; /* Smaller padding */
+        font-size: 1em; 
+        margin: 5px 0; 
+        padding: 5px 15px; 
     }
 }
 
 @media (max-width: 768px) {
     #searchInput {
-        width: 50%; /* Wider on mobile */
-        max-width: 400px; /* But not too wide */
+        width: 50%;
+        max-width: 400px; 
     }
 }
 
 @media (max-width: 768px) {
     .team-list ul {
-        width: 90%; /* Wider on mobile */
+        width: 90%; 
     }
 
     .team-list ul li a {
-        font-size: 16px; /* Smaller font size */
+        font-size: 16px; 
     }
 
     .team-record {
-        font-size: 10px; /* Smaller font size for records */
+        font-size: 10px; 
     }
 }
     
