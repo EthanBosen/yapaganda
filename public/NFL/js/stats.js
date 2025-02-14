@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const bannerVideo = document.querySelector('video');
 
     homeBtn.addEventListener('click', function() {
-        window.location.href = '/index';
+        window.location.href = '/index.html';
     });
 
     nflBtn.addEventListener('click', function() {
