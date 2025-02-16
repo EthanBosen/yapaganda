@@ -140,98 +140,98 @@ p {
 .thunder a {
     color: #ec7e00; 
     text-shadow: 
-    2px 2px 0 #0a94e4,    
+    1px 1px 0 #000000,    
     -2px -2px 0 #0a94e4,   
-    2px -2px 0 #0a94e4,    
-    -2px 2px 0 #0a94e4,    
-    0 2px 0 #0a94e4,       
-    2px 0 0 #0a94e4,     
-    0 -2px 0 #0a94e4,    
-    -2px 0 0 #0a94e4; 
+    1px -1px 0 #0a94e4,    
+    -1px 1px 0 #0a94e4,    
+    0 1px 0 #0a94e4,       
+    1px 0 0 #0a94e4,     
+    0 -1px 0 #0a94e4,    
+    -1px 0 0 #0a94e4; 
 }
 
 /* Cavaliers */
 .cavaliers a {
     color: #77202c; 
     text-shadow: 
-    2px 2px 0 #ca982d,    
-    -2px -2px 0 #ca982d,   
-    2px -2px 0 #ca982d,    
-    -2px 2px 0 #ca982d,    
-    0 2px 0 #ca982d,       
-    2px 0 0 #ca982d,     
-    0 -2px 0 #ca982d,    
-    -2px 0 0 #ca982d; 
+    1px 1px 0 #ca982d,    
+    -1px -1px 0 #ca982d,   
+    1px -1px 0 #ca982d,    
+    -1px 1px 0 #ca982d,    
+    0 1px 0 #ca982d,       
+    1px 0 0 #ca982d,     
+    0 -1px 0 #ca982d,    
+    -1px 0 0 #ca982d; 
 }
 
 /* Celtics */
 .celtics a {
     color: #ffffff; 
     text-shadow: 
-    2px 2px 0 #00b359,    
-    -2px -2px 0 #00b359,   
-    2px -2px 0 #00b359,    
-    -2px 2px 0 #00b359,    
-    0 2px 0 #00b359,       
-    2px 0 0 #00b359,     
-    0 -2px 0 #00b359,    
-    -2px 0 0 #00b359; 
+    1px 1px 0 #00b32d,    
+    -1px -1px 0 #00b359,   
+    1px -1px 0 #00b359,    
+    -1px 1px 0 #00b359,    
+    0 1px 0 #00b359,       
+    1px 0 0 #00b359,     
+    0 -1px 0 #00b359,    
+    -1px 0 0 #00b359; 
 }
 
 /* Grizzlies */
 .grizzlies a {
-    color: #0067bb;
+    color: #348bd3;
     text-shadow: 
-    2px 2px 0 #0e3775,    
-    -2px -2px 0 #0e3775,   
-    2px -2px 0 #0e3775,    
-    -2px 2px 0 #0e3775,    
-    0 2px 0 #0e3775,       
-    2px 0 0 #0e3775,     
-    0 -2px 0 #0e3775,    
-    -2px 0 0 #0e3775; 
+    1px 1px 0 #0e3775,    
+    -1px -1px 0 #0e3775,   
+    1px -1px 0 #0e3775,    
+    -1px 1px 0 #0e3775,    
+    0 1px 0 #0e3775,       
+    1px 0 0 #0e3775,     
+    0 -1px 0 #0e3775,    
+    -1px 0 0 #0e3775; 
 }
 
 /* Knicks */
 .knicks a {
     color: #b65200; 
     text-shadow: 
-    2px 2px 0 #000cb6,    
-    -2px -2px 0 #000cb6,   
-    2px -2px 0 #000cb6,    
-    -2px 2px 0 #000cb6,    
-    0 2px 0 #000cb6,       
-    2px 0 0 #000cb6,     
-    0 -2px 0 #000cb6,    
-    -2px 0 0 #000cb6; 
+    1px 1px 0 #000cb6,    
+    -1px -1px 0 #000cb6,   
+    1px -1px 0 #000cb6,    
+    -1px 1px 0 #000cb6,    
+    0 1px 0 #000cb6,       
+    1px 0 0 #000cb6,     
+    0 -1px 0 #000cb6,    
+    -1px 0 0 #000cb6; 
 }
 
 /* Nuggets */
 .nuggets a {
     color: #d4960e; 
     text-shadow: 
-    2px 2px 0 #012149,    
-    -2px -2px 0 #012149,   
-    2px -2px 0 #012149,    
-    -2px 2px 0 #012149,    
-    0 2px 0 #012149,       
-    2px 0 0 #012149,     
-    0 -2px 0 #012149,    
-    -2px 0 0 #012149; 
+    1px 1px 0 #004292,    
+    -1px -1px 0 #1153a3,   
+    1px -1px 0 #00306b,    
+    -1px 1px 0 #00306b,    
+    0 1px 0 #00306b,       
+    1px 0 0 #00306b,     
+    0 -1px 0 #00306b,    
+    -1px 0 0 #00306b; 
 }
 
 /* Lakers */
 .lakers a {
     color: #d4d10e; 
     text-shadow: 
-    2px 2px 0 #6700bb,    
-    -2px -2px 0 #6700bb,   
-    2px -2px 0 #6700bb,    
-    -2px 2px 0 #6700bb,    
-    0 2px 0 #6700bb,       
-    2px 0 0 #6700bb,     
-    0 -2px 0 #6700bb,    
-    -2px 0 0 #6700bb; 
+    1px 1px 0 #6700bb,    
+    -1px -1px 0 #6700bb,   
+    1px -1px 0 #6700bb,    
+    -1px 1px 0 #6700bb,    
+    0 1px 0 #6700bb,       
+    1px 0 0 #6700bb,     
+    0 -1px 0 #6700bb,    
+    -1px 0 0 #6700bb; 
 }
 
 /* Rockets */
@@ -250,44 +250,44 @@ p {
 
 /* Timberwolves */
 .timberwolves a {
-    color: #059400; 
+    color: #00388d; 
     text-shadow: 
-    2px 2px 0 #002e74,    
-    -2px -2px 0 #002e74,   
-    2px -2px 0 #002e74,    
-    -2px 2px 0 #002e74,    
-    0 2px 0 #002e74,       
-    2px 0 0 #002e74,     
-    0 -2px 0 #002e74,    
-    -2px 0 0 #002e74; 
+    1px 1px 0 #3aff33,    
+    -1px -1px 0 #3aff33,   
+    1px -1px 0 #3aff33,    
+    -1px 1px 0 #3aff33,    
+    0 1px 0 #3aff33,       
+    1px 0 0 #3aff33,     
+    0 -1px 0 #3aff33,    
+    -1px 0 0 #3aff33; 
 }
 
 /* Clippers */
 .clippers a {
-    color: #ff0000; 
+    color: #aa0000; 
     text-shadow: 
-    2px 2px 0 #003fbe,    
-    -2px -2px 0 #003fbe,   
-    2px -2px 0 #003fbe,    
-    -2px 2px 0 #003fbe,    
-    0 2px 0 #003fbe,       
-    2px 0 0 #003fbe,     
-    0 -2px 0 #003fbe,    
-    -2px 0 0 #003fbe; 
+    1px 1px 0 #003fbe,    
+    -1px -1px 0 #003fbe,   
+    1px -1px 0 #003fbe,    
+    -1px 1px 0 #003fbe,    
+    0 1px 0 #003fbe,       
+    1px 0 0 #003fbe,     
+    0 -1px 0 #003fbe,    
+    -1px 0 0 #003fbe; 
 }
 
 /* Pacers */
 .pacers a {
-    color: #ffdf80;
+    color: #d8b241;
     text-shadow: 
-    2px 2px 0 #002e74,    
-    -2px -2px 0 #002e74,   
-    2px -2px 0 #002e74,    
-    -2px 2px 0 #002e74,    
-    0 2px 0 #002e74,       
-    2px 0 0 #002e74,     
-    0 -2px 0 #002e74,    
-    -2px 0 0 #002e74; 
+    1px 1px 0 #002e74,    
+    -1px -1px 0 #002e74,   
+    1px -1px 0 #002e74,    
+    -1px 1px 0 #002e74,    
+    0 1px 0 #002e74,       
+    1px 0 0 #002e74,     
+    0 -1px 0 #002e74,    
+    -1px 0 0 #002e74; 
 }
 
 /* Bucks */
@@ -336,7 +336,7 @@ p {
 .heat a {
     color: #750124; 
     text-shadow: 
-    2px 2px 0 #9b9b9b,    
+    2px 2px 0 #dfdfdf,    
     -2px -2px 0 #9b9b9b,   
     2px -2px 0 #9b9b9b,    
     -2px 2px 0 #9b9b9b,    
@@ -350,14 +350,14 @@ p {
 .warriors a {
     color: #0e44b1; 
     text-shadow: 
-    2px 2px 0 #e6c535,    
-    -2px -2px 0 #e6c535,   
-    2px -2px 0 #e6c535,    
-    -2px 2px 0 #e6c535,    
-    0 2px 0 #e6c535,       
-    2px 0 0 #e6c535,     
-    0 -2px 0 #e6c535,    
-    -2px 0 0 #e6c535;
+    1px 1px 0 #e6c535,    
+    -1px -1px 0 #e6c535,   
+    1px -1px 0 #e6c535,    
+    -1px 1px 0 #e6c535,    
+    0 1px 0 #e6c535,       
+    1px 0 0 #e6c535,     
+    0 -1px 0 #e6c535,    
+    -1px 0 0 #e6c535;
 }
 
 /* Hawks */
@@ -378,14 +378,14 @@ p {
 .mavericks a {
     color: #243772;
     text-shadow: 
-    2px 2px 0 #c7c7c7,    
-    -2px -2px 0 #c7c7c7,   
-    2px -2px 0 #c7c7c7,    
-    -2px 2px 0 #c7c7c7,    
-    0 2px 0 #c7c7c7,       
-    2px 0 0 #c7c7c7,     
-    0 -2px 0 #c7c7c7,    
-    -2px 0 0 #c7c7c7;
+    1px 1px 0 #c7c7c7,    
+    -1px -1px 0 #c7c7c7,   
+    1px -1px 0 #c7c7c7,    
+    -1px 1px 0 #c7c7c7,    
+    0 1px 0 #c7c7c7,       
+    1px 0 0 #c7c7c7,     
+    0 -1px 0 #c7c7c7,    
+    -1px 0 0 #c7c7c7;
 }
 
 /* Magic */
@@ -406,7 +406,7 @@ p {
 .suns a {
     color: #ff792b; 
     text-shadow: 
-    2px 2px 0 #5200a5,    
+    2px 2px 0 #000000,    
     -2px -2px 0 #5200a5,   
     2px -2px 0 #5200a5,    
     -2px 2px 0 #5200a5,    
@@ -420,7 +420,7 @@ p {
 .spurs a {
     color: #000000; 
     text-shadow: 
-    2px 2px 0 #646464,    
+    2px 2px 0 #a8a8a8,    
     -2px -2px 0 #646464,   
     2px -2px 0 #646464,    
     -2px 2px 0 #646464,    
@@ -434,9 +434,9 @@ p {
 .bulls a {
     color: #000000;
     text-shadow: 
-    2px 2px 0 #d10000,    
+    2px 2px 0 #860000,    
     -2px -2px 0 #d10000,   
-    2px -2px 0 #d10000,    
+    2px -2px 0 #610101,    
     -2px 2px 0 #d10000,    
     0 2px 0 #d10000,       
     2px 0 0 #d10000,     
@@ -449,27 +449,27 @@ p {
     color: #d30007; 
     text-shadow: 
     2px 2px 0 #000000,    
-    -2px -2px 0 #000000,   
+    -2px -2px 0 #4d4d4d,   
     2px -2px 0 #000000,    
     -2px 2px 0 #000000,    
     0 2px 0 #000000,       
-    2px 0 0 #000000,     
+    2px 0 0 #202020,     
     0 -2px 0 #000000,    
     -2px 0 0 #000000;
 }
 
 /* Raptors */
 .raptors a {
-    color: #7c3cc5; 
+    color: #6e2bb9; 
     text-shadow: 
-    2px 2px 0 #d10000,    
-    -2px -2px 0 #d10000,   
-    2px -2px 0 #d10000,    
-    -2px 2px 0 #d10000,    
-    0 2px 0 #d10000,       
-    2px 0 0 #d10000,     
-    0 -2px 0 #d10000,    
-    -2px 0 0 #d10000;
+    2px 2px 0 #000000,    
+    -1px -1px 0 #970000,   
+    1px -1px 0 #d10000,    
+    -1px 1px 0 #d10000,    
+    0 1px 0 #d10000,       
+    1px 0 0 #d10000,     
+    0 -1px 0 #d10000,    
+    -1px 0 0 #d10000;
 }
 
 /* Nets */
@@ -490,28 +490,28 @@ p {
 .sixers a {
     color: #002bb8; 
     text-shadow: 
-    2px 2px 0 #d10000,    
-    -2px -2px 0 #d10000,   
-    2px -2px 0 #d10000,    
-    -2px 2px 0 #d10000,    
-    0 2px 0 #d10000,       
-    2px 0 0 #d10000,     
-    0 -2px 0 #d10000,    
-    -2px 0 0 #d10000;
+    1px 1px 0 #000000,    
+    -1px -1px 0 #990000,   
+    2px -0px 0 #d10000,    
+    -1px 3px 0 #d10000,    
+    0 3px 0 #d10000,       
+    1px 0 0 #d10000,     
+    0 -1px 0 #680000,    
+    -1px 0 0 #d10000;
 }  
 
 /* Hornets */
 .hornets a {
     color: #4c3598; 
     text-shadow: 
-    2px 2px 0 #0083cf,    
-    -2px -2px 0 #0083cf,   
-    2px -2px 0 #0083cf,    
-    -2px 2px 0 #0083cf,    
-    0 2px 0 #0083cf,       
-    2px 0 0 #0083cf,     
-    0 -2px 0 #0083cf,    
-    -2px 0 0 #0083cf; 
+    1px 1px 0 #000000,    
+    -1px -1px 0 #00a2ff,   
+    1px -1px 0 #0083cf,    
+    -1px 1px 0 #0083cf,    
+    0 1px 0 #0083cf,       
+    1px 0 0 #0083cf,     
+    0 -1px 0 #0083cf,    
+    -1px 0 0 #0083cf; 
 }
 
 /* Jazz */
@@ -544,9 +544,9 @@ p {
 
 /* Wizards */
 .wizards a {
-    color: #883b3b; 
+    color: #c42121; 
     text-shadow: 
-    2px 2px 0 #2d3f7a,    
+    2px 2px 0 #000000,    
     -2px -2px 0 #2d3f7a,   
     2px -2px 0 #2d3f7a,    
     -2px 2px 0 #2d3f7a,    
