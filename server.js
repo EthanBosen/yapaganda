@@ -3,7 +3,25 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Import CORS middleware
+const cors = require('cors');
+
 require('dotenv').config();
+
+// CORS configuration
+const corsOptions = {
+    origin: function (origin, callback) {
+        if (!origin || origin === 'https://www.yapaganda.com' || origin === 'http://localhost:3000') {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
 
 // Serve static files from the root directory
 app.use(express.static(__dirname));
@@ -31,15 +49,12 @@ app.get('/stats', (req, res) => {
 //NBA API
 app.get('/api/nba', async (req, res) => {
     const apiKey = process.env.NBA_API_KEY;
-    const endpoint = 'https://api.sportradar.us/nba/trial/v8/en/games/2023/REG/schedule.json'; // Update this to the correct endpoint for 2025 or live data
+    const endpoint = `https://api.sportradar.com/nba/trial/v8/en/games/2025/02/19/schedule.json?api_key=${apiKey}`;
 
     try {
         const fetch = (await import('node-fetch')).default;
         const response = await fetch(endpoint, {
-            method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${apiKey}`
-            }
+            method: 'GET'
         });
 
         if (!response.ok) {

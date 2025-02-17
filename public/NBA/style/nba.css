@@ -43,6 +43,7 @@ main {
     padding-top: 10px;
 }
 
+/* Nav Bar */
 .button-container {
     text-align: center;
     margin-bottom: 20px;
@@ -68,6 +69,8 @@ main {
     background-color: rgb(12, 167, 214);
 }
 
+
+/* Search Bar */
 .search-container {
     text-align: center;
     margin-top: 30px;
@@ -93,6 +96,61 @@ main {
     color: rgba(211, 211, 211, 0.541);
 }
 
+/* Score Banner */
+.score-banner {
+    margin-top: 20px;
+    margin-top: 20px;
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.carousel-list li {
+    flex: 0 0 auto;
+    width: 300px; /* Adjust based on your design */
+    margin: 0 10px;
+    text-align: center;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Team List */
 .team-list {
     display: flex;
     justify-content: center;
@@ -154,7 +212,7 @@ p {
 .cavaliers a {
     color: #77202c; 
     text-shadow: 
-    1px 1px 0 #ca982d,    
+    .2px .2px 0 #000000,    
     -1px -1px 0 #ca982d,   
     1px -1px 0 #ca982d,    
     -1px 1px 0 #ca982d,    
@@ -168,7 +226,7 @@ p {
 .celtics a {
     color: #ffffff; 
     text-shadow: 
-    1px 1px 0 #00b32d,    
+    .5px .5px 0 #000000,    
     -1px -1px 0 #00b359,   
     1px -1px 0 #00b359,    
     -1px 1px 0 #00b359,    
