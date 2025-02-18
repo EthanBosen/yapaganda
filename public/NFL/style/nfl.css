@@ -159,27 +159,16 @@ p {
     margin-bottom: 10px;
     text-align: center;
     font-family: 'Caprasimo', sans-serif;
-    position: relative; 
 }
 
+/* General Team Styling */
 .team-list ul li a {
-    color: rgb(0, 0, 0);
-    font-size: 18px;
+    font-size: 25px;
     text-decoration: none;
-    text-shadow: 
-    2px 2px 0 #fff,    
-    -2px -2px 0 #fff,   
-    2px -2px 0 #fff,    
-    -2px 2px 0 #fff,    
-    0 2px 0 #fff,       
-    2px 0 0 #fff,     
-    0 -2px 0 #fff,    
-    -2px 0 0 #fff;   
 }
 
-.team-list ul li a:hover {
-    color: #2188e9;
-    font-size: 18px;
+.team-list a:hover {
+    font-size: 35px;
 }
 
 .record {
@@ -199,6 +188,488 @@ p {
     margin-left: 8px;
     margin-bottom: -3px; 
 }
+
+/* Titans */
+.titans a {
+    color: #0C2340; /* Navy */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #4B92DB,   
+    1px -1px 0 #4B92DB,    
+    -1px 1px 0 #4B92DB,    
+    0 1px 0 #4B92DB,       
+    1px 0 0 #4B92DB,     
+    0 -1px 0 #4B92DB,    
+    -1px 0 0 #4B92DB; 
+}
+
+/* Browns */
+.browns a {
+    color: #311D00; /* Brown */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #FF3C00,   
+    1px -1px 0 #FF3C00,    
+    -1px 1px 0 #FF3C00,    
+    0 1px 0 #FF3C00,       
+    1px 0 0 #FF3C00,     
+    0 -1px 0 #FF3C00,    
+    -1px 0 0 #FF3C00; 
+}
+
+/* Giants */
+.giants a {
+    color: #0B2265; /* Blue */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #A71930,   
+    1px -1px 0 #A71930,    
+    -1px 1px 0 #A71930,    
+    0 1px 0 #A71930,       
+    1px 0 0 #A71930,     
+    0 -1px 0 #A71930,    
+    -1px 0 0 #A71930; 
+}
+
+/* Patriots */
+.patriots a {
+    color: #002244; /* Navy */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #C60C30,   
+    1px -1px 0 #C60C30,    
+    -1px 1px 0 #C60C30,    
+    0 1px 0 #C60C30,       
+    1px 0 0 #C60C30,     
+    0 -1px 0 #C60C30,    
+    -1px 0 0 #C60C30; 
+}
+
+/* Jaguars */
+.jaguars a {
+    color: #006778; /* Teal */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #D7A022,   
+    1px -1px 0 #D7A022,    
+    -1px 1px 0 #D7A022,    
+    0 1px 0 #D7A022,       
+    1px 0 0 #D7A022,     
+    0 -1px 0 #D7A022,    
+    -1px 0 0 #D7A022; 
+}
+
+/* Raiders */
+.raiders a {
+    color: #000000; /* Black */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #A5ACAF,   
+    1px -1px 0 #A5ACAF,    
+    -1px 1px 0 #A5ACAF,    
+    0 1px 0 #A5ACAF,       
+    1px 0 0 #A5ACAF,     
+    0 -1px 0 #A5ACAF,    
+    -1px 0 0 #A5ACAF; 
+}
+
+/* Jets */
+.jets a {
+    color: #125740; /* Green */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #000000,   
+    1px -1px 0 #000000,    
+    -1px 1px 0 #000000,    
+    0 1px 0 #000000,       
+    1px 0 0 #000000,     
+    0 -1px 0 #000000,    
+    -1px 0 0 #000000; 
+}
+
+/* Panthers */
+.panthers a {
+    color: #0085CA; /* Blue */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #000000,   
+    1px -1px 0 #000000,    
+    -1px 1px 0 #000000,    
+    0 1px 0 #000000,       
+    1px 0 0 #000000,     
+    0 -1px 0 #000000,    
+    -1px 0 0 #000000; 
+}
+
+/* Saints */
+.saints a {
+    color: #D3BC8D; /* Gold */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #000000,   
+    1px -1px 0 #000000,    
+    -1px 1px 0 #000000,    
+    0 1px 0 #000000,       
+    1px 0 0 #000000,     
+    0 -1px 0 #000000,    
+    -1px 0 0 #000000; 
+}
+
+/* Bears */
+.bears a {
+    color: #0B162A; /* Navy */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #C83803,   
+    1px -1px 0 #C83803,    
+    -1px 1px 0 #C83803,    
+    0 1px 0 #C83803,       
+    1px 0 0 #C83803,     
+    0 -1px 0 #C83803,    
+    -1px 0 0 #C83803; 
+}
+
+/* Niners */
+.niners a {
+    color: #AA0000; /* Red */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #FFD100,   
+    1px -1px 0 #FFD100,    
+    -1px 1px 0 #FFD100,    
+    0 1px 0 #FFD100,       
+    1px 0 0 #FFD100,     
+    0 -1px 0 #FFD100,    
+    -1px 0 0 #FFD100; 
+}
+
+/* Cowboys */
+.cowboys a {
+    color: #041E42; /* Navy */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #869397,   
+    1px -1px 0 #869397,    
+    -1px 1px 0 #869397,    
+    0 1px 0 #869397,       
+    1px 0 0 #869397,     
+    0 -1px 0 #869397,    
+    -1px 0 0 #869397; 
+}
+
+/* Dolphins */
+.dolphins a {
+    color: #008E97; /* Aqua */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #F58220,   
+    1px -1px 0 #F58220,    
+    -1px 1px 0 #F58220,    
+    0 1px 0 #F58220,       
+    1px 0 0 #F58220,     
+    0 -1px 0 #F58220,    
+    -1px 0 0 #F58220; 
+}
+
+/* Colts */
+.colts a {
+    color: #002C5F; /* Blue */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #FFFFFF,   
+    1px -1px 0 #FFFFFF,    
+    -1px 1px 0 #FFFFFF,    
+    0 1px 0 #FFFFFF,       
+    1px 0 0 #FFFFFF,     
+    0 -1px 0 #FFFFFF,    
+    -1px 0 0 #FFFFFF; 
+}
+
+/* Falcons */
+.falcons a {
+    color: #A71930; /* Red */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #000000,   
+    1px -1px 0 #000000,    
+    -1px 1px 0 #000000,    
+    0 1px 0 #000000,       
+    1px 0 0 #000000,     
+    0 -1px 0 #000000,    
+    -1px 0 0 #000000; 
+}
+
+/* Cardinals */
+.cardinals a {
+    color: #97233F; /* Red */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #FFB612,   
+    1px -1px 0 #FFB612,    
+    -1px 1px 0 #FFB612,    
+    0 1px 0 #FFB612,       
+    1px 0 0 #FFB612,     
+    0 -1px 0 #FFB612,    
+    -1px 0 0 #FFB612; 
+}
+
+/* Bengals */
+.bengals a {
+    color: #FB4F14; /* Orange */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #000000,   
+    1px -1px 0 #000000,    
+    -1px 1px 0 #000000,    
+    0 1px 0 #000000,       
+    1px 0 0 #000000,     
+    0 -1px 0 #000000,    
+    -1px 0 0 #000000; 
+}
+
+/* Seahawks */
+.seahawks a {
+    color: #002244; /* Navy */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #69BE28,   
+    1px -1px 0 #69BE28,    
+    -1px 1px 0 #69BE28,    
+    0 1px 0 #69BE28,       
+    1px 0 0 #69BE28,     
+    0 -1px 0 #69BE28,    
+    -1px 0 0 #69BE28; 
+}
+
+/* Buccaneers */
+.buccaneers a {
+    color: #D50A0A; /* Red */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #FF7900,   
+    1px -1px 0 #FF7900,    
+    -1px 1px 0 #FF7900,    
+    0 1px 0 #FF7900,       
+    1px 0 0 #FF7900,     
+    0 -1px 0 #FF7900,    
+    -1px 0 0 #FF7900; 
+}
+
+/* Broncos */
+.broncos a {
+    color: #002244; /* Navy */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #FB4F14,   
+    1px -1px 0 #FB4F14,    
+    -1px 1px 0 #FB4F14,    
+    0 1px 0 #FB4F14,       
+    1px 0 0 #FB4F14,     
+    0 -1px 0 #FB4F14,    
+    -1px 0 0 #FB4F14; 
+}
+
+/* Steelers */
+.steelers a {
+    color: #000000; /* Black */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #FFB612,   
+    1px -1px 0 #FFB612,    
+    -1px 1px 0 #FFB612,    
+    0 1px 0 #FFB612,       
+    1px 0 0 #FFB612,     
+    0 -1px 0 #FFB612,    
+    -1px 0 0 #FFB612; 
+}
+
+/* Chargers */
+.chargers a {
+    color: #003A70; /* Navy */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #FFC20E,   
+    1px -1px 0 #FFC20E,    
+    -1px 1px 0 #FFC20E,    
+    0 1px 0 #FFC20E,       
+    1px 0 0 #FFC20E,     
+    0 -1px 0 #FFC20E,    
+    -1px 0 0 #FFC20E; 
+}
+
+/* Packers */
+.packers a {
+    color: #203731; /* Green */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #FFB612,   
+    1px -1px 0 #FFB612,    
+    -1px 1px 0 #FFB612,    
+    0 1px 0 #FFB612,       
+    1px 0 0 #FFB612,     
+    0 -1px 0 #FFB612,    
+    -1px 0 0 #FFB612; 
+}
+
+/* Vikings */
+.vikings a {
+    color: #4F2683; /* Purple */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #FFC62F,   
+    1px -1px 0 #FFC62F,    
+    -1px 1px 0 #FFC62F,    
+    0 1px 0 #FFC62F,       
+    1px 0 0 #FFC62F,     
+    0 -1px 0 #FFC62F,    
+    -1px 0 0 #FFC62F; 
+}
+
+/* Texans */
+.texans a {
+    color: #03202F; /* Navy */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #A71930,   
+    1px -1px 0 #A71930,    
+    -1px 1px 0 #A71930,    
+    0 1px 0 #A71930,       
+    1px 0 0 #A71930,     
+    0 -1px 0 #A71930,    
+    -1px 0 0 #A71930; 
+}
+
+/* Rams */
+.rams a {
+    color: #003690; /* Blue */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #FFA300,   
+    1px -1px 0 #FFA300,    
+    -1px 1px 0 #FFA300,    
+    0 1px 0 #FFA300,       
+    1px 0 0 #FFA300,     
+    0 -1px 0 #FFA300,    
+    -1px 0 0 #FFA300; 
+}
+
+/* Ravens */
+.ravens a {
+    color: #241773; /* Purple */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #9E7C0C,   
+    1px -1px 0 #9E7C0C,    
+    -1px 1px 0 #9E7C0C,    
+    0 1px 0 #9E7C0C,       
+    1px 0 0 #9E7C0C,     
+    0 -1px 0 #9E7C0C,    
+    -1px 0 0 #9E7C0C; 
+}
+
+/* Lions */
+.lions a {
+    color: #0076B6; /* Blue */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #B0B7BC,   
+    1px -1px 0 #B0B7BC,    
+    -1px 1px 0 #B0B7BC,    
+    0 1px 0 #B0B7BC,       
+    1px 0 0 #B0B7BC,     
+    0 -1px 0 #B0B7BC,    
+    -1px 0 0 #B0B7BC; 
+}
+
+/* Commanders */
+.commanders a {
+    color: #773141; /* Burgundy */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #FFB612,   
+    1px -1px 0 #FFB612,    
+    -1px 1px 0 #FFB612,    
+    0 1px 0 #FFB612,       
+    1px 0 0 #FFB612,     
+    0 -1px 0 #FFB612,    
+    -1px 0 0 #FFB612; 
+}
+
+/* Bills */
+.bills a {
+    color: #00338D; /* Blue */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #C60C30,   
+    1px -1px 0 #C60C30,    
+    -1px 1px 0 #C60C30,    
+    0 1px 0 #C60C30,       
+    1px 0 0 #C60C30,     
+    0 -1px 0 #C60C30,    
+    -1px 0 0 #C60C30; 
+}
+
+/* Chiefs */
+.chiefs a {
+    color: #E31837; /* Red */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #FFB81C,   
+    1px -1px 0 #FFB81C,    
+    -1px 1px 0 #FFB81C,    
+    0 1px 0 #FFB81C,       
+    1px 0 0 #FFB81C,     
+    0 -1px 0 #FFB81C,    
+    -1px 0 0 #FFB81C; 
+}
+
+/* Eagles */
+.eagles a {
+    color: #004C54; /* Midnight Green */
+    text-shadow: 
+    1px 1px 0 #FFFFFF,    
+    -1px -1px 0 #A5ACAF,   
+    1px -1px 0 #A5ACAF,    
+    -1px 1px 0 #A5ACAF,    
+    0 1px 0 #A5ACAF,       
+    1px 0 0 #A5ACAF,     
+    0 -1px 0 #A5ACAF,    
+    -1px 0 0 #A5ACAF; 
+}
+
+/* POSSIBLE DRAFT STYLING? */
+/* .titans { background-color: #0C2340; color: #FFFFFF; } Titans navy and white */
+/* .browns { background-color: #311D00; color: #FF3C00; } Browns brown and orange */
+/* .giants { background-color: #0B2265; color: #A71930; } Giants blue and red */
+/* .patriots { background-color: #002244; color: #C60C30; } Patriots navy and red */
+/* .jaguars { background-color: #006778; color: #D7A022; } Jaguars teal and gold */
+/* .raiders { background-color: #000000; color: #A5ACAF; } Raiders black and silver */
+/* .jets { background-color: #125740; color: #FFFFFF; } Jets green and white */
+/* .panthers { background-color: #0085CA; color: #000000; } Panthers blue and black */
+/* .saints { background-color: #D3BC8D; color: #000000; } Saints gold and black */
+/* .bears { background-color: #0B162A; color: #C83803; } Bears navy and orange */
+/* .niners { background-color: #AA0000; color: #FFFFFF; } 49ers red and white */
+/* .cowboys { background-color: #041E42; color: #869397; } Cowboys navy and silver */
+/* .dolphins { background-color: #008E97; color: #F58220; } Dolphins aqua and orange */
+/* .colts { background-color: #002C5F; color: #FFFFFF; } Colts blue and white */
+/* .falcons { background-color: #A71930; color: #000000; } Falcons red and black */
+/* .cardinals { background-color: #97233F; color: #FFB612; } Cardinals red and yellow */
+/* .bengals { background-color: #FB4F14; color: #000000; } Bengals orange and black */
+/* .seahawks { background-color: #002244; color: #69BE28; } Seahawks navy and green */
+/* .buccaneers { background-color: #D50A0A; color: #FF7900; } Buccaneers red and orange */
+/* .broncos { background-color: #002244; color: #FB4F14; } Broncos navy and orange */
+/* .steelers { background-color: #000000; color: #FFB612; } Steelers black and yellow */
+/* .chargers { background-color: #003A70; color: #FFC20E; } Chargers navy and yellow */
+/* .packers { background-color: #203731; color: #FFB612; } Packers green and yellow */
+/* .vikings { background-color: #4F2683; color: #FFC62F; } Vikings purple and yellow */
+/* .texans { background-color: #03202F; color: #A71930; } Texans navy and red */
+/* .rams { background-color: #003690; color: #FFA300; } Rams blue and yellow */
+/* .ravens { background-color: #241773; color: #9E7C0C; } Ravens purple and gold */
+/* .lions { background-color: #0076B6; color: #B0B7BC; } Lions blue and silver */
+/* .commanders { background-color: #773141; color: #FFB612; } Commanders burgundy and gold */
+/* .bills { background-color: #00338D; color: #C60C30; } Bills blue and red */
+/* .chiefs { background-color: #E31837; color: #FFB81C; } Chiefs red and gold */
+/* .eagles { background-color: #004C54; color: #A5ACAF; } Eagles midnight green and silver */
 
 @media (max-width: 768px) {
     header {
