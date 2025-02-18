@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', async function() {
     const homeBtn = document.getElementById('index-btn');
     const merchBtn = document.getElementById('merch-btn');
     const statsBtn = document.getElementById('stats-btn');
-    const nbaBtn = document.getElementById('nba-btn');
+    const nhlBtn = document.getElementById('nba-btn');
     const bannerVideo = document.querySelector('video');
 
     homeBtn.addEventListener('click', function() {
         window.location.href = '/index.html';
     });
 
-    nbaBtn.addEventListener('click', function() {
+    nhlBtn.addEventListener('click', function() {
         window.location.href = '/public/NHL/nhl.html';
     });
 

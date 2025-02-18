@@ -23,30 +23,55 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-// Serve static files from the root directory
+// Serve static files from the root directory and public directory (once)
 app.use(express.static(__dirname));
-
-// Serve static files from the public directory
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-// Serve index.html at the root path
+// Homepage (single route for index.html)
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('/merch', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'NFL', 'merch.html'));
-});
-
+// NFL Routes
 app.get('/nfl', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'NFL', 'nfl.html'));
 });
 
-app.get('/stats', (req, res) => {
+app.get('/nfl-merch', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'NFL', 'merch.html'));
+});
+
+app.get('/nfl-stats', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'NFL', 'stats.html'));
 });
 
-//NBA API
+// NHL Routes
+app.get('/nhl', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'NHL', 'nhl.html'));
+});
+
+app.get('/nhl-merch', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'NHL', 'merch.html'));
+});
+
+app.get('/nhl-stats', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'NHL', 'stats.html'));
+});
+
+// NBA Routes
+app.get('/nba', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'NBA', 'nba.html')); 
+});
+
+app.get('/nba-merch', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'NBA', 'merch.html'));
+});
+
+app.get('/nba-stats', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'NBA', 'stats.html'));
+});
+
+// NBA API
 app.get('/api/nba', async (req, res) => {
     const apiKey = process.env.API_KEY;
     const endpoint = `https://api.sportradar.com/nba/trial/v8/en/games/2025/02/19/schedule.json?api_key=${apiKey}`;
@@ -68,7 +93,7 @@ app.get('/api/nba', async (req, res) => {
     }
 });
 
-//NHL API
+// NHL API
 app.get('/api/nhl', async (req, res) => {
     const apiKey = process.env.API_KEY;
     const endpoint = `https://api.sportradar.com/nhl/trial/v7/en/games/2025/02/20/schedule.json?api_key=${apiKey}`;
@@ -90,20 +115,7 @@ app.get('/api/nhl', async (req, res) => {
     }
 });
 
-// NHL Routes
-app.get('/nhl', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'NHL', 'nhl.html'));
-});
-
-app.get('/nhl-merch', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'NHL', 'merch.html'));
-});
-
-app.get('/nhl-stats', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'NHL', 'stats.html'));
-});
-
-
+// 404 handler for undefined routes
 app.use((req, res) => {
     res.status(404).send('Page not found');
 });

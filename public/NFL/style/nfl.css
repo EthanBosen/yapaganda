@@ -36,7 +36,7 @@ h1 {
     text-shadow: 5px 5px 10px rgb(0, 0, 0);
     z-index: 1;
     white-space: nowrap;
-    -webkit-text-stroke: .5px rgba(216, 56, 51, 0.822);  
+    -webkit-text-stroke: .5px rgba(255, 255, 255, 0.822);  
 }
 
 main {
@@ -54,7 +54,8 @@ main {
     font-family: 'Caprasimo', sans-serif;
     font-size: 1.2em;
     background-color: rgb(211, 70, 65, 0.822);
-    color: black;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: .8px #000000;
     border: none;
     padding: 5px 25px;
     margin-left: 20px;
@@ -65,7 +66,7 @@ main {
 }
 
 .button-container button:hover {
-    background-color: rgb(12, 167, 214);
+    background-color: #45a049;
 }
 
 .search-container {
@@ -87,6 +88,8 @@ main {
 
 #searchInput:focus {
     border-color: rgb(255, 0, 55);
+    font-family: 'Caprasimo', sans-serif;
+    font-size: 1.2em;
 }
 
 #searchInput::placeholder {

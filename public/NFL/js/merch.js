@@ -3,11 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const merchBtn = document.getElementById('merch-btn');
     const statsBtn = document.getElementById('stats-btn');
     const nflBtn = document.getElementById('nfl-btn');
-    const teamList = document.getElementById('teamList');
     const bannerVideo = document.querySelector('video');
 
     homeBtn.addEventListener('click', function() {
-        window.location.href = '/index';
+        window.location.href = '/';
     });
 
     nflBtn.addEventListener('click', function() {

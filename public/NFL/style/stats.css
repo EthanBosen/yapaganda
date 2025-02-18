@@ -26,6 +26,10 @@ header .video-container video {
     margin-bottom: 10px;
 }
 
+main {
+    padding-top: 10px;
+}
+
 h1 {
     position: absolute;
     top: 20%;
@@ -37,16 +41,16 @@ h1 {
     text-shadow: 5px 5px 10px rgb(0, 0, 0);
     z-index: 1;
     white-space: nowrap;
-    -webkit-text-stroke: .5px rgba(216, 56, 51, 0.822);  
+    -webkit-text-stroke: .5px rgba(255, 255, 255, 0.822);  
 }
 
 h3 {
-    color: rgb(0, 72, 207); 
-    font-size: 27px;
+    color: rgb(255, 255, 255); 
+    -webkit-text-stroke: .7px rgb(0, 0, 0);  
+    font-size: 25px;
     text-align: center;
     margin-bottom: 5px;
     font-family: 'Caprasimo', sans-serif;
-    -webkit-text-stroke: .7px rgb(0, 0, 0);  
 }
 
 main {
@@ -58,24 +62,25 @@ main {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; 
 }
 
 .button-container button {
     font-family: 'Caprasimo', sans-serif;
     font-size: 1.2em;
     background-color: rgb(211, 70, 65, 0.822);
-    color: black;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: .8px #000000;
     border: none;
     padding: 5px 25px;
-    margin: 5px 10px; 
+    margin-left: 20px;
+    margin-right: 10px;
     cursor: pointer;
     border-radius: 250px;
     transition: background-color 0.3s ease;
 }
 
 .button-container button:hover {
-    background-color: rgb(12, 167, 214);
+    background-color: #45a049;
 }
 
 .search-container {
@@ -97,6 +102,8 @@ main {
 
 #searchInput:focus {
     border-color: rgb(255, 0, 55);
+    font-family: 'Caprasimo', sans-serif;
+    font-size: 1.2em;
 }
 
 #searchInput::placeholder {

@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const homeBtn = document.getElementById('home-btn');
     const merchBtn = document.getElementById('merch-btn');
-    const nflBtn = document.getElementById('nfl-btn');
+    const sportBtn = document.querySelector('#nfl-btn, #nhl-btn, #nba-btn');
 
-    if (homeBtn && merchBtn && nflBtn) { 
+    if (homeBtn && merchBtn && sportBtn) {
+        // Home button navigation
         homeBtn.addEventListener('click', function() {
             gtag('event', 'button_click', {
                 'event_category': 'Navigation',
@@ -13,22 +14,29 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = '/';
         });
 
+        // Merch button navigation
         merchBtn.addEventListener('click', function() {
             gtag('event', 'button_click', {
                 'event_category': 'Navigation',
                 'event_label': 'Merch Button',
                 'traffic_type': document.body.getAttribute('data-traffic-type')
             });
-            window.location.href = '/public/NFL/merch.html';
+            
+            // Determine the sport based on the sport button's ID
+            const sport = sportBtn.id.replace('-btn', '').toUpperCase();
+            window.location.href = `/${sport.toLowerCase()}-merch`; 
         });
 
-        nflBtn.addEventListener('click', function() {
+        // Sport button navigation
+        sportBtn.addEventListener('click', function() {
             gtag('event', 'button_click', {
                 'event_category': 'Navigation',
-                'event_label': 'NFL Button',
+                'event_label': `${sportBtn.id.replace('-btn', '').toUpperCase()} Button`,
                 'traffic_type': document.body.getAttribute('data-traffic-type')
             });
-            window.location.href = '/public/NFL/nfl.html';
+            
+            const sport = sportBtn.id.replace('-btn', '').toUpperCase(); // 
+            window.location.href = `/${sport.toLowerCase()}`; 
         });
-    } 
+    }
 });
