@@ -42,7 +42,7 @@ h1 {
     text-shadow: 5px 5px 10px black;
     z-index: 1;
     white-space: nowrap;
-    -webkit-text-stroke: 0.5px rgba(9, 255, 111, 0.466);  
+    -webkit-text-stroke: .5px rgba(216, 56, 51, 0.822);  
 }
 
 main {

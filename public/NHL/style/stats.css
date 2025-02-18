@@ -37,7 +37,7 @@ h1 {
     text-shadow: 5px 5px 10px rgb(0, 0, 0);
     z-index: 1;
     white-space: nowrap;
-    -webkit-text-stroke: .5px rgb(0, 72, 207);  
+    -webkit-text-stroke: .5px rgba(216, 56, 51, 0.822);  
 }
 
 h3 {
@@ -64,7 +64,7 @@ main {
 .button-container button {
     font-family: 'Caprasimo', sans-serif;
     font-size: 1.2em;
-    background-color: rgb(0, 72, 207);
+    background-color: rgba(211, 70, 65, 0.822); 
     color: black;
     border: none;
     padding: 5px 25px;

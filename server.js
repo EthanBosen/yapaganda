@@ -48,7 +48,7 @@ app.get('/stats', (req, res) => {
 
 //NBA API
 app.get('/api/nba', async (req, res) => {
-    const apiKey = process.env.NBA_API_KEY;
+    const apiKey = process.env.API_KEY;
     const endpoint = `https://api.sportradar.com/nba/trial/v8/en/games/2025/02/19/schedule.json?api_key=${apiKey}`;
 
     try {
@@ -70,8 +70,8 @@ app.get('/api/nba', async (req, res) => {
 
 //NHL API
 app.get('/api/nhl', async (req, res) => {
-    const apiKey = process.env.NHL_API_KEY;
-    const endpoint = `https://api.sportradar.com/nhl/trial/v7/en/games/2025/02/17/schedule.json?api_key=${apiKey}`;
+    const apiKey = process.env.API_KEY;
+    const endpoint = `https://api.sportradar.com/nhl/trial/v7/en/games/2025/02/20/schedule.json?api_key=${apiKey}`;
 
     try {
         const fetch = (await import('node-fetch')).default;
