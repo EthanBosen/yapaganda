@@ -41,7 +41,7 @@ h1 {
 }
 
 h3 {
-    color: rgb(255, 255, 255); 
+    color: rgb(211, 70, 65, 0.822); 
     -webkit-text-stroke: .7px rgb(0, 0, 0);  
     font-size: 25px;
     text-align: center;
@@ -106,33 +106,34 @@ main {
     color: rgba(211, 211, 211, 0.541);
 }
 
-.offense, .defense {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    gap: 20px; 
-    margin-bottom: 20px;
-    width: 90%; 
-    margin: 0 auto; 
-}
-
-.points, .assists, .three-points, .rebounds, .blocks, .steals {
-    width: 100%; 
-    text-align: left; 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
 .player-stat {
     display: flex;
-    justify-content: space-between;
     align-items: baseline;
-    gap: 10px;
-    padding: 5px 0; 
+    margin-left:10%;
+    margin-right:10%;
+    padding: 10px 0; /* Reduced padding to minimize vertical spacing */
 }
 
-.player-stat p, .player-stat h4 {
-    margin: 0; 
-    font-size: 16px; 
+.player-stat p {
+    margin: 0;
+    font-size: 20px;
+    white-space: nowrap;
+    flex: 1; /* Allows player names to take up available space but not exceed */
+    /* max-width: 70%; Limits the width of player names to prevent overflow into stats */
+}
+
+.player-stat h4 {
+    margin: 0;
+    font-size: 20px;
+    white-space: nowrap; /* Prevents text wrapping for stats */
+    min-width: 50px; /* Ensures stats have a fixed minimum width for alignment */
+    text-align: right; /* Aligns stats to the right for a straight column */
+}
+
+.points, .goals, .plus-minus, .goals-allowed, .save-percentage, .wins {
+    width: 100%;
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -150,6 +151,15 @@ main {
         font-size: 3em;
         margin-top: 20px;
     }
+
+    .player-stat p{
+        font-size: 16px;
+    }
+    
+    .player-stat h4{
+        font-size: 16px;
+    }
+    
 }
 
 @media (max-width: 480px) {
@@ -167,6 +177,14 @@ main {
     h1 {
         margin-top: 31px;
         font-size: 3.5em;
+    }
+
+    .player-stat p{
+        font-size: 16px;
+    }
+
+    .player-stat h4{
+        font-size: 16px;
     }
 
     .button-container button {
