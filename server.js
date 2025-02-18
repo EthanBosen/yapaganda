@@ -11,7 +11,7 @@ require('dotenv').config();
 // CORS configuration
 const corsOptions = {
     origin: function (origin, callback) {
-        if (!origin || origin === 'https://www.yapaganda.com' || origin === 'http://localhost:3000') {
+        if (!origin || origin === 'yapaganda.com' || origin === 'localhost:3000') {
             callback(null, true);
         } else {
             callback(new Error('Not allowed by CORS'));
