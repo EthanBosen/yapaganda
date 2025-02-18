@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yapaganda sports - NHL</title>
+    <link rel="stylesheet" href="/public/NHL/style/nhl.css">
+    <script src="/public/NHL/js/nhl.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Galindo&family=Caprasimo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <div class="video-container">
+        <video autoplay muted loop playsinline>
+            <source src="/public/media/static.mp4" type="video/mp4">
+            <img src="/public/media/fallback.jpg" alt="yapaganda">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <h1>yapaganda</h1>
+</header>
+
+<main>
+<section>
+    <!-- Navigation Bar -->
+    <div class="button-container">
+     <button id="index-btn">Home</button>
+     <button id="nba-btn">NHL</button> 
+     <button id="stats-btn">Stats</button>
+     <button id="merch-btn">Merch</button>
+    </div>
+    <div class="search-container">
+     <input type="text" id="searchInput" placeholder="Search" onkeyup="search()">
+    </div>
+</section>
+
+    <!-- Draft Countdown Timer -->
+    <!-- Commented out as it's not relevant for NHL -->
+    <!-- <div class = "draft-title">Draft Timer:
+        <a id="draft-timer"></a>
+        <script src="/public/NFL/js/drafttimer.js"></script>
+    </div> -->
+
+    <div class="score-banner">
+        <div class="carousel">
+            <button class="carousel-control prev" aria-label="Previous Game"><</button>
+            <ul class="carousel-list">
+                <!-- Game items will be dynamically added here -->
+            </ul>
+            <button class="carousel-control next" aria-label="Next Game">></button>
+        </div>
+    </div>
+
+<!-- Team List -->
+<div class="team-list">
+    <ul id="teamList">
+        <li class="jets"><a href="">Jets</a><p class="team-record">(39-14-3)</p></li>
+        <li class="capitals"><a href="">Capitals</a><p class="team-record">(36-11-8)</p></li>
+        <li class="oilers"><a href="">Oilers</a><p class="team-record">(34-17-4)</p></li>
+        <li class="stars"><a href="">Stars</a><p class="team-record">(35-18-2)</p></li>
+        <li class="golden-knights"><a href="">Golden Knights</a><p class="team-record">(33-17-6)</p></li>
+        <li class="panthers"><a href="">Panthers</a><p class="team-record">(34-20-3)</p></li>
+        <li class="hurricanes"><a href="">Hurricanes</a><p class="team-record">(33-19-4)</p></li>
+        <li class="wild"><a href="">Wild</a><p class="team-record">(33-19-4)</p></li>
+        <li class="maple-leafs"><a href="">Maple Leafs</a><p class="team-record">(33-20-2)</p></li>
+        <li class="avalanche"><a href="">Avalanche</a><p class="team-record">(33-22-2)</p></li>
+        <li class="devils"><a href="">Devils</a><p class="team-record">(31-20-6)</p></li>
+        <li class="lightning"><a href="">Lightning</a><p class="team-record">(31-20-4)</p></li>
+        <li class="kings"><a href="">Kings</a><p class="team-record">(29-17-7)</p></li>
+        <li class="canucks"><a href="">Canucks</a><p class="team-record">(26-18-11)</p></li>
+        <li class="senators"><a href="">Senators</a><p class="team-record">(29-23-4)</p></li>
+        <li class="red-wings"><a href="">Red Wings</a><p class="team-record">(28-22-5)</p></li>
+        <li class="flames"><a href="">Flames</a><p class="team-record">(26-21-8)</p></li>
+        <li class="blue-jackets"><a href="">Blue Jackets</a><p class="team-record">(26-22-8)</p></li>
+        <li class="bruins"><a href="">Bruins</a><p class="team-record">(27-24-6)</p></li>
+        <li class="rangers"><a href="">Rangers</a><p class="team-record">(27-24-4)</p></li>
+        <li class="islanders"><a href="">Islanders</a><p class="team-record">(25-23-7)</p></li>
+        <li class="hockey-club"><a href="">Hockey Club</a><p class="team-record">(24-23-9)</p></li>
+        <li class="canadiens"><a href="">Canadiens</a><p class="team-record">(25-26-5)</p></li>
+        <li class="blues"><a href="">Blues</a><p class="team-record">(25-26-5)</p></li>
+        <li class="penguins"><a href="">Penguins</a><p class="team-record">(23-25-9)</p></li>
+        <li class="flyers"><a href="">Flyers</a><p class="team-record">(24-26-7)</p></li>
+        <li class="ducks"><a href="">Ducks</a><p class="team-record">(24-24-6)</p></li>
+        <li class="kraken"><a href="">Kraken</a><p class="team-record">(24-29-4)</p></li>
+        <li class="sabres"><a href="">Sabres</a><p class="team-record">(22-27-5)</p></li>
+        <li class="predators"><a href="">Predators</a><p class="team-record">(19-28-7)</p></li>
+        <li class="blackhawks"><a href="">Blackhawks</a><p class="team-record">(17-31-7)</p></li>
+        <li class="sharks"><a href="">Sharks</a><p class="team-record">(15-35-7)</p></li>
+    </ul>
+</div>
+</main>
+
+</body>
+</html>

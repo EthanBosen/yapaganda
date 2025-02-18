@@ -68,6 +68,42 @@ app.get('/api/nba', async (req, res) => {
     }
 });
 
+//NHL API
+app.get('/api/nhl', async (req, res) => {
+    const apiKey = process.env.NHL_API_KEY;
+    const endpoint = `https://api.sportradar.com/nhl/trial/v7/en/games/2025/02/17/schedule.json?api_key=${apiKey}`;
+
+    try {
+        const fetch = (await import('node-fetch')).default;
+        const response = await fetch(endpoint, {
+            method: 'GET'
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        res.json(data);
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+        res.status(500).json({ error: 'Failed to fetch NHL data' });
+    }
+});
+
+// NHL Routes
+app.get('/nhl', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'NHL', 'nhl.html'));
+});
+
+app.get('/nhl-merch', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'NHL', 'merch.html'));
+});
+
+app.get('/nhl-stats', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'NHL', 'stats.html'));
+});
+
+
 app.use((req, res) => {
     res.status(404).send('Page not found');
 });

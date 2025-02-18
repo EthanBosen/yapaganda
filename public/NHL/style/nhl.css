@@ -1,0 +1,722 @@
+body {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    font-family: 'Galindo', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+header .video-container video {
+    width: 400px;
+    max-height: auto;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 5em;
+    font-family: 'Caprasimo', sans-serif;
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+    z-index: 1;
+    white-space: nowrap;
+    -webkit-text-stroke: .5px rgb(0, 72, 207);  
+}
+
+main {
+    padding-top: 10px;
+}
+
+/* Nav Bar */
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    font-family: 'Caprasimo', sans-serif;
+    font-size: 1.2em;
+    background-color: rgb(0, 72, 207);
+    color: black;
+    border: none;
+    padding: 5px 25px;
+    margin-left: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 250px;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: rgb(12, 167, 214);
+}
+
+
+/* Search Bar */
+.search-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 200px;
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 250px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: rgb(255, 0, 55);
+}
+
+#searchInput::placeholder {
+    color: rgba(211, 211, 211, 0.541);
+}
+
+/* Score Banner */
+.score-banner {
+    margin-top: 20px;
+    margin-top: 20px;
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.carousel-list li {
+    flex: 0 0 auto;
+    width: 300px; /* Adjust based on your design */
+    margin: 0 10px;
+    text-align: center;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Team List */
+.team-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.team-record {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px; 
+}
+
+p {
+    font-size: 12px;
+    color: #777777c4;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+}
+
+.team-list ul {
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 0;
+    list-style-type: none;
+}
+
+.team-list ul li {
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Caprasimo', sans-serif;
+}
+
+/* General Team Styling */
+.team-list ul li a {
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.team-list a:hover {
+    font-size: 35px;
+}
+
+/* Jets */
+.jets a {
+    color: #041e42; 
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Capitals */
+.capitals a {
+    color: #c8102e; 
+    text-shadow: 
+    .2px .2px 0 #000000,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Oilers */
+.oilers a {
+    color: #ff4c00; 
+    text-shadow: 
+    .5px .5px 0 #000000,    
+    -1px -1px 0 #002f87,   
+    1px -1px 0 #002f87,    
+    -1px 1px 0 #002f87,    
+    0 1px 0 #002f87,       
+    1px 0 0 #002f87,     
+    0 -1px 0 #002f87,    
+    -1px 0 0 #002f87; 
+}
+
+/* Stars */
+.stars a {
+    color: #00843d;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Golden Knights */
+.golden-knights a {
+    color: #b4975a; 
+    text-shadow: 
+    1px 1px 0 #000000,    
+    -1px -1px 0 #000000,   
+    1px -1px 0 #000000,    
+    -1px 1px 0 #000000,    
+    0 1px 0 #000000,       
+    1px 0 0 #000000,     
+    0 -1px 0 #000000,    
+    -1px 0 0 #000000; 
+}
+
+/* Panthers */
+.panthers a {
+    color: #c8102e;
+    text-shadow: 
+    1px 1px 0 #000000,    
+    -1px -1px 0 #000000,   
+    1px -1px 0 #000000,    
+    -1px 1px 0 #000000,    
+    0 1px 0 #000000,       
+    1px 0 0 #000000,     
+    0 -1px 0 #000000,    
+    -1px 0 0 #000000; 
+}
+
+/* Hurricanes */
+.hurricanes a {
+    color: #cc0000;
+    text-shadow: 
+    1px 1px 0 #000000,    
+    -1px -1px 0 #000000,   
+    1px -1px 0 #000000,    
+    -1px 1px 0 #000000,    
+    0 1px 0 #000000,       
+    1px 0 0 #000000,     
+    0 -1px 0 #000000,    
+    -1px 0 0 #000000; 
+}
+
+/* Wild */
+.wild a {
+    color: #154734;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Maple Leafs */
+.maple-leafs a {
+    color: #003876;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Avalanche */
+.avalanche a {
+    color: #6f263d;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Devils */
+.devils a {
+    color: #ce1126;
+    text-shadow: 
+    1px 1px 0 #000000,    
+    -1px -1px 0 #000000,   
+    1px -1px 0 #000000,    
+    -1px 1px 0 #000000,    
+    0 1px 0 #000000,       
+    1px 0 0 #000000,     
+    0 -1px 0 #000000,    
+    -1px 0 0 #000000; 
+}
+
+/* Lightning */
+.lightning a {
+    color: #002868;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Kings */
+.kings a {
+    color: #000000;
+    text-shadow: 
+    2px 2px 0 #c9c9c9,    
+    -2px -2px 0 #c9c9c9,   
+    2px -2px 0 #c9c9c9,    
+    -2px 2px 0 #c9c9c9,    
+    0 2px 0 #c9c9c9,       
+    2px 0 0 #c9c9c9,     
+    0 -2px 0 #c9c9c9,    
+    -2px 0 0 #c9c9c9;
+}
+
+/* Canucks */
+.canucks a {
+    color: #00205b;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Senators */
+.senators a {
+    color: #e31937;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Red Wings */
+.red-wings a {
+    color: #ce1126;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Flames */
+.flames a {
+    color: #c8102e;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Blue Jackets */
+.blue-jackets a {
+    color: #002654;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Bruins */
+.bruins a {
+    color: #000000;
+    text-shadow: 
+    1px 1px 0 #ffcc33,    
+    -1px -1px 0 #ffcc33,   
+    1px -1px 0 #ffcc33,    
+    -1px 1px 0 #ffcc33,    
+    0 1px 0 #ffcc33,       
+    1px 0 0 #ffcc33,     
+    0 -1px 0 #ffcc33,    
+    -1px 0 0 #ffcc33; 
+}
+
+/* Rangers */
+.rangers a {
+    color: #0038a8;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Islanders */
+.islanders a {
+    color: #00539b;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Hockey Club */
+.hockey-club a {
+    color: #004899;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Canadiens */
+.canadiens a {
+    color: #af1e2d;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Blues */
+.blues a {
+    color: #002f87;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Penguins */
+.penguins a {
+    color: #000000;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Flyers */
+.flyers a {
+    color: #ff0000;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Ducks */
+.ducks a {
+    color: #f47a38;
+    text-shadow: 
+    1px 1px 0 #000000,    
+    -1px -1px 0 #000000,   
+    1px -1px 0 #000000,    
+    -1px 1px 0 #000000,    
+    0 1px 0 #000000,       
+    1px 0 0 #000000,     
+    0 -1px 0 #000000,    
+    -1px 0 0 #000000; 
+}
+
+/* Kraken */
+.kraken a {
+    color: #99d9ea;
+    text-shadow: 
+    1px 1px 0 #000000,    
+    -1px -1px 0 #000000,   
+    1px -1px 0 #000000,    
+    -1px 1px 0 #000000,    
+    0 1px 0 #000000,       
+    1px 0 0 #000000,     
+    0 -1px 0 #000000,    
+    -1px 0 0 #000000; 
+}
+
+/* Sabres */
+.sabres a {
+    color: #002654;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Predators */
+.predators a {
+    color: #ffbd00;
+    text-shadow: 
+    1px 1px 0 #000000,    
+    -1px -1px 0 #000000,   
+    1px -1px 0 #000000,    
+    -1px 1px 0 #000000,    
+    0 1px 0 #000000,       
+    1px 0 0 #000000,     
+    0 -1px 0 #000000,    
+    -1px 0 0 #000000; 
+}
+
+/* Blackhawks */
+.blackhawks a {
+    color: #cf0a2c;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+/* Sharks */
+.sharks a {
+    color: #006847;
+    text-shadow: 
+    1px 1px 0 #ffffff,    
+    -1px -1px 0 #ffffff,   
+    1px -1px 0 #ffffff,    
+    -1px 1px 0 #ffffff,    
+    0 1px 0 #ffffff,       
+    1px 0 0 #ffffff,     
+    0 -1px 0 #ffffff,    
+    -1px 0 0 #ffffff; 
+}
+
+.team-list ul li a:hover {
+    font-size: 35px; 
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        height: auto; 
+    }
+
+    header .video-container video {
+        max-width: 100%; 
+        height: auto;
+        border-radius: 25px; 
+    }
+
+    h1 {
+        font-size: 2em; 
+        margin-top: 10px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        gap: 10px;
+        align-items: center;
+    }
+
+    .button-container button {
+        font-size: 1em; 
+        margin: 5px 0; 
+        padding: 5px 15px; 
+    }
+}
+
+@media (max-width: 768px) {
+    #searchInput {
+        width: 50%; 
+        max-width: 400px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .team-list ul {
+        width: 90%; 
+    }
+
+    .team-list ul li a {
+        font-size: 16px; 
+    }
+
+    .team-record {
+        font-size: 10px; 
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: auto;
+    }
+
+    header .video-container video {
+        width: 100%;
+        max-width: 200px;
+        border-radius: 20px;
+        margin: 10px 0;
+    }
+
+    h1 {
+        margin-top: 31px;
+        font-size: 3.5em;
+    }
+
+    .video-row, .merch-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}

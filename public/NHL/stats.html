@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yapaganda sports - NBA</title>
+    <link rel="stylesheet" href="/public/NBA/style/stats.css">
+    <script src="/public/NBA/js/stats.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Galindo&family=Caprasimo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <div class="video-container">
+        <video autoplay muted loop playsinline>
+            <source src="/public/media/static.mp4" type="video/mp4">
+            <img src="/public/media/fallback.jpg" alt="yapaganda">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <h1>yapaganda</h1>
+</header>
+
+<section>
+    <!-- Navigation Bar -->
+    <div class="button-container">
+     <button id="index-btn">Home</button>
+     <button id="nba-btn">NBA</button>
+     <button id="stats-btn">Stats</button>
+     <button id="merch-btn">Merch</button>
+    </div>
+    <div class="search-container">
+     <input type="text" id="searchInput" placeholder="Search" onkeyup="search()">
+    </div>
+</section>
+
+<main>
+<!-- Offense -->
+<div class="offense"> 
+    <!-- Points-->
+    <div class="points">
+        <h3>Points</h3>
+        <div class="player-stat">
+            <p>1)  Shai Gilgeous-Alexander</p>
+            <h4>32.6</h4>
+        </div>
+        <div class="player-stat">
+            <p>2) Giannis Antetokounmpo</p>
+            <h4>31.8</h4>
+        </div>
+        <div class="player-stat">
+            <p>3) Nikola Jokic</p>
+            <h4>29.8</h4>
+        </div>
+        <div class="player-stat">
+            <p>4) Tyrese Maxey</p>
+            <h4>27.6</h4>
+        </div>
+        <div class="player-stat">
+            <p>5) Anthony Edwards</p>
+            <h4>27.5</h4>
+        </div>
+    </div>
+    <!-- Assists -->
+    <div class="assists">
+        <h3>Assists</h3>
+        <div class="player-stat">
+            <p>1) Trae Young</p>
+            <h4>11.4</h4>
+        </div>
+        <div class="player-stat">
+            <p>2) Nikola Jokic</p>
+            <h4>10.3</h4>
+        </div>
+        <div class="player-stat">
+            <p>2) Cade Cunningham</p>
+            <h4>9.4</h4>
+        </div>
+        <div class="player-stat">
+            <p>4) LeBron James</p>
+            <h4>9.0</h4>
+        </div>
+        <div class="player-stat">
+            <p>5) James Harden</p>
+            <h4>8.6</h4>
+        </div>
+    </div>
+
+    <!-- 3 Points -->
+    <div class="three-points">
+        <h3>3 Pointers</h3>
+        <div class="player-stat">
+            <p>1) Stephen Curry</p>
+            <h4>4.4</h4>
+        </div>
+        <div class="player-stat">
+            <p>2) Anthony Edwards</p>
+            <h4>4.2</h4>
+        </div>
+        <div class="player-stat">
+            <p>3) LaMelo Ball</p>
+            <h4>4.0</h4>
+        </div>
+        <div class="player-stat">
+            <p>4) Malik Beasley</p>
+            <h4>3.9</h4>
+        </div>
+        <div class="player-stat">
+            <p>5) Brandon Miller</p>
+            <h4>3.9</h4>
+        </div>
+    </div>
+</div>
+
+<!-- Defense-->
+<div class="defense">
+    <!-- Rebounds-->
+    <div class="rebounds">
+        <h3>Rebounds</h3>
+        <div class="player-stat">
+            <p>1) Domantas Sabonis</p>
+            <h4>14.3</h4>
+        </div>
+        <div class="player-stat">
+            <p>2) Karl-Anthony Towns</p>
+            <h4>13.5</h4>
+        </div>
+        <div class="player-stat">
+            <p>3) Ivica Zubac</p>
+            <h4>12.7</h4>
+        </div>
+        <div class="player-stat">
+            <p>4) Nikola Jokic</p>
+            <h4>12.5</h4>
+        </div>
+        <div class="player-stat">
+            <p>5) Giannis Antetokounmpo</p>
+            <h4>12.2</h4>
+        </div>
+    </div>
+    <!-- Blocks -->
+    <div class="blocks">
+        <h3>Blocks</h3>
+        <div class="player-stat">
+            <p>1) Victor Wembanyama</p>
+            <h4>3.9</h4>
+        </div>
+        <div class="player-stat">
+            <p>1) Walker Kessler</p>
+            <h4>2.3</h4>
+        </div>
+        <div class="player-stat">
+            <p>1) Anthony Davis</p>
+            <h4>2.2</h4>
+        </div>
+        <div class="player-stat">
+            <p>4) Brook Lopez</p>
+            <h4>1.9</h4>
+        </div>
+        <div class="player-stat">
+            <p>5) Daniel Gafford</p>
+            <h4>1.9</h4>
+        </div>
+    </div>
+
+    <!-- Steals -->
+    <div class="steals">
+        <h3>Steals</h3>
+        <div class="player-stat">
+            <p>1) Dyson Daniels</p>
+            <h4>3.0</h4>
+        </div>
+        <div class="player-stat">
+            <p>2) Shai Gilgeous-Alexander</p>
+            <h4>1.9</h4>
+        </div>
+        <div class="player-stat">
+            <p>3) Tyrese Maxey</p>
+            <h4>1.9</h4>
+        </div>
+        <div class="player-stat">
+            <p>3) Nikola Jokic</p>
+            <h4>1.8</h4>
+        </div>
+        <div class="player-stat">
+            <p>5) Cason Wallace</p>
+            <h4>1.8</h4>
+        </div>
+    </div>
+</div>
+</main>
+
+</body>
+</html>

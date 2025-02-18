@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const merchBtn = document.getElementById('merch-btn');
     const nflBtn = document.getElementById('nfl-btn');
 
-    // Check if elements exist before adding event listeners
-    if (homeBtn && merchBtn && nflBtn) { // Removed 'statsBtn' since it wasn't declared
+    if (homeBtn && merchBtn && nflBtn) { 
         homeBtn.addEventListener('click', function() {
             gtag('event', 'button_click', {
                 'event_category': 'Navigation',
