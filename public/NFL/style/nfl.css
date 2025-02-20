@@ -181,12 +181,8 @@ p {
 .crown {
     width: 3%;
     height: auto;
-    position: absolute;
-    bottom: 100%; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    margin-left: 8px;
-    margin-bottom: -3px; 
+    display: block;
+    margin: 0 auto 2px;
 }
 
 /* Titans */
@@ -317,10 +313,10 @@ p {
 
 /* Bears */
 .bears a {
-    color: #0B162A; /* Navy */
+    color: #0f1e3a; /* Navy */
     text-shadow: 
     1px 1px 0 #FFFFFF,    
-    -1px -1px 0 #C83803,   
+    -1px -1px 0 #ee4407,   
     1px -1px 0 #C83803,    
     -1px 1px 0 #C83803,    
     0 1px 0 #C83803,       
@@ -373,7 +369,7 @@ p {
 
 /* Colts */
 .colts a {
-    color: #002C5F; /* Blue */
+    color: #0054d3; /* Blue */
     text-shadow: 
     1px 1px 0 #FFFFFF,    
     -1px -1px 0 #FFFFFF,   
@@ -387,7 +383,7 @@ p {
 
 /* Falcons */
 .falcons a {
-    color: #A71930; /* Red */
+    color: #ff0000; /* Red */
     text-shadow: 
     1px 1px 0 #FFFFFF,    
     -1px -1px 0 #000000,   
@@ -401,16 +397,16 @@ p {
 
 /* Cardinals */
 .cardinals a {
-    color: #97233F; /* Red */
+    color: #A71930; /* Red */
     text-shadow: 
     1px 1px 0 #FFFFFF,    
-    -1px -1px 0 #FFB612,   
-    1px -1px 0 #FFB612,    
-    -1px 1px 0 #FFB612,    
-    0 1px 0 #FFB612,       
-    1px 0 0 #FFB612,     
-    0 -1px 0 #FFB612,    
-    -1px 0 0 #FFB612; 
+    -1px -1px 0 #000000,   
+    1px -1px 0 #000000,    
+    -1px 1px 0 #000000,    
+    0 1px 0 #000000,       
+    1px 0 0 #000000,     
+    0 -1px 0 #000000,    
+    -1px 0 0 #000000; 
 }
 
 /* Bengals */
@@ -485,7 +481,7 @@ p {
 
 /* Chargers */
 .chargers a {
-    color: #003A70; /* Navy */
+    color: #1c91ff; /* Navy */
     text-shadow: 
     1px 1px 0 #FFFFFF,    
     -1px -1px 0 #FFC20E,   
@@ -499,7 +495,7 @@ p {
 
 /* Packers */
 .packers a {
-    color: #203731; /* Green */
+    color: #234132; /* Green */
     text-shadow: 
     1px 1px 0 #FFFFFF,    
     -1px -1px 0 #FFB612,   
@@ -541,13 +537,13 @@ p {
 
 /* Rams */
 .rams a {
-    color: #003690; /* Blue */
+    color: #1561e4; /* Blue */
     text-shadow: 
     1px 1px 0 #FFFFFF,    
     -1px -1px 0 #FFA300,   
-    1px -1px 0 #FFA300,    
-    -1px 1px 0 #FFA300,    
-    0 1px 0 #FFA300,       
+    1px -1px 0 #ffd900,    
+    -1px 1px 0 #ffd900,    
+    0 1px 0 #ffd900,       
     1px 0 0 #FFA300,     
     0 -1px 0 #FFA300,    
     -1px 0 0 #FFA300; 
@@ -555,7 +551,7 @@ p {
 
 /* Ravens */
 .ravens a {
-    color: #241773; /* Purple */
+    color: #2e1bac; /* Purple */
     text-shadow: 
     1px 1px 0 #FFFFFF,    
     -1px -1px 0 #9E7C0C,   
@@ -571,7 +567,7 @@ p {
 .lions a {
     color: #0076B6; /* Blue */
     text-shadow: 
-    1px 1px 0 #FFFFFF,    
+    1px 1px 0 #9b9b9b,    
     -1px -1px 0 #B0B7BC,   
     1px -1px 0 #B0B7BC,    
     -1px 1px 0 #B0B7BC,    
@@ -597,7 +593,7 @@ p {
 
 /* Bills */
 .bills a {
-    color: #00338D; /* Blue */
+    color: #013ca1; /* Blue */
     text-shadow: 
     1px 1px 0 #FFFFFF,    
     -1px -1px 0 #C60C30,   
