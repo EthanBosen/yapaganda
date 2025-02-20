@@ -1,0 +1,703 @@
+body {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    font-family: 'Galindo', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+header .video-container video {
+    width: 400px;
+    max-height: auto;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 5em;
+    font-family: 'Caprasimo', sans-serif;
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+    z-index: 1;
+    white-space: nowrap;
+    -webkit-text-stroke: .5px rgba(255, 255, 255, 0.822);  
+}
+
+h3 {
+    color: rgb(255, 255, 255); 
+    -webkit-text-stroke: .7px rgb(0, 0, 0);  
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-family: 'Caprasimo', sans-serif;
+}
+
+main {
+    padding-top: 10px;
+}
+
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    font-family: 'Caprasimo', sans-serif;
+    font-size: 1.2em;
+    background-color: rgb(211, 70, 65, 0.822);
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: .8px #000000;
+    border: none;
+    padding: 5px 25px;
+    margin-left: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 250px;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #45a049;
+}
+
+.search-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 200px;
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 250px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: rgb(255, 0, 55);
+    font-family: 'Caprasimo', sans-serif;
+    font-size: 1.2em;
+}
+
+#searchInput::placeholder {
+    color: rgba(211, 211, 211, 0.541);
+}
+
+/* Score Banner */
+.score-banner {
+    margin-top: 20px;
+    margin-top: 20px;
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.carousel-list li {
+    flex: 0 0 auto;
+    width: 300px; /* Adjust based on your design */
+    margin: 0 10px;
+    text-align: center;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Team List */
+.team-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.team-record {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px; 
+}
+
+p {
+    font-size: 12px;
+    color: #777777c4;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+}
+
+.team-list ul {
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 0;
+    list-style-type: none;
+}
+
+.team-list ul li {
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Caprasimo', sans-serif;
+}
+
+/* General Team Styling */
+.team-list ul li a {
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.team-list a:hover {
+    font-size: 35px;
+}
+
+/* Thunder */
+.thunder a {
+    color: #ec7e00; 
+    text-shadow: 
+    1px 1px 0 #000000,    
+    -2px -2px 0 #0a94e4,   
+    1px -1px 0 #0a94e4,    
+    -1px 1px 0 #0a94e4,    
+    0 1px 0 #0a94e4,       
+    1px 0 0 #0a94e4,     
+    0 -1px 0 #0a94e4,    
+    -1px 0 0 #0a94e4; 
+}
+
+/* Cavaliers */
+.cavaliers a {
+    color: #77202c; 
+    text-shadow: 
+    .2px .2px 0 #000000,    
+    -1px -1px 0 #ca982d,   
+    1px -1px 0 #ca982d,    
+    -1px 1px 0 #ca982d,    
+    0 1px 0 #ca982d,       
+    1px 0 0 #ca982d,     
+    0 -1px 0 #ca982d,    
+    -1px 0 0 #ca982d; 
+}
+
+/* Celtics */
+.celtics a {
+    color: #ffffff; 
+    text-shadow: 
+    .5px .5px 0 #000000,    
+    -1px -1px 0 #00b359,   
+    1px -1px 0 #00b359,    
+    -1px 1px 0 #00b359,    
+    0 1px 0 #00b359,       
+    1px 0 0 #00b359,     
+    0 -1px 0 #00b359,    
+    -1px 0 0 #00b359; 
+}
+
+/* Grizzlies */
+.grizzlies a {
+    color: #348bd3;
+    text-shadow: 
+    1px 1px 0 #0e3775,    
+    -1px -1px 0 #0e3775,   
+    1px -1px 0 #0e3775,    
+    -1px 1px 0 #0e3775,    
+    0 1px 0 #0e3775,       
+    1px 0 0 #0e3775,     
+    0 -1px 0 #0e3775,    
+    -1px 0 0 #0e3775; 
+}
+
+/* Knicks */
+.knicks a {
+    color: #b65200; 
+    text-shadow: 
+    1px 1px 0 #000cb6,    
+    -1px -1px 0 #000cb6,   
+    1px -1px 0 #000cb6,    
+    -1px 1px 0 #000cb6,    
+    0 1px 0 #000cb6,       
+    1px 0 0 #000cb6,     
+    0 -1px 0 #000cb6,    
+    -1px 0 0 #000cb6; 
+}
+
+/* Nuggets */
+.nuggets a {
+    color: #d4960e; 
+    text-shadow: 
+    1px 1px 0 #004292,    
+    -1px -1px 0 #1153a3,   
+    1px -1px 0 #00306b,    
+    -1px 1px 0 #00306b,    
+    0 1px 0 #00306b,       
+    1px 0 0 #00306b,     
+    0 -1px 0 #00306b,    
+    -1px 0 0 #00306b; 
+}
+
+/* Lakers */
+.lakers a {
+    color: #d4d10e; 
+    text-shadow: 
+    1px 1px 0 #6700bb,    
+    -1px -1px 0 #6700bb,   
+    1px -1px 0 #6700bb,    
+    -1px 1px 0 #6700bb,    
+    0 1px 0 #6700bb,       
+    1px 0 0 #6700bb,     
+    0 -1px 0 #6700bb,    
+    -1px 0 0 #6700bb; 
+}
+
+/* Rockets */
+.rockets a {
+    color: #ffffff; 
+    text-shadow: 
+    2px 2px 0 #9c0000,    
+    -2px -2px 0 #9c0000,   
+    2px -2px 0 #9c0000,    
+    -2px 2px 0 #9c0000,    
+    0 2px 0 #9c0000,       
+    2px 0 0 #9c0000,     
+    0 -2px 0 #9c0000,    
+    -2px 0 0 #9c0000; 
+}
+
+/* Timberwolves */
+.timberwolves a {
+    color: #00388d; 
+    text-shadow: 
+    1px 1px 0 #3aff33,    
+    -1px -1px 0 #3aff33,   
+    1px -1px 0 #3aff33,    
+    -1px 1px 0 #3aff33,    
+    0 1px 0 #3aff33,       
+    1px 0 0 #3aff33,     
+    0 -1px 0 #3aff33,    
+    -1px 0 0 #3aff33; 
+}
+
+/* Clippers */
+.clippers a {
+    color: #aa0000; 
+    text-shadow: 
+    1px 1px 0 #003fbe,    
+    -1px -1px 0 #003fbe,   
+    1px -1px 0 #003fbe,    
+    -1px 1px 0 #003fbe,    
+    0 1px 0 #003fbe,       
+    1px 0 0 #003fbe,     
+    0 -1px 0 #003fbe,    
+    -1px 0 0 #003fbe; 
+}
+
+/* Pacers */
+.pacers a {
+    color: #d8b241;
+    text-shadow: 
+    1px 1px 0 #002e74,    
+    -1px -1px 0 #002e74,   
+    1px -1px 0 #002e74,    
+    -1px 1px 0 #002e74,    
+    0 1px 0 #002e74,       
+    1px 0 0 #002e74,     
+    0 -1px 0 #002e74,    
+    -1px 0 0 #002e74; 
+}
+
+/* Bucks */
+.bucks a {
+    color: #e7e3b8; 
+    text-shadow: 
+    2px 2px 0 #016427,    
+    -2px -2px 0 #00471B,   
+    2px -2px 0 #00471B,    
+    -2px 2px 0 #00471B,    
+    0 2px 0 #00471B,       
+    2px 0 0 #00471B,     
+    0 -2px 0 #00471B,    
+    -2px 0 0 #00471B; 
+}
+
+/* Pistons */
+.pistons a {
+    color: #c9000a;
+    text-shadow: 
+    2px 2px 0 #cccccc,    
+    -2px -2px 0 #cccccc,   
+    2px -2px 0 #cccccc,    
+    -2px 2px 0 #cccccc,    
+    0 2px 0 #cccccc,       
+    2px 0 0 #cccccc,     
+    0 -2px 0 #cccccc,    
+    -2px 0 0 #cccccc;
+}
+
+/* Kings */
+.kings a {
+    color: #c9c9c9; 
+    text-shadow: 
+    2px 2px 0 #5600ac,    
+    -2px -2px 0 #5600ac,   
+    2px -2px 0 #5600ac,    
+    -2px 2px 0 #5600ac,    
+    0 2px 0 #5600ac,       
+    2px 0 0 #5600ac,     
+    0 -2px 0 #5600ac,    
+    -2px 0 0 #5600ac;
+}
+
+/* Heat */
+.heat a {
+    color: #750124; 
+    text-shadow: 
+    2px 2px 0 #dfdfdf,    
+    -2px -2px 0 #9b9b9b,   
+    2px -2px 0 #9b9b9b,    
+    -2px 2px 0 #9b9b9b,    
+    0 2px 0 #9b9b9b,       
+    2px 0 0 #9b9b9b,     
+    0 -2px 0 #9b9b9b,    
+    -2px 0 0 #9b9b9b;
+}
+
+/* Warriors */
+.warriors a {
+    color: #0e44b1; 
+    text-shadow: 
+    1px 1px 0 #e6c535,    
+    -1px -1px 0 #e6c535,   
+    1px -1px 0 #e6c535,    
+    -1px 1px 0 #e6c535,    
+    0 1px 0 #e6c535,       
+    1px 0 0 #e6c535,     
+    0 -1px 0 #e6c535,    
+    -1px 0 0 #e6c535;
+}
+
+/* Hawks */
+.hawks a {
+    color: #ff9100;
+    text-shadow: 
+    2px 2px 0 #c50003,    
+    -2px -2px 0 #c50003,   
+    2px -2px 0 #c50003,    
+    -2px 2px 0 #c50003,    
+    0 2px 0 #c50003,       
+    2px 0 0 #c50003,     
+    0 -2px 0 #c50003,    
+    -2px 0 0 #c50003;
+}
+
+/* Mavericks */
+.mavericks a {
+    color: #243772;
+    text-shadow: 
+    1px 1px 0 #c7c7c7,    
+    -1px -1px 0 #c7c7c7,   
+    1px -1px 0 #c7c7c7,    
+    -1px 1px 0 #c7c7c7,    
+    0 1px 0 #c7c7c7,       
+    1px 0 0 #c7c7c7,     
+    0 -1px 0 #c7c7c7,    
+    -1px 0 0 #c7c7c7;
+}
+
+/* Magic */
+.magic a {
+    color: #006ec9;
+    text-shadow: 
+    2px 2px 0 #ffffff,    
+    -2px -2px 0 #ffffff,   
+    2px -2px 0 #ffffff,    
+    -2px 2px 0 #ffffff,    
+    0 2px 0 #ffffff,       
+    2px 0 0 #ffffff,     
+    0 -2px 0 #ffffff,    
+    -2px 0 0 #ffffff;
+}
+
+/* Suns */
+.suns a {
+    color: #ff792b; 
+    text-shadow: 
+    2px 2px 0 #000000,    
+    -2px -2px 0 #5200a5,   
+    2px -2px 0 #5200a5,    
+    -2px 2px 0 #5200a5,    
+    0 2px 0 #5200a5,       
+    2px 0 0 #5200a5,     
+    0 -2px 0 #5200a5,    
+    -2px 0 0 #5200a5;
+}
+
+/* Spurs */
+.spurs a {
+    color: #000000; 
+    text-shadow: 
+    2px 2px 0 #a8a8a8,    
+    -2px -2px 0 #646464,   
+    2px -2px 0 #646464,    
+    -2px 2px 0 #646464,    
+    0 2px 0 #646464,       
+    2px 0 0 #646464,     
+    0 -2px 0 #646464,    
+    -2px 0 0 #646464;
+}
+
+/* Bulls */
+.bulls a {
+    color: #000000;
+    text-shadow: 
+    2px 2px 0 #860000,    
+    -2px -2px 0 #d10000,   
+    2px -2px 0 #610101,    
+    -2px 2px 0 #d10000,    
+    0 2px 0 #d10000,       
+    2px 0 0 #d10000,     
+    0 -2px 0 #d10000,    
+    -2px 0 0 #d10000;
+}
+
+/* Trail Blazers */
+.trail-blazers a {
+    color: #d30007; 
+    text-shadow: 
+    2px 2px 0 #000000,    
+    -2px -2px 0 #4d4d4d,   
+    2px -2px 0 #000000,    
+    -2px 2px 0 #000000,    
+    0 2px 0 #000000,       
+    2px 0 0 #202020,     
+    0 -2px 0 #000000,    
+    -2px 0 0 #000000;
+}
+
+/* Raptors */
+.raptors a {
+    color: #6e2bb9; 
+    text-shadow: 
+    2px 2px 0 #000000,    
+    -1px -1px 0 #970000,   
+    1px -1px 0 #d10000,    
+    -1px 1px 0 #d10000,    
+    0 1px 0 #d10000,       
+    1px 0 0 #d10000,     
+    0 -1px 0 #d10000,    
+    -1px 0 0 #d10000;
+}
+
+/* Nets */
+.nets a {
+    color: #000000; 
+    text-shadow: 
+    2px 2px 0 #ffffff,    
+    -2px -2px 0 #ffffff,   
+    2px -2px 0 #ffffff,    
+    -2px 2px 0 #ffffff,    
+    0 2px 0 #ffffff,       
+    2px 0 0 #ffffff,     
+    0 -2px 0 #ffffff,    
+    -2px 0 0 #ffffff;
+}
+
+/* Sixers */
+.sixers a {
+    color: #002bb8; 
+    text-shadow: 
+    1px 1px 0 #000000,    
+    -1px -1px 0 #990000,   
+    2px -0px 0 #d10000,    
+    -1px 3px 0 #d10000,    
+    0 3px 0 #d10000,       
+    1px 0 0 #d10000,     
+    0 -1px 0 #680000,    
+    -1px 0 0 #d10000;
+}  
+
+/* Hornets */
+.hornets a {
+    color: #4c3598; 
+    text-shadow: 
+    1px 1px 0 #000000,    
+    -1px -1px 0 #00a2ff,   
+    1px -1px 0 #0083cf,    
+    -1px 1px 0 #0083cf,    
+    0 1px 0 #0083cf,       
+    1px 0 0 #0083cf,     
+    0 -1px 0 #0083cf,    
+    -1px 0 0 #0083cf; 
+}
+
+/* Jazz */
+.jazz a {
+    color: #4c3598;
+    text-shadow: 
+    2px 2px 0 #ffffff,    
+    -2px -2px 0 #ffffff,   
+    2px -2px 0 #ffffff,    
+    -2px 2px 0 #ffffff,    
+    0 2px 0 #ffffff,       
+    2px 0 0 #ffffff,     
+    0 -2px 0 #ffffff,    
+    -2px 0 0 #ffffff;
+}
+
+/* Pelicans */
+.pelicans a {
+    color: #1a3963;
+    text-shadow: 
+    2px 2px 0 #bb9033,    
+    -2px -2px 0 #bb9033,   
+    2px -2px 0 #bb9033,    
+    -2px 2px 0 #bb9033,    
+    0 2px 0 #bb9033,       
+    2px 0 0 #bb9033,     
+    0 -2px 0 #bb9033,    
+    -2px 0 0 #bb9033;
+}
+
+/* Wizards */
+.wizards a {
+    color: #c42121; 
+    text-shadow: 
+    2px 2px 0 #000000,    
+    -2px -2px 0 #2d3f7a,   
+    2px -2px 0 #2d3f7a,    
+    -2px 2px 0 #2d3f7a,    
+    0 2px 0 #2d3f7a,       
+    2px 0 0 #2d3f7a,     
+    0 -2px 0 #2d3f7a,    
+    -2px 0 0 #2d3f7a;
+}
+
+.team-list ul li a:hover {
+    font-size: 35px; 
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        height: auto; 
+    }
+
+    header .video-container video {
+        max-width: 100%; 
+        height: auto;
+        border-radius: 25px; 
+    }
+
+    h1 {
+        font-size: 2em; 
+        margin-top: 10px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        gap: 10px;
+        align-items: center;
+    }
+
+    .button-container button {
+        font-size: 1em; 
+        margin: 5px 0; 
+        padding: 5px 15px; 
+    }
+}
+
+@media (max-width: 768px) {
+    #searchInput {
+        width: 50%; 
+        max-width: 400px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .team-list ul {
+        width: 90%; 
+    }
+
+    .team-list ul li a {
+        font-size: 16px; 
+    }
+
+    .team-record {
+        font-size: 10px; 
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: auto;
+    }
+
+    header .video-container video {
+        width: 100%;
+        max-width: 200px;
+        border-radius: 20px;
+        margin: 10px 0;
+    }
+
+    h1 {
+        margin-top: 31px;
+        font-size: 3.5em;
+    }
+
+    .video-row, .merch-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
