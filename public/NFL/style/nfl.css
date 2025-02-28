@@ -711,12 +711,14 @@ p {
     }
 
     .team-list ul li a {
-        font-size: 24px; 
+        font-size: 28px;
+        margin-right: 5px; 
     }
 
     .team-record {
         font-size: 10px; 
     }
+
     .draft-title {
         display: flex;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
