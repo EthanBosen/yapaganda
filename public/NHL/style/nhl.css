@@ -696,10 +696,11 @@ p {
 @media (max-width: 768px) {
     .team-list ul {
         width: 90%; 
+        margin-right: 25px;
     }
 
     .team-list ul li a {
-        font-size: 16px; 
+        font-size: 28px; 
     }
 
     .team-record {
