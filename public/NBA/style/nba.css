@@ -668,7 +668,7 @@ p {
 @media (max-width: 768px) {
     .team-list ul {
         width: 90%; 
-        margin-right: 25px;
+        margin-right: 15px;
     }
 
     .team-list ul li a {
