@@ -71,10 +71,10 @@ app.get('/nba-stats', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'NBA', 'stats.html'));
 });
 
-// NBA API
+// NBA API - Game Schedule
 app.get('/api/nba', async (req, res) => {
     const apiKey = process.env.API_KEY;
-    const endpoint = `https://api.sportradar.com/nba/trial/v8/en/games/2025/02/19/schedule.json?api_key=${apiKey}`;
+    const endpoint = `https://api.sportradar.com/nba/trial/v8/en/games/2025/03/06/schedule.json?api_key=${apiKey}`;
 
     try {
         const fetch = (await import('node-fetch')).default;
@@ -93,10 +93,33 @@ app.get('/api/nba', async (req, res) => {
     }
 });
 
+// NBA API - Standings
+app.get('/api/nba-standings', async (req, res) => {
+    const apiKey = process.env.API_KEY; // Using the same API_KEY as your other endpoints
+    const endpoint = `https://api.sportradar.com/nba/trial/v8/en/seasons/2024/REG/standings.json?api_key=${apiKey}`;
+
+    try {
+        const fetch = (await import('node-fetch')).default;
+        const response = await fetch(endpoint, {
+            method: 'GET',
+            headers: { accept: 'application/json' }
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        res.json(data);
+    } catch (error) {
+        console.error('There was a problem fetching NBA standings:', error);
+        res.status(500).json({ error: 'Failed to fetch NBA standings' });
+    }
+});
+
 // NHL API
 app.get('/api/nhl', async (req, res) => {
     const apiKey = process.env.API_KEY;
-    const endpoint = `https://api.sportradar.com/nhl/trial/v7/en/games/2025/02/20/schedule.json?api_key=${apiKey}`;
+    const endpoint = `https://api.sportradar.com/nhl/trial/v7/en/games/2025/03/06/schedule.json?api_key=${apiKey}`;
 
     try {
         const fetch = (await import('node-fetch')).default;

@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         nextButton.disabled = currentIndex === listItems.length - 1;
     }
 
-    // Fetch NBA data and populate the carousel
+    // Fetch NBA game schedule data and populate the carousel
     try {
         const response = await fetch('/api/nba');
         if (!response.ok) {
@@ -77,13 +77,93 @@ document.addEventListener('DOMContentLoaded', async function() {
         
     } catch (error) {
         console.error('Error fetching NBA data:', error);
-        // Optionally, handle the error by showing a message in the UI
         carouselList.innerHTML = '<p>Failed to load game schedule. Please try again later.</p>';
     }
 
     // Event listeners for navigation
     prevButton.addEventListener('click', () => slideCarousel('prev'));
     nextButton.addEventListener('click', () => slideCarousel('next'));
+
+    // Fetch NBA win loss record
+    async function fetchNBAStandings() {
+        try {
+            const response = await fetch('/api/nba-standings');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const standingsData = await response.json();
+            updateTeamRecords(standingsData);
+        } catch (error) {
+            console.error('Error fetching NBA standings:', error);
+            const teamList = document.querySelector('.team-list');
+            teamList.innerHTML = '<p>Failed to load standings. Please try again later.</p>';
+        }
+    }
+
+    // Function to update team records in the HTML
+    function updateTeamRecords(standingsData) {
+        // Flatten the team data from conferences and divisions
+        const teams = [];
+        standingsData.conferences.forEach(conference => {
+            conference.divisions.forEach(division => {
+                division.teams.forEach(team => {
+                    teams.push({
+                        name: team.name,
+                        wins: team.wins,
+                        losses: team.losses
+                    });
+                });
+            });
+        });
+
+        // Map team names to their respective HTML class names
+        const teamClassMap = {
+            'Thunder': 'thunder',
+            'Cavaliers': 'cavaliers',
+            'Celtics': 'celtics',
+            'Grizzlies': 'grizzlies',
+            'Knicks': 'knicks',
+            'Nuggets': 'nuggets',
+            'Lakers': 'lakers',
+            'Rockets': 'rockets',
+            'Timberwolves': 'timberwolves',
+            'Clippers': 'clippers',
+            'Pacers': 'pacers',
+            'Bucks': 'bucks',
+            'Pistons': 'pistons',
+            'Kings': 'kings',
+            'Heat': 'heat',
+            'Warriors': 'warriors',
+            'Hawks': 'hawks',
+            'Mavericks': 'mavericks',
+            'Magic': 'magic',
+            'Suns': 'suns',
+            'Spurs': 'spurs',
+            'Bulls': 'bulls',
+            'Trail Blazers': 'trail-blazers',
+            'Raptors': 'raptors',
+            'Nets': 'nets',
+            '76ers': 'sixers',
+            'Hornets': 'hornets',
+            'Jazz': 'jazz',
+            'Pelicans': 'pelicans',
+            'Wizards': 'wizards'
+        };
+
+        // Update each team's record in the HTML
+        teams.forEach(team => {
+            const className = teamClassMap[team.name];
+            if (className) {
+                const teamElement = document.querySelector(`.${className} .team-record`);
+                if (teamElement) {
+                    teamElement.textContent = `(${team.wins}-${team.losses})`;
+                }
+            }
+        });
+    }
+
+    // Call the function to fetch standings when the page loads
+    fetchNBAStandings();
 
     // Search Function
     function search() {
@@ -103,4 +183,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             }
         }
     }
+
+    // Expose the search function to the global scope (since it's called from HTML)
+    window.search = search;
 });
